@@ -6,17 +6,19 @@ import swLogo from '/src/assets/icons/svg/swlogo.svg'
 // documents
 import resume from '/src/assets/documents/pdf/Resume.pdf'
 
-// images
-
+// --- images ---
 
 // Taskify
-import TaskifyConcept from '/src/assets/images/png/Taskify/Taskify0.png'
 import TaskifyExcalidraw from '/src/assets/images/png/Taskify/Taskify.excalidraw.png'
-import TaskifyWIP from '/src/assets/images/png/Taskify/Taskify.wip.png'
+import TaskifyWIP from '/src/assets/images/png/Taskify/Taskify2.png'
 import TaskifyFinal from '/src/assets/images/png/Taskify/Taskify.png'
+import TaskifyConcept from '/src/assets/images/png/Taskify/Taskify5.png'
 
 // Hacker News
-import HackerNews from '/src/assets/images/png/Hackernews/HackerNews.png' 
+import HackerNewsStyleExploration from '/src/assets/images/png/Hackernews/HackerNewsStyleExploration.png'
+import HackerNewsVanillaCSS from '/src/assets/images/png/Hackernews/HackerNewsVanillaCSS.png' 
+import HackerNewsDarkmode from '/src/assets/images/png/Hackernews/HackerNewsDarkmode.png'
+import HackerNewsTailwindCSS from '/src/assets/images/png/Hackernews/HackerNewsTailwind.png'
 
 // PICAPI
 import PICAPI from '/src/assets/images/png/PICAPI/PICAPI.png'
@@ -28,28 +30,66 @@ import PokeFight from '/src/assets/images/png/PokeFight/Pokefight_arena.png'
 import ElderGymBroAppHome from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Home.png'
 import ElderGymBroAppDemo from '/src/assets/images/gif/ElderGymBroApp/ElderGymBro_Demo.gif'
 
+const workCards = [
+  {
+    // associate at empower
+    startDate: '09/2021 ',
+    endDate: '09/2023',
+    contract: 'Fulltime associate at empower GmbH Cologne TEST',
+    position: 'UX & UI Designer',
+    bullet1: 'Designed wireframes, mockups & prototypes for the copmpany\'s software products.',
+    bullet2: 'Developed ui guidelines for the implementation of ui elements in the company\'s products.',
+    bullet3: 'Co-authored the company\'s ui style guide and implemented it in XAML.',
+    bullet4: '(Re)designed ui layouts, icons, marketing materials.',
+    bullet5: 'Wrote a language guide on ux writing and ui copy.',
+    tag1: 'Adobe XD',
+    tag2: 'Adobe Illustrator',
+    tag3: 'Adobe Photoshop',
+    tag4: 'Visual Studio',
+    tag5: 'XAML',
+    tag6: 'UX Writing',
+    tag7: 'Jira',
+  },
+  {
+    // working student at empower
+    startDate: '05/2019',
+    endDate: '08/2021',
+    contract: 'Working student at empower GmbH Cologne',
+    position: 'UX & UI Designer',
+    bullet1: 'Created ux personas for the company\'s ux design department.',
+    bullet2: 'Crafted pixel-perfect icons in different sizes, formats and color schemes.',
+    bullet3: 'Created concepts for marketing materials, such as website and broschures, business cards, product mockups, (html) banners.',
+    bullet4: 'Photo editing.',
+    tag1: 'Adobe XD',
+    tag2: 'Adobe Illustrator',
+    tag3: 'Adobe Photoshop',
+    tag4: 'Visual Studio',
+    tag5: 'XAML',
+  },
+];
+
 const projectCards = [
   {
     // Taskify
-    image1: TaskifyConcept,
-    image2: TaskifyExcalidraw,
-    image3: TaskifyWIP,
+    image1: TaskifyExcalidraw,
+    image2: TaskifyWIP,
+    image3: TaskifyConcept,
     image4: TaskifyFinal,
     heading: 'Taskify',
     subheading: 'Stay organized and focused with Taskify!',
-    description: '"Taskify" is a to-do list app that was developed as a group project. It was the first project work in the curriculum that took us beyond basic web technologies like HTML and CSS and introduced me to Javascript and React.js. An interesting observation that I made while working on the project was that collaborative wireframing - we used Excalidraw to sketch out our wireframe concept - is not only an extremely valuable tool for UX designers, but it can also be a very helpful strategy for beginners in software development who first of all need to develop their personal mental model of how UIs work and how they translate into code. Wireframing allowed us not only to clearly outline and visualize our project idea, but also to take a structured approach to project management and plan the basis for a common code base. Our team consisted of inexperienced web developers, some of whom had only been familiar with HTML, CSS and JavaScript for a few weeks. "Taskify" is certainly not the gold standard of to-do lists, but the learning curve on this project was enormous and the result is more than decent given the lack of experience. I will always remember this little project as my introduction to the processes and technologies of web development.:)',
+    description: '"Taskify" is a to-do list app created during the WBS Coding School bootcamp, marking my first deep dive into JavaScript and React.js. Collaborating on this project, I discovered the power of collaborative wireframing using Excalidraw. It not only clarified our projects UX but also helped us, as beginners, build a shared understanding of how UIs work and translate into code. Despite our team of four being mostly new to web development, we successfully built a functional app using tools like Git, Slack and Trello. With Taskify we did not create a new gold standard ofor to-do-lists but the learning experience was invaluable and unforgettable!',
     linkNetlify: 'https://taskifyinreact.netlify.app/',
     linkGitHub: 'https://github.com/tarekelg/ToDoListReact',
   },
   {
-    // Taskify
-    image1: HackerNews,
-    image2: HackerNews,
-    image3: HackerNews,
-    image4: HackerNews,
+    // HackerNews
+    image1: HackerNewsStyleExploration, 
+    image2: HackerNewsVanillaCSS, 
+    image3: HackerNewsDarkmode,
+    image4: HackerNewsTailwindCSS,
     heading: 'HackerNews',
-    subheading: 'HackerNews is ...',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias saepe quae sunt, labore porro excepturi provident fugiat eveniet soluta illo odio reiciendis ipsa accusantium blanditiis. Natus magni debitis veniam aspernatur, aut fugit, sed quasi assumenda quos similique cum soluta ut corporis distinctio harum, possimus consequuntur eius esse. Sit labore rerum aliquid dignissimos illo aspernatur, consequatur asperiores error dolores quibusdam optio ipsam mollitia sed quod non praesentium voluptatem qui earum. Natus sequi vero ea eligendi, quia temporibus sit dicta, ducimus illo quos dolorum asperiores amet. Architecto sunt exercitationem fugit tenetur quos corrupti laborum sint magni expedita quia, sequi perspiciatis nemo quas?',
+    subheading: 'Whats new in Tech? —Swift and seamless news styled with TailwindCSS',
+    description: 'Coming from a design background I have always been more interested in frontend technologies. My first experience fetching data from a JSON was with the HackerNews API, thanks to Algolia\'s free access for learning. This group project also introduced me to npm packages, where I discovered that components like busy spinners and paginations dont have to be coded from scratch—unless you want to! After using Bootstrap CSS, I tried TailwindCSS for the first time, spending hours perfecting the layout and styling for the news items. I used to struggle with writing and maintaining semantic CSS, but TailwindCSS\'s simplicity won me over. While it doesnt cover everything classic CSS does, the time and effort it saves are well worth the trade-offs.',
     linkNetlify: 'https://taskifyinreact.netlify.app/',
     linkGitHub: 'https://github.com/tarekelg/ToDoListReact',
   },
@@ -224,13 +264,77 @@ After working mainly in native software development for 5 years, I have recently
             <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
           </div>
 
-          {/* -- 4. Work experience section */}
-          <div className="p-4 pt-12">
-            <p className="bg-clip-text pb-1 pl-2 text-start font-medium leading-tight sm:text-lg md:text-xl">
-              _work experience
-            </p>
-            <br></br>
-            
+
+
+        {/* -- work experience grid */}
+        <div className="grid grid-flow-row auto-rows-max grid-cols-1">
+
+          {workCards.map((card, index) => (
+                        <div class="flex flex-col">
+                        <article class="flex flex-col justify-start px-6">
+                          <ul>
+                            <div class="flex flex-col justify-start items-start">
+                              <div class="flex flex-row">
+                                <div class="p-2">{card.startDate} — {card.endDate}</div>
+                                <hr class='flex flex-row'></hr>
+                              </div>
+                              <div class="flex flex-row">
+                              <hr class='mx-auto'></hr>
+                              </div>
+                              <h2 class="p-2 font-light sm:text-md md:text-lg">{card.contract}</h2>
+                              <h2 class="p-2 sm:text-md md:text-md">{card.position}</h2>
+                              <p className="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base">
+                              </p>
+          
+                              <p className="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base">
+                                <ul>
+                                  <li>&#8226; {card.bullet1}</li>
+                                  <li>&#8226; {card.bullet2}</li>
+                                  <li>&#8226; {card.bullet3}</li>
+                                  <li>&#8226; {card.bullet4}</li> 
+                                  <li>&#8226; {card.bullet5}</li> 
+                                </ul>
+                              </p>
+                            </div>
+                          </ul>
+                          <ul class="flex flex-wrap justify-start py-4">
+                            <li class="rounded-full bg-purple-500/25 px-4 text-xs text-purple-300 py-1 m-1 hover:bg-purple-200/25">{card.tag1}</li>
+                            <li class="rounded-full bg-orange-500/25 px-4 text-xs text-orange-300 py-1 m-1 hover:bg-orange-200/25">{card.tag2}</li>
+                            <li class="rounded-full bg-blue-500/25 px-4 text-xs text-blue-300 py-1 m-1 hover:bg-blue-200/25">{card.tag3}</li>
+                            <li class="rounded-full bg-teal-500/25 text-xs text-teal-300 px-4 py-1 m-1 hover:bg-teal-200/25">{card.tag4}</li>
+                            <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag5}</li>
+                            <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag6}</li>
+                            <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag7}</li>
+                          </ul>
+                        </article>
+                      </div>
+          // <div className="m-w-40 m-6 cursor-pointer rounded-lg bg-gray-900 p-4 shadow-xl transition-transform hover:bg-sky-950/50 hover:scale-105">
+          //   <div key={index} className="">
+          //     <div className="p-2">
+          //       <div className="flex flex-col items-start">
+          //         <div className="flex flex-wrap justify-start lg:flex-grow flex-1">
+          //           <div className="flex flex-col px-4 items-start">
+
+          //           <p className="font-thin text-xl italic text-start text-balance text-white/75">{card.startDate}</p>
+          //             <br></br>
+          //             <p className="font-normal text-start text-balance text-white/75">{card.endDate}</p>
+          //             <br></br>
+
+          //           </div>
+          //           <br></br>
+          //         </div>
+          //       </div>
+          //     </div>     
+          //   </div>
+          // </div>
+                  ))}
+        <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+
+
+
+
+
+
 
             <div class="flex flex-col">
               <article class="flex flex-col justify-start px-6">
@@ -439,7 +543,7 @@ After working mainly in native software development for 5 years, I have recently
         <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
         </div>
 
-        {/* -- 6. grid-flow-row auto-rows-max -- */}
+        {/* -- Projects grid */}
         <div className="grid grid-flow-row auto-rows-max grid-cols-1">
 
           {projectCards.map((card, index) => (
@@ -488,9 +592,7 @@ After working mainly in native software development for 5 years, I have recently
                 </div>
               </div>     
             </div>
-
-
-        </div>
+          </div>
                   ))}
         <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             
@@ -553,7 +655,7 @@ After working mainly in native software development for 5 years, I have recently
               <div className="p-2 ">
                 <div className="flex flex-col items-start">
                   <div className="flex flex-row justify-center">
-                    <img class="h-32 md:h-36 lg:h-42" src={HackerNews}></img>
+
                     <div className="flex flex-col px-4 items-start">
                       <h2 className="text-lg font-semibold">HackerNews</h2>
                       <br></br>
