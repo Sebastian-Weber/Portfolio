@@ -4,44 +4,78 @@ import { useEffect, useState } from 'react';
 import swLogo from '/src/assets/icons/svg/swlogo.svg'
 
 // documents
-import resume from '/src/assets/documents/pdf/Resume.pdf'
+import resume from '/src/assets/documents/pdf/Sebastian_Weber_-_CV_-_UX-UI_Designer_and_Frontend_Developer_07-2024.pdf'
+
 
 // --- images ---
 
-//Logos
+// Logos
 import RH_Logo from '/src/assets/logos/RH_Logo.png'
 import RH_Logo_white from '/src/assets/logos/RH_Logo_weiss.png'
+
+import BUW_Logo_white from '/src/assets/logos/Unilogo_schwarz_T3.png'
+
+import WBS_Logo_red from '/src/assets/logos/WBSCS-Red-logo.webp'
+import WBS_Logo_white from '/src/assets/logos/WBSCS-full-logo-white.webp'
+
+
 
 // Taskify
 import TaskifyExcalidraw from '/src/assets/images/png/Taskify/Taskify.excalidraw.png'
 import TaskifyWIP from '/src/assets/images/png/Taskify/Taskify2.png'
 import TaskifyFinal from '/src/assets/images/png/Taskify/Taskify.png'
 import TaskifyConcept from '/src/assets/images/png/Taskify/Taskify5.png'
+import TaskifyMacBookAir from '/src/assets/images/png/Taskify/Taskify_macbook_air_mockup_2023.png'
 
 // HackerNews
 import HackerNewsStyleExploration from '/src/assets/images/png/Hackernews/HackerNewsStyleExploration.png'
 import HackerNewsVanillaCSS from '/src/assets/images/png/Hackernews/HackerNewsVanillaCSS.png' 
 import HackerNewsDarkmode from '/src/assets/images/png/Hackernews/HackerNewsDarkmode.png'
 import HackerNewsTailwindCSS from '/src/assets/images/png/Hackernews/HackerNewsTailwind.png'
+import HackerNewsMacBookAir from '/src/assets/images/png/Hackernews/HackerNews_macbook_air_mockup_2023.png'
+
 
 // PICAPI
-import PICAPI from '/src/assets/images/png/PICAPI/PICAPI.png'
+import PICAPIWireframe from '/src/assets/images/png/PICAPI/PICAPI_wireframe.png'
+import PICAPIDetailPage2 from '/src/assets/images/png/PICAPI/PICAPI_DetailPage_2.png'
+import PICAPIMacBookAir from '/src/assets/images/png/PICAPI/PICAPI_MacBookAir.png'
+import PICAPIWIPTopbar from '/src/assets/images/png/PICAPI/PICAPI_WIP_Topbar.png'
+
+
 
 // PokéFight
 import PokeFight from '/src/assets/images/png/PokeFight/Pokefight_arena.png'
 
 // Elder Gym Bro App
-import ElderGymBroAppHome from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Home.png'
+import ElderGymBroWireframeDashboard from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Wireframe_Dashboard.png'
+import ElderGymBroDashboard from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Dashboard.png'
+import ElderGymBroWorkouts from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Workouts.png'
 import ElderGymBroAppDemo from '/src/assets/images/gif/ElderGymBroApp/ElderGymBro_Demo.gif'
+
+
+
+const aboutSection = [
+  {
+    introduction: 'I am a graduate UX designer with a total of +10 years of experience in Tech. I have a passion for everything related to UIs, frontend technologies and visual design in general. I am also interested in the history of information technology, especially its earliest ideas and concepts. After working mainly in native software development for 5 years, I recently started learning how to code frontends for the web.'
+  },
+];
+
+const projectsSection = [
+  {
+    introduction: 'Transitioning from a UX/UI design background to developing web applications using React, I want to use this space share the learnings and insights gained from my journey. Working on the projects documented in my porfolio has deepened my understanding of how design decisions directly impact user experience and taught me how to bring those designs to life through code. I\'ve explored building dynamic interfaces, managing state, and integrating APIs, all while keeping a focus on usability and aesthetics. These projects highlight my ability to blend design principles with modern development practices, creating engaging, functional, and user-friendly digital experiences.'
+  },
+];
+
 
 const workCards = [
   {
     // associate at empower
     startDate: '09/2021 ',
     endDate: '09/2023',
-    contract: 'Fulltime associate at empower GmbH Cologne',
+    contract: 'Fulltime Associate',
     position: 'UX & UI Designer',
-    bullet1: '• Designed wireframes, mockups & prototypes for the copmpany\'s software products.',
+    company: 'empower GmbH',
+    bullet1: '• Designed wireframes, mockups & prototypes for the company\'s software products.',
     bullet2: '• Developed ui guidelines for the implementation of ui elements in the company\'s products.',
     bullet3: '• Co-authored the company\'s ui style guide and implemented it in XAML.',
     bullet4: '• (Re)designed ui layouts, icons, marketing materials.',
@@ -52,18 +86,18 @@ const workCards = [
     tag4: 'Visual Studio',
     tag5: 'XAML',
     tag6: 'UX Writing',
-    tag7: 'Jira',
   },
   {
     // working student at empower
     startDate: '05/2019',
     endDate: '08/2021',
-    contract: 'Working student at empower GmbH Cologne',
+    contract: 'Working Student',
     position: 'UX & UI Designer',
-    bullet1: '• Created ux personas for the company\'s ux design department.',
-    bullet2: '• Crafted pixel-perfect icons in different sizes, formats and color schemes.',
+    company: 'empower GmbH',
+    bullet1: '• Created ux personas for the company\'s ux department.',
+    bullet2: '• Crafted pixel-perfect icons in various sizes, formats and color schemes.',
     bullet3: '• Created concepts for marketing materials, such as website and broschures, business cards, product mockups, (html) banners.',
-    bullet4: '• Photo editing.',
+    bullet4: '• Image editing.',
     tag1: 'Adobe XD',
     tag2: 'Adobe Illustrator',
     tag3: 'Adobe Photoshop',
@@ -72,25 +106,60 @@ const workCards = [
   },
 ];
 
+
 const educationCards = [
   {
-    // associate at empower
-    startDate: '09/2021 ',
-    endDate: '09/2023',
-    contract: 'Fulltime associate at empower GmbH Cologne',
-    position: 'UX & UI Designer',
-    bullet1: '• Designed wireframes, mockups & prototypes for the copmpany\'s software products.',
-    bullet2: '• Developed ui guidelines for the implementation of ui elements in the company\'s products.',
-    bullet3: '• Co-authored the company\'s ui style guide and implemented it in XAML.',
-    bullet4: '• (Re)designed ui layouts, icons, marketing materials.',
-    bullet5: '• Wrote a language guide on ux writing and ui copy.',
-    tag1: 'Adobe XD',
-    tag2: 'Adobe Illustrator',
-    tag3: 'Adobe Photoshop',
-    tag4: 'Visual Studio',
-    tag5: 'XAML',
-    tag6: 'UX Writing',
-    tag7: 'Jira',
+    // Continuing education as Fullstack Web and App developer (bootcamp) at WBS Coding School (Remote & on campus in Berlin)
+    startDate: '03/2024',
+    endDate: '07/2024',
+    logotype: WBS_Logo_white,
+    degree: 'Certified Fullstack Web and App Developer',
+    program: 'Fullstack Web and App Development Bootcamp',
+    bullet1: '• Learned how to apply frontend, backend and middleware technologies for web and app development. ',
+    tag1: 'VS Code',
+    tag2: 'Figma',
+    tag3: 'Project management',
+    tag4: 'HTML',
+    tag5: 'CSS',
+    tag6: 'Javascript',
+    tag7: 'React',
+  },
+  {
+    // Master of Arts in User Experience Design
+    startDate: '03/2018 ',
+    endDate: '07/2021',
+    logotype: RH_Logo_white,
+    degree: 'Master of Arts',
+    program: 'User Experience Design',
+    bullet1: '• Researched user needs and scientifically and practically analyzed user experiences.',
+    bullet2: '• Designed iterative concepts and for interactive services and products with focus on psychology, empathy, diversity and social responsibility.',
+    bullet3: '• Created interfaces and interaction designs.',
+    bullet4: '• Practiced pitches, self-presentation & visualization of design processes and results.',
+    bullet5: '',
+    tag1: 'UX Research',
+    tag2: 'Market & competitors analyses',
+    tag3: 'Design Thinking Workshops',
+    tag4: 'Creativity techniques',
+    tag5: 'Quantitative & qualitative research methods',
+    tag6: 'Presentation skills',
+    tag7: '...',
+  },
+  {
+    // Bachelor of Arts in Media Design / Design technology & English Studies
+    startDate: '10/2010',
+    endDate: '06/2017 ',
+    logotype: BUW_Logo_white,
+    degree: 'Bachelor of Arts',
+    program: 'Media Design / Design Technology & English Studies',
+    bullet1: '• Studied the principles of different field of design, e.g. visual design, layout, typography, film and the history and theory of design.',
+    bullet2: '• Created concepts for various media projects using a broad stack of media and design technologies.',
+    tag1: 'Academic Writing',
+    tag2: 'Business English',
+    tag3: 'Technical English',
+    tag4: '...',
+    tag5: '...',
+    tag6: '...',
+    tag7: '...',
   },
 ];
 
@@ -98,9 +167,13 @@ const projectCards = [
   {
     // Taskify
     image1: TaskifyExcalidraw,
+      image1Description: 'Wireframe',
     image2: TaskifyWIP,
+      image2Description: 'Work in progress',
     image3: TaskifyConcept,
-    image4: TaskifyFinal,
+      image3Description: 'Work in progress',
+    image4: TaskifyMacBookAir,
+      image4Description: 'Mockup',
     heading: 'Taskify',
     subheading: 'Stay organized and focused with Taskify!',
     description: '"Taskify" is a to-do list app created during the WBS Coding School bootcamp, marking my first deep dive into JavaScript and React.js. Collaborating on this project, I discovered the power of collaborative wireframing using Excalidraw. It not only clarified our projects UX but also helped us, as beginners, build a shared understanding of how UIs work and translate into code. Despite our team of four being mostly new to web development, we successfully built a functional app using tools like Git, Slack and Trello. With Taskify we did not create a new gold standard ofor to-do-lists but the learning experience was invaluable and unforgettable!',
@@ -109,15 +182,63 @@ const projectCards = [
   },
   {
     // HackerNews
-    image1: HackerNewsStyleExploration, 
-    image2: HackerNewsVanillaCSS, 
-    image3: HackerNewsDarkmode,
-    image4: HackerNewsTailwindCSS,
+    image1: HackerNewsStyleExploration,
+      image1Description: 'Style exploration',
+    image2: HackerNewsVanillaCSS,
+      image2Description: 'Work in progress', 
+    image3: HackerNewsTailwindCSS,
+      image3Description: 'Work in progress', 
+    image4: HackerNewsMacBookAir,
+      image4Description: 'Mockup',
     heading: 'HackerNews',
-    subheading: 'What\'s up in tech? — The latest news delivered from Agolia API & styled with TailwindCSS',
-    description: 'Coming from a design background, I\'ve always preferred working with frontend over backend technologies. My first backend experience was fetching data using the HackerNews API for a group project, where I also discovered npm packages for pre-built components like busy spinners and pagination. I experimented with TailwindCSS after using Bootstrap and spent hours perfecting the layout and styling. TailwindCSS\'s simplicity won me over, making it easier to write and maintain CSS, even with its limitations—well worth the trade-offs from a UX designer\'s perspective.',
+    subheading: 'What\'s up in Tech? — The latest news fetched from Agolia API & styled with TailwindCSS',
+    description: 'Coming from a design background, I\'ve always been more involved with front-end technologies than back-end technologies. Fetching data from an API and JSon files were things I had heard about, but had never done myself. While working on this HackerNews group project, I not only got my first taste of backend technologies, but also discovered npm packages for pre-built components like busy spinners and pagination. After using Bootstrap, I experimented with TailwindCSS and spent hours perfecting the layout and styling. The simplicity of TailwindCSS won me over, making it easier to write and maintain CSS, even with its limitations - well worth the tradeoffs from a UX designer\'s perspective.',
     linkNetlify: 'https://taskifyinreact.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/HackerNews',
+  },
+  {
+    // PICAPI
+    image1: PICAPIWireframe,
+      image1Description: 'Wireframe',
+    image2: PICAPIWIPTopbar,
+      image2Description: 'Work in progress',
+    image3: PICAPIDetailPage2,
+      image3Description: 'Details page',
+    image4: PICAPIMacBookAir,
+      image4Description: 'Mockup',
+    heading: 'PICAPI',
+    subheading: 'PICAPI — All your favorite APIs at your fingertips!',
+    description: 'This group project was primarily focused on gaining practical experience in fetching data from both a headless CMS and a backend server. To accomplish this, we began by creating our own API collection, which we initially hosted on the Contentful platform, a popular headless CMS. After successfully setting up the API, we transferred the collection into a custom JSON file, which was then hosted on an Express server for greater flexibility and control over the backend processes. In addition, we enhanced the user interface by implementing an off-canvas sidebar, which was managed through the useState hook, a dedicated details page, pagination with npm\'s pagination library, the "slick slider carousel" for dynamic content display, a search bar using Daisy UI with an efficient search function, and clickable category tags to serve as filter options.',
+    linkNetlify: 'https://picapi.netlify.app/',
+    linkGitHub: 'https://github.com/Sebastian-Weber/Contentful_CMS_Rework',
+  },
+  {
+    // PokeFight
+    image1: PokeFight,
+      image1Description: 'Wireframe',
+    image2: PokeFight,
+      image2Description: 'Wireframe',
+    heading: 'PokeFight',
+    subheading: 'PokeFight — Got to fetch them all!',
+    description: '...',
+    linkNetlify: 'https://picapi.netlify.app/',
+    linkGitHub: 'https://github.com/Sebastian-Weber/Contentful_CMS_Rework',
+  },
+  {
+    // Elder Gym Bro App
+    image1: ElderGymBroWireframeDashboard,
+      image1Description: 'Dashboard (Figma prototype)',
+    image2: ElderGymBroDashboard,
+      image2Description: 'Dashboard (Finalized)',
+    image3: ElderGymBroWorkouts,
+      image3Description: 'Workouts (Finalized)',
+    image4: ElderGymBroAppDemo,
+      image4Description: 'App Mockup',  
+    heading: 'ElderGymBroApp',
+    subheading: 'ElderGymBroApp — Join the Cult!',
+    description: 'ElderGymBroApp is a lovecraft-themed fitness app for blobs and other abominations.',
+    linkNetlify: 'https://picapi.netlify.app/',
+    linkGitHub: 'https://github.com/Sebastian-Weber/Contentful_CMS_Rework',
   },
 ];
 
@@ -136,6 +257,7 @@ import BesucherzentrumOG from '/src/assets/images/png/Besucherzentrum/Entwurf_Be
 
 //FashionPlattform
 import FashionPlattform from '/src/assets/images/png/FashionPlattform/FashionPlattform.png'
+import { GiCarDoor } from 'react-icons/gi';
 
 
 
@@ -157,7 +279,7 @@ function App() {
         </div>
 
         {/* -- inner layout grid */}
-        <div class="flex flex-col justify-start items-start lg:w-8/12 ">   
+        <div class="flex flex-col lg:w-8/12 ">   
 
         {/* -- 4. info section */}
         <div className="p-4 pt-6">
@@ -173,14 +295,247 @@ function App() {
               </p>
             </div>
             <br></br>
-            <div className="flex flex-row justify-center mt-2">
-              <p className="text-right font-extralight line-clamp-6 pb-1 leading-tight text-2xl md:text-4xl">
-              "I enjoy surrounding myself with technology building engaging digital experiences."
+            <div className="flex flex-col justify-end items-end mt-2">
+              <p className="text-right font-extralight line-clamp-6 px-4 pb-4 leading-6 text-2xl md:text-4xl xl:text-5xl">
+              building
+              </p>
+              <p className="text-right font-extralight line-clamp-6 px-4 pb-4 leading-6 text-2xl md:text-4xl xl:text-5xl">
+              engaging 
+              </p>
+              <p className="text-right font-extralight line-clamp-6 px-4 pb-4 leading-6 text-2xl md:text-4xl xl:text-5xl">
+              digital 
+              </p>
+              <p className="text-right font-extralight line-clamp-6 px-4 pb-4 leading-6 text-2xl md:text-4xl xl:text-5xl">
+              experiences 
               </p>
             </div>
           <br></br>
 
-                  {/* -- 3. Tech stack icons --*/}
+          </div>
+
+         {/* -- 4. About section */}
+         <div className="p-4">
+          	<div className="flex flex-row justify-start">
+              <p className="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight sm:text-xl md:text-2xl xl:text-4xl">
+                _about 
+              </p>
+            </div>
+
+
+
+            {aboutSection.map((card, index) => (
+                <div className="flex flex-col justify-center text-start items-center py-10 px-4 font-light text-balance text-white leading-tight sm:text-lg md:text-base">
+                {card.introduction}
+                </div>
+            ))}
+
+
+   
+            <div class="flex flex-row justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+              <a class="mx-2 font-semibold" href={resume}>Dowload full CV</a>
+            </div>
+            <br></br>
+
+            <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+          </div>
+
+
+
+
+{/* -- 4. Projects section */}
+<div className="p-4 pt-12">
+
+<div className="flex flex-row justify-start">
+  <p className="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight sm:text-xl md:text-2xl xl:text-4xl">
+  _projects
+  </p>
+</div>
+
+{projectsSection.map((card, index) => (
+                <div className="flex flex-col justify-center text-start items-center py-6 px-4 font-light text-balance text-white leading-tight sm:text-lg md:text-base">
+                {card.introduction}
+                </div>
+                        ))}
+</div>
+
+{/* -- Projects -- */}
+{projectCards.map((card, index) => (
+<div className="m-w-40 m-6 rounded-lg bg-gray-900 p-4 shadow-xl transition-transform ">
+  <div key={index} className="">
+    <div className="p-2">
+      <div className="flex flex-col items-start">
+        <div className="flex flex-wrap justify-start lg:flex-grow flex-1">
+          <div className="flex flex-col px-4 items-start">
+            <a class="text-indigo-300/90" href="https://taskifyinreact.netlify.app/">
+              <h2 className="text-xl underline font-semibold">{card.heading}</h2>
+            </a>
+            <br></br>
+          </div>  
+          <div className="flex flex-col px-4 items-start">
+            <div className="flex flex-wrap items-start">
+              <div class="flex flex-col mx-4 justify-center items-center">
+                <img class="h-32 md:h-36 lg:h-42 p-2" src={card.image1}></img>
+                <div class="font-thin">{card.image1Description}</div>
+              </div>
+              <div class="flex flex-col mx-4 justify-center items-center">
+                <img class="h-32 md:h-36 lg:h-42 p-2" src={card.image2}></img>
+                <div class="font-thin">{card.image2Description}</div>
+              </div>
+              <div class="flex flex-col mx-4 justify-center items-center">
+                <img class="h-32 md:h-36 lg:h-42 p-2" src={card.image3}></img>
+                <div class="font-thin">{card.image3Description}</div>
+              </div>
+              <div class="flex flex-col mx-4 justify-center items-center">
+                <img class="h-32 md:h-36 lg:h-42 p-2" src={card.image4}></img>
+                <div class="font-thin">{card.image4Description}</div>
+              </div>
+            </div>  
+            <br></br>
+            <p className="font-thin text-xl italic text-start text-balance text-white/75">{card.subheading}</p>
+            <br></br>
+            <p className="font-normal text-start text-balance prose text-white/75">{card.description}</p>
+            <br></br>
+            <div class="flex flex-row">
+
+              <a class="text-color-white pr-2 underline" href={card.linkNetlify}>
+                <h2 className="text-lg font-semibold">Netlify</h2>
+              </a>
+
+              <br></br>
+              <a class="text-color-white pr-2 underline" href={card.linkGitHub}>
+                <h2 className="text-lg font-semibold">GitHub</h2>
+              </a>
+            </div>
+
+          </div>
+          <br></br>
+        </div>
+      </div>
+    </div>     
+  </div>
+</div>
+        ))}
+
+
+        {/* -- 4. Work experience section */}
+        <div className="p-4 pt-6">
+
+          <div className="flex flex-row justify-start">
+            <p className="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight sm:text-xl md:text-2xl xl:text-4xl">
+               _work experience
+            </p>
+          </div>
+
+        </div>
+
+        {/* -- work experience grid */}
+
+          {workCards.map((card, index) => (
+          // responsive container
+          <div class="px-6 my-2 w-full float-right">
+            <ul>
+              <div class="flex flex-col">
+                <div class="flex flex-grow">
+                    <div class="flex flex-col items-end w-full m-auto justify-end">
+                      <div class="p-2">{card.startDate} — {card.endDate}</div>  
+                      <div class="w-36 font-semibold xl:w-42">{card.company}</div>
+                    </div>
+                    </div>
+                  <div class="flex flex-row justify-start">
+                    <div class="flex flex-col justify-start items-start">
+                    <h2 class="p-2 font-semibold sm:text-md md:text-md">{card.position}</h2>
+                    <h2 class="p-2 font-light italic sm:text-md md:text-lg">{card.contract}</h2>
+                  </div>
+                  </div>
+                  <p className="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base"></p>
+
+                  <p className="font-light text-white/75 text-start leading-tight sm:text-lg md:text-base">
+                    <ul class="px-2">
+                      <li>{card.bullet1}</li>
+                      <li>{card.bullet2}</li>
+                      <li>{card.bullet3}</li>
+                      <li>{card.bullet4}</li> 
+                      <li>{card.bullet5}</li> 
+                    </ul>
+                  </p>
+                </div>
+
+              {/* <article class="flex flex-col justify-start">
+              <ul class="flex flex-wrap justify-start pt-4">
+                <li class="rounded-full bg-purple-500/25 px-4 text-xs text-purple-300 py-1 m-1 hover:bg-purple-200/25">{card.tag1}</li>
+                <li class="rounded-full bg-orange-500/25 px-4 text-xs text-orange-300 py-1 m-1 hover:bg-orange-200/25">{card.tag2}</li>
+                <li class="rounded-full bg-blue-500/25 px-4 text-xs text-blue-300 py-1 m-1 hover:bg-blue-200/25">{card.tag3}</li>
+                <li class="rounded-full bg-teal-500/25 text-xs text-teal-300 px-4 py-1 m-1 hover:bg-teal-200/25">{card.tag4}</li>
+                <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag5}</li>
+                <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag6}</li>
+                <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag7}</li>
+              </ul>
+            </article> */}
+            <hr class="h-px my-6 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+            </ul>
+          </div>
+          
+          ))}
+
+          {/* -- 4. eduaction section */}
+          <div className="p-4 pt-12">
+            <p className="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight sm:text-xl md:text-2xl xl:text-4xl">
+              _education
+            </p>
+            <br></br>
+
+
+            {educationCards.map((card, index) => (
+          // responsive container
+          <div class="">
+            <ul>
+              <div class="flex flex-col ">
+                <div class="flex flex-grow">
+                    <div class="flex flex-col items-end w-full m-auto justify-end">
+                      <div class="p-2">{card.startDate} — {card.endDate}</div> 
+                      <img class="w-36 font-semibold xl:w-42" src={card.logotype}></img>
+                    </div>
+                    </div>
+                  <div class="px-4 my-2 flex flex-row justify-start">
+                    <div class="flex flex-col justify-start items-start">
+                      <h2 class="p-2 font-semibold sm:text-md md:text-md">{card.degree}</h2>
+                      <h2 class="p-2 font-light italic sm:text-md md:text-lg">{card.program}</h2>
+                    </div>
+                  </div>
+                  <p className="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base"></p>
+
+                  <p className="px-4 my-2 font-light text-white/75 text-start leading-tight sm:text-lg md:text-base">
+                    <ul class="px-2">
+                      <li>{card.bullet1}</li>
+                      <li>{card.bullet2}</li>
+                      <li>{card.bullet3}</li>
+                      <li>{card.bullet4}</li> 
+                      <li>{card.bullet5}</li> 
+                    </ul>
+                  </p>
+                </div>
+
+              {/* <article class="px-4 my-2 flex flex-col justify-start">
+              <ul class="flex flex-wrap justify-start pt-4">
+                <li class="rounded-full bg-purple-500/25 px-4 text-xs text-purple-300 py-1 m-1 hover:bg-purple-200/25">{card.tag1}</li>
+                <li class="rounded-full bg-orange-500/25 px-4 text-xs text-orange-300 py-1 m-1 hover:bg-orange-200/25">{card.tag2}</li>
+                <li class="rounded-full bg-blue-500/25 px-4 text-xs text-blue-300 py-1 m-1 hover:bg-blue-200/25">{card.tag3}</li>
+                <li class="rounded-full bg-teal-500/25 text-xs text-teal-300 px-4 py-1 m-1 hover:bg-teal-200/25">{card.tag4}</li>
+                <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag5}</li>
+                <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag6}</li>
+                <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag7}</li>
+              </ul>
+            </article> */}
+            <hr class="h-px my-6 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+            </ul>
+            </div>
+          
+          ))}
+
+        {/* -- 3. Tech stack icons --*/}
         <div className="px-4">
           <div className="pt-2 flex flex-row justify-center ">
 
@@ -226,147 +581,17 @@ function App() {
 
             {/* Email icon */}
             <div className='px-2'>
-              <a href="mailto:sebastian.weber1708@gmail.com">
+              <a lass="email-link" href="mailto:sebastian.weber1708@gmail.com" rel="noopener noreferrer" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" className="size-9">
                   <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" fill="#d1d5db"/>
                   <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" fill="#d1d5db"/>
                 </svg>
               </a>
             </div>
-
-          </div>
-
+          </div> 
         </div>
 
-          <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-          </div>
-
-                    {/* -- 4. About section */}
-                    <div className= "p-4 ">
-            <div className="flex flex-row justify-start">
-              <p className="bg-clip-text pb-1 pl-2 text-start font-medium leading-tight sm:text-lg md:text-xl">
-                _about 
-              </p>
-            </div>
-            <div className="flex flex-row justify-start">
-              <div className="py-10 font-light text-balance text-white/75 px-6 text-start leading-tight sm:text-lg md:text-base">
-              I am a graduate UX designer with a total of +10 years of experience in various fields of Tech. I have a passion for everything related to UIs and frontend technologies and visual design in general. I am also interested in the history of information technology, especially its earliest ideas and concepts.
-After working mainly in native software development for 5 years, I have recently started learning how to code frontends for the web...
-              </div>
-            </div>
-            <a>View full Résumé src={resume}</a>
-            <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-          </div>
-
-        {/* -- 4. Work experience section */}
-        <div className="p-4 pt-6">
-
-          <div className="flex flex-row justify-start">
-            <p className="bg-clip-text pb-1 pl-2 text-start font-medium leading-tight sm:text-lg md:text-xl">
-               _work experience
-            </p>
-          </div>
-
-        </div>
-
-        {/* -- cv grid */}
-        <div className="grid grid-flow-row auto-rows-max grid-cols-1">
-
-          {workCards.map((card, index) => (
-            <div class="flex flex-row">
-            <article class="flex flex-col justify-start">
-              <ul>
-                <div class="flex flex-col justify-start items-start">
-                  <div class="flex flex-row w-full justify-end">
-                    <div class="p-2">{card.startDate} — {card.endDate}</div>
-                    <hr class='flex flex-row'></hr>
-                  </div>
-                  <div class="flex flex-row">
-                  <hr class='mx-auto'></hr>
-                  </div>
-                  <h2 class="p-2 font-light sm:text-md md:text-lg">{card.contract}</h2>
-                  <h2 class="p-2 sm:text-md md:text-md">{card.position}</h2>
-                  <p className="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base">
-                  </p>
-
-                  <p className="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base">
-                    <ul>
-                      <li>{card.bullet1}</li>
-                      <li>{card.bullet2}</li>
-                      <li>{card.bullet3}</li>
-                      <li>{card.bullet4}</li> 
-                      <li>{card.bullet5}</li> 
-                    </ul>
-                  </p>
-                </div>
-              </ul>
-              <ul class="flex flex-wrap justify-start py-4">
-                <li class="rounded-full bg-purple-500/25 px-4 text-xs text-purple-300 py-1 m-1 hover:bg-purple-200/25">{card.tag1}</li>
-                <li class="rounded-full bg-orange-500/25 px-4 text-xs text-orange-300 py-1 m-1 hover:bg-orange-200/25">{card.tag2}</li>
-                <li class="rounded-full bg-blue-500/25 px-4 text-xs text-blue-300 py-1 m-1 hover:bg-blue-200/25">{card.tag3}</li>
-                <li class="rounded-full bg-teal-500/25 text-xs text-teal-300 px-4 py-1 m-1 hover:bg-teal-200/25">{card.tag4}</li>
-                <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag5}</li>
-                <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag6}</li>
-                <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag7}</li>
-              </ul>
-              <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-            </article>
-
-          </div>
-          
-          ))}
-        </div>
-
-          {/* -- 4. eduaction section */}
-          <div className="p-4 pt-12">
-            <p className="bg-clip-text pb-1 pl-2 text-start font-medium leading-tight sm:text-lg md:text-xl">
-              _education
-            </p>
-            <br></br>
-
-            {educationCards.map((card, index) => (
-            <div class="flex flex-row">
-            <article class="flex flex-col justify-start px-6">
-              <ul>
-                <div class="flex flex-col justify-start items-start">
-                  <div class="flex flex-row">
-                    <div class="p-2">{card.startDate} — {card.endDate}</div>
-                    <hr class='flex flex-row'></hr>
-                  </div>
-                  <div class="flex flex-row">
-                  <hr class='mx-auto'></hr>
-                  </div>
-                  <h2 class="p-2 font-light sm:text-md md:text-lg">{card.contract}</h2>
-                  <h2 class="p-2 sm:text-md md:text-md">{card.position}</h2>
-                  <p className="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base">
-                  </p>
-
-                  <p className="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base">
-                    <ul>
-                      <li>{card.bullet1}</li>
-                      <li>{card.bullet2}</li>
-                      <li>{card.bullet3}</li>
-                      <li>{card.bullet4}</li> 
-                      <li>{card.bullet5}</li> 
-                    </ul>
-                  </p>
-                </div>
-              </ul>
-              <ul class="flex flex-wrap justify-start py-4">
-                <li class="rounded-full bg-purple-500/25 px-4 text-xs text-purple-300 py-1 m-1 hover:bg-purple-200/25">{card.tag1}</li>
-                <li class="rounded-full bg-orange-500/25 px-4 text-xs text-orange-300 py-1 m-1 hover:bg-orange-200/25">{card.tag2}</li>
-                <li class="rounded-full bg-blue-500/25 px-4 text-xs text-blue-300 py-1 m-1 hover:bg-blue-200/25">{card.tag3}</li>
-                <li class="rounded-full bg-teal-500/25 text-xs text-teal-300 px-4 py-1 m-1 hover:bg-teal-200/25">{card.tag4}</li>
-                <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag5}</li>
-                <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag6}</li>
-                <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">{card.tag7}</li>
-              </ul>
-              <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-            </article>
-
-          </div>
-          
-          ))}
+ 
 
 
 
@@ -381,8 +606,8 @@ After working mainly in native software development for 5 years, I have recently
 
 
 
-            <div class="flex flex-col">
-              <article class="flex flex-col justify-start px-6">
+            {/* <div class="flex flex-col">
+              <article class="flex flex-col justify-start px-4">
                 <ul>
                   <div class="flex flex-col justify-start items-start">
                     <div class="flex flex-row">
@@ -506,515 +731,15 @@ After working mainly in native software development for 5 years, I have recently
                   <li class="rounded-full bg-yellow-500/25 text-xs text-yellow-300 px-4 py-1 m-1 hover:bg-yellow-200/25">XAML</li>
                 </ul>
               </article>
-            </div>
+            </div> */}
 
 
             
 
-        {/* -- 4. Projects section */}
-        <div className="p-4 pt-12">
-
-          <div className="flex flex-row justify-start">
-            <p className="bg-clip-text pb-1 pl-2 text-start font-medium leading-tight sm:text-lg md:text-xl">
-            _projects
-            </p>
-          </div>
-          <div className="flex flex-row justify-start">
-            <p className="py-10 font-light text-white/75  px-6 text-start leading-tight sm:text-lg md:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi officiis obcaecati commodi nam rerum soluta, tenetur placeat repudiandae autem vero quisquam quaerat natus doloribus enim a, voluptatum quod sequi reiciendis repellendus labore. Error minus, enim aliquam aut accusantium beatae consequuntur aspernatur. Expedita dicta quis quisquam quae omnis nostrum debitis quia voluptatum nisi, nulla cum. Ipsa optio neque veniam consectetur, esse voluptatibus, sed fuga eveniet commodi molestias earum distinctio. Fugiat veniam quis aspernatur fugit. Ipsum voluptas ipsa laudantium recusandae omnis, expedita repudiandae quo modi veniam facilis harum aliquid iusto vitae earum, est deleniti quis maiores dolorum cumque illo totam et laborum.
-            </p>
-          </div>
-
-
-
-        <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-        </div>
-
-        {/* -- Projects grid */}
-        <div className="grid grid-flow-row auto-rows-max grid-cols-1">
-
-          {projectCards.map((card, index) => (
-          <div className="m-w-40 m-6 cursor-pointer rounded-lg bg-gray-900 p-4 shadow-xl transition-transform hover:bg-sky-950/50 hover:scale-105">
-            <div key={index} className="">
-              <div className="p-2">
-                <div className="flex flex-col items-start">
-                  <div className="flex flex-wrap justify-start lg:flex-grow flex-1">
-                    <div className="flex flex-col px-4 items-start">
-                      <a class="text-indigo-300/90" href="https://taskifyinreact.netlify.app/">
-                        <h2 className="text-xl underline font-semibold">{card.heading}</h2>
-                      </a>
-                      <br></br>
-                    </div>  
-                    <div className="flex flex-col px-4 items-start">
-                      <div className="flex flex-wrap items-start">
-                      <img class="h-32 md:h-36 lg:h-42 p-2" src={card.image1}></img>
-                        <img class="h-32 md:h-36 lg:h-42 p-2" src={card.image2}></img>
-                        <img class="h-32 md:h-36 lg:h-42 p-2" src={card.image3}></img>
-                        <img class="h-32 md:h-36 lg:h-42 p-2" src={card.image4}></img>
-                      </div>  
-                      <br></br>
-                      <p className="font-thin text-xl italic text-start text-balance text-white/75">{card.subheading}</p>
-                      <br></br>
-                      <p className="font-normal text-start text-balance text-white/75">{card.description}</p>
-                      <br></br>
-                      <div class="flex flex-row justify-start items-center ">
-                        <a class="text-color-white pr-2 underline" href={card.linkNetlify}>
-                          <h2 className="text-lg font-semibold">Netlify</h2>
-                        </a>
-                        <br></br>
-                        <a class="text-color-white pr-2 underline" href={card.linkGitHub}>
-                          <h2 className="text-lg font-semibold">GitHub</h2>
-                        </a>
-                      </div>
-
-                    </div>
-                    <br></br>
-                  </div>
-                </div>
-              </div>     
-            </div>
-          </div>
-                  ))}
-        <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-          
-
-          {/* Besucherzentrum Park Glienicke */}
-          {/* <div className="m-w-40 m-6 cursor-pointer rounded-lg bg-gray-900 p-4 shadow-xl transition-transform hover:bg-sky-950/50 hover:scale-105">
-            <div className="p-2 ">
-              <div className="flex flex-col items-start">
-                <div className="flex flex-row justify-center">
-                  <img class="h-32 md:h-36 lg:h-42" src={Besucherzentrum}></img>
-                  <div className="flex flex-col px-4 items-start">
-                    <h2 className="text-lg font-semibold">Besucherzentrum Park Glienicke</h2>
-                    <br></br>
-                    <p className="font-thin text-start text-balance text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente minus voluptas laboriosam, aut blanditiis.</p>
-                  </div>
-                <br></br>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr> */}
-
-          {/* PICAPI */}
-          <a class="text-color-white" href="https://github.com/Sebastian-Weber/HackerNews">
-            <div className="m-w-40 m-6 cursor-pointer rounded-lg bg-gray-900 p-4 shadow-xl transition-transform hover:bg-sky-950/50 hover:scale-105">
-              <div className="p-2 ">
-                <div className="flex flex-col items-start">
-                  <div className="flex flex-row justify-center">
-                    <img class="h-32 md:h-36 lg:h-42" src={PICAPI}></img>
-                    <div className="flex flex-col px-4 items-start">
-                      <h2 className="text-lg font-semibold">PICAPI</h2>
-                      <br></br>
-                      <p className="font-thin text-start text-balance text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente minus voluptas laboriosam, aut blanditiis.</p>
-                    </div>
-                  <br></br>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>  
-          <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-
-          {/* Pokéfight */}
-
-            <div className="m-w-40 m-6 cursor-pointer rounded-lg bg-gray-900 p-4 shadow-xl transition-transform hover:bg-sky-950/50 hover:scale-105">
-              <div className="p-2 ">
-                <div className="flex flex-col items-start">
-                  <div className="flex flex-row justify-center">
-                    <img class="h-32 md:h-36 lg:h-42" src={PokeFight}></img>
-                    <div className="flex flex-col px-4 items-start">
-                      <a class="text-color-white" href="https://pokebattler.netlify.app/">
-                        <h2 className="text-lg font-semibold">PokéFight (Netlify)</h2>
-                      </a>  
-                      <br></br>
-                      <a class="text-color-white" href="https://github.com/EinKinddesWindes/PokemonBattle">
-                        <h2 className="text-lg font-semibold">PokéFight (GitHub)</h2>
-                      </a>  
-                      <br></br>
-                      <p className="font-thin text-start text-balance text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente minus voluptas laboriosam, aut blanditiis.</p>
-                    </div>
-                  <br></br>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-
-          {/* Elder Gym Bro App */}
-          <a class="text-color-white" href="https://github.com/Sebastian-Weber/HackerNews">
-            <div className="m-w-40 m-6 cursor-pointer rounded-lg bg-gray-900 p-4 shadow-xl transition-transform hover:bg-sky-950/50 hover:scale-105">
-              <div className="p-2 ">
-                <div className="flex flex-col items-start">
-                  <div className="flex flex-row justify-center">
-                    <img class="h-32 md:h-36 lg:h-42" src={ElderGymBroAppHome}></img>
-                    <img class="h-32 md:h-36 lg:h-42" src={ElderGymBroAppDemo}></img>
-                    <div className="flex flex-col px-4 items-start">
-                      <h2 className="text-lg font-semibold">Elder Gym Bro App</h2>
-                      <br></br>
-                      <p className="font-thin text-start text-balance text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente minus voluptas laboriosam, aut blanditiis.</p>
-                    </div>
-                  <br></br>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>  
-          <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
         </div>
 
-        {/* -- 4. Other works section */}
-        <div className="p-4 pt-12">
-          <div className="flex flex-row justify-start">
-          <p className="bg-clip-text pb-1 pl-2 text-start font-medium leading-tight sm:text-lg md:text-xl">
-            _other works
-            </p>
-          </div>
-          <div className="flex flex-row justify-start">
-            <p className="py-10 font-light text-white/75  px-6 text-start leading-tight sm:text-lg md:text-base">
-             Concept & implementation. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi officiis obcaecati commodi nam rerum soluta, tenetur placeat repudiandae autem vero quisquam quaerat natus doloribus enim a, voluptatum quod sequi reiciendis repellendus labore. Error minus, enim aliquam aut accusantium beatae consequuntur aspernatur. Expedita dicta quis quisquam quae omnis nostrum debitis quia voluptatum nisi, nulla cum. Ipsa optio neque veniam consectetur, esse voluptatibus, sed fuga eveniet commodi molestias earum distinctio. Fugiat veniam quis aspernatur fugit. Ipsum voluptas ipsa laudantium recusandae omnis, expedita repudiandae quo modi veniam facilis harum aliquid iusto vitae earum, est deleniti quis maiores dolorum cumque illo totam et laborum.
-            </p>
-          </div>
-
-          {/* --6. Wrap flex box with 3 cards in a row*/}
-          <div className="flex flex-wrap justify-center">
-
-            <div className="flex flex-wrap justify-center">
-              <div className="m-2 w-80 cursor-pointer rounded-lg bg-gray-900 p-6 shadow-xl transition-transform hover:scale-105">
-                <div className="flex flex-col items-center">
-                  <h2 className="py-2 text-lg font-semibold">Entwurf: Besucherzentrum</h2>
-                </div>
-                <div className="flex min-w-36 flex-col items-center justify-center">
-                  <img src={Besucherzentrum}></img>
-                </div>
-                <div className="">
-                  <div className="flex flex-col items-start">
-                    <p className="py-1 font-thin text-start">Konzept für ein Besucherzetrum im Schlosspark Glienicke in Berlin</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center">
-              <div className="m-2 w-80 cursor-pointer rounded-lg bg-gray-900 p-6 shadow-xl transition-transform hover:scale-105">
-                <div className="flex flex-col items-center">
-                  <h2 className="py-2 text-lg font-semibold">Entwurf: Besucherzentrum</h2>
-                </div>
-                <div className="flex min-w-36 flex-col items-center justify-center">
-                  <img src={BesucherzentrumEG}></img>
-                </div>
-                <div className="">
-                  <div className="flex flex-col items-start">
-                    <p className="py-1 font-thin text-start">Konzept für ein Besucherzetrum im Schlosspark Glienicke in Berlin</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center">
-              <div className="m-2 w-80 cursor-pointer rounded-lg bg-gray-900 p-6 shadow-xl transition-transform hover:scale-105">
-                <div className="flex flex-col items-center">
-                  <h2 className="py-2 text-lg font-semibold">Entwurf: Besucherzentrum</h2>
-                </div>
-                <div className="flex min-w-36 flex-col items-center justify-center">
-                  <img src={BesucherzentrumOG}></img>
-                </div>
-                <div className="">
-                  <div className="flex flex-col items-start">
-                    <p className="py-1 font-thin text-start">Konzept für ein Besucherzetrum im Schlosspark Glienicke in Berlin</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center">
-              <div className="m-2 w-80 cursor-pointer rounded-lg bg-gray-900 p-6 shadow-xl transition-transform hover:scale-105">
-                <div className="flex flex-col items-center">
-                  <a class="text-color-white" href="https://www.youtube.com/watch?v=nvSFsqbfqgo">
-                    <h2 className="py-2 text-lg font-semibold">Animationsfilm: Fashion Plattform</h2>
-                  </a>  
-                </div>
-                <div className="flex min-w-36 flex-col items-center justify-center">
-                  <img src={FashionPlattform}></img>
-                </div>
-                <div className="">
-                  <div className="flex flex-col items-start">
-                    <p className="py-1 font-thin text-start">Animationsfilm zu einem Service-Design 
-                      -Konzept für eine nutzerzentrierte Fashion Plattform</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-        </div>
-
-        {/* --6. Wrap flex box for tiles*/}
-        <div className="flex flex-wrap justify-center bg-green-900">
-          {/* --7. Add content here-- */}
-
-          <div className="flex flex-wrap justify-center">
-            <div className="card glass m-2 w-80 cursor-pointer rounded-lg bg-gray-900 p-6 shadow-xl transition-transform lg:card-side hover:scale-110">
-              <div className="flex min-w-36 flex-col items-center justify-center">
-                <svg width="50" height="50" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M47.8125 4.78125H42.2344V3.1875C42.2344 1.42481 40.8088 0 39.0469 0H11.9531C10.1912 0 8.76562 1.42481 8.76562 3.1875V4.78125H3.1875C1.42561 4.78125 0 6.20606 0 7.96875V14.3438C0 19.184 3.92461 23.1094 8.76562 23.1094H8.84212C9.57047 30.8064 15.5207 36.971 23.1094 38.0595V44.625H17.5312C15.7694 44.625 14.3438 46.0498 14.3438 47.8125V50.2031C14.3438 50.643 14.7 51 15.1406 51H35.8594C36.3 51 36.6562 50.643 36.6562 50.2031V47.8125C36.6562 46.0498 35.2306 44.625 33.4688 44.625H27.8906V38.0595C35.4793 36.971 41.4255 30.808 42.1539 23.1094H42.2344C47.0754 23.1094 51 19.184 51 14.3438V7.96875C51 6.20606 49.5744 4.78125 47.8125 4.78125ZM8.76562 18.3281C6.56466 18.3281 4.78125 16.5439 4.78125 14.3438V9.5625H8.76562V18.3281ZM1.59375 14.3438V7.96875C1.59375 7.0882 2.30775 6.375 3.1875 6.375H8.76562V7.96875H3.98438C3.5437 7.96875 3.1875 8.32416 3.1875 8.76562V14.3438C3.1875 17.4237 5.68491 19.9219 8.76562 19.9219V21.5156C4.80436 21.5156 1.59375 18.3042 1.59375 14.3438ZM33.4688 46.2188C34.3485 46.2188 35.0625 46.932 35.0625 47.8125V49.4062H15.9375V47.8125C15.9375 46.932 16.6515 46.2188 17.5312 46.2188H33.4688ZM24.7031 44.625V38.2086C24.9693 38.2213 25.2307 38.25 25.5 38.25C25.7693 38.25 26.0307 38.2213 26.2969 38.2086V44.625H24.7031ZM40.6406 21.5156C40.6406 29.8764 33.8616 36.6562 25.5 36.6562C17.1384 36.6562 10.3594 29.8764 10.3594 21.5156V3.1875C10.3594 2.30695 11.0734 1.59375 11.9531 1.59375H39.0469C39.9266 1.59375 40.6406 2.30695 40.6406 3.1875V21.5156ZM42.2344 9.5625H46.2188V14.3438C46.2188 16.5439 44.4353 18.3281 42.2344 18.3281V9.5625ZM49.4062 14.3438C49.4062 18.3042 46.1956 21.5156 42.2344 21.5156V19.9219C45.3151 19.9219 47.8125 17.4237 47.8125 14.3438V8.76562C47.8125 8.32416 47.4563 7.96875 47.0156 7.96875H42.2344V6.375H47.8125C48.6922 6.375 49.4062 7.0882 49.4062 7.96875V14.3438Z"
-                    fill="#702848"
-                    stroke="#702848"
-                    strokeWidth="1.536"
-                  />
-                  <path
-                    d="M31.1957 15.4272L27.7619 14.9029L26.2192 11.6174C26.0877 11.3369 25.8064 11.1592 25.498 11.1592C25.1896 11.1592 24.9083 11.3377 24.7768 11.6174L23.2341 14.9029L19.8004 15.4272C19.5055 15.4735 19.2601 15.6783 19.1652 15.9619C19.0704 16.2456 19.1421 16.5572 19.3501 16.7716L21.8571 19.3431L21.2634 22.98C21.214 23.2812 21.3423 23.5841 21.5909 23.7602C21.8396 23.9363 22.1687 23.9538 22.4364 23.8072L25.4972 22.1154L28.558 23.8072C28.6799 23.8733 28.813 23.906 28.9453 23.906C29.1063 23.906 29.2672 23.8566 29.4043 23.7594C29.6529 23.5833 29.7812 23.2804 29.7318 22.9792L29.1381 19.3423L31.6451 16.7708C31.8539 16.5564 31.9256 16.2448 31.83 15.9611C31.7344 15.6775 31.4913 15.4735 31.1957 15.4272ZM27.7165 18.5175C27.5396 18.6992 27.4599 18.9526 27.5006 19.202L27.895 21.6158L25.8853 20.5041C25.765 20.438 25.6327 20.4045 25.4996 20.4045C25.3665 20.4045 25.2342 20.438 25.1139 20.5041L23.1042 21.6158L23.4987 19.202C23.5393 18.9526 23.4588 18.6984 23.2827 18.5175L21.5766 16.77L23.8979 16.4146C24.1601 16.3747 24.3856 16.2066 24.4987 15.9659L25.5004 13.8319L26.5021 15.9659C26.6152 16.2074 26.8407 16.3755 27.1029 16.4146L29.4242 16.77L27.7165 18.5175Z"
-                    fill="#702848"
-                    stroke="#702848"
-                    strokeWidth="1.536"
-                  />
-                </svg>
-              </div>
-              <div className="card-body">
-                <div className="flex flex-col items-center">
-                  <h2 className="card-title py-2 font-semibold">Dummy Card 1</h2>
-                  <p className="py-1 font-thin">3 cards in a flex-wrap box</p>
-                  {/* <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Listen</button>
-                  </div> */}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* my trophies tile */}
-          <div className="flex flex-wrap justify-center">
-            <div className="card glass m-2 w-80 cursor-pointer rounded-lg bg-gray-900 p-6 shadow-xl transition-transform lg:card-side hover:scale-110">
-              <div className="flex min-w-36 flex-col items-center justify-center">
-                <svg width="50" height="50" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M47.8125 4.78125H42.2344V3.1875C42.2344 1.42481 40.8088 0 39.0469 0H11.9531C10.1912 0 8.76562 1.42481 8.76562 3.1875V4.78125H3.1875C1.42561 4.78125 0 6.20606 0 7.96875V14.3438C0 19.184 3.92461 23.1094 8.76562 23.1094H8.84212C9.57047 30.8064 15.5207 36.971 23.1094 38.0595V44.625H17.5312C15.7694 44.625 14.3438 46.0498 14.3438 47.8125V50.2031C14.3438 50.643 14.7 51 15.1406 51H35.8594C36.3 51 36.6562 50.643 36.6562 50.2031V47.8125C36.6562 46.0498 35.2306 44.625 33.4688 44.625H27.8906V38.0595C35.4793 36.971 41.4255 30.808 42.1539 23.1094H42.2344C47.0754 23.1094 51 19.184 51 14.3438V7.96875C51 6.20606 49.5744 4.78125 47.8125 4.78125ZM8.76562 18.3281C6.56466 18.3281 4.78125 16.5439 4.78125 14.3438V9.5625H8.76562V18.3281ZM1.59375 14.3438V7.96875C1.59375 7.0882 2.30775 6.375 3.1875 6.375H8.76562V7.96875H3.98438C3.5437 7.96875 3.1875 8.32416 3.1875 8.76562V14.3438C3.1875 17.4237 5.68491 19.9219 8.76562 19.9219V21.5156C4.80436 21.5156 1.59375 18.3042 1.59375 14.3438ZM33.4688 46.2188C34.3485 46.2188 35.0625 46.932 35.0625 47.8125V49.4062H15.9375V47.8125C15.9375 46.932 16.6515 46.2188 17.5312 46.2188H33.4688ZM24.7031 44.625V38.2086C24.9693 38.2213 25.2307 38.25 25.5 38.25C25.7693 38.25 26.0307 38.2213 26.2969 38.2086V44.625H24.7031ZM40.6406 21.5156C40.6406 29.8764 33.8616 36.6562 25.5 36.6562C17.1384 36.6562 10.3594 29.8764 10.3594 21.5156V3.1875C10.3594 2.30695 11.0734 1.59375 11.9531 1.59375H39.0469C39.9266 1.59375 40.6406 2.30695 40.6406 3.1875V21.5156ZM42.2344 9.5625H46.2188V14.3438C46.2188 16.5439 44.4353 18.3281 42.2344 18.3281V9.5625ZM49.4062 14.3438C49.4062 18.3042 46.1956 21.5156 42.2344 21.5156V19.9219C45.3151 19.9219 47.8125 17.4237 47.8125 14.3438V8.76562C47.8125 8.32416 47.4563 7.96875 47.0156 7.96875H42.2344V6.375H47.8125C48.6922 6.375 49.4062 7.0882 49.4062 7.96875V14.3438Z"
-                    fill="#702848"
-                    stroke="#702848"
-                    strokeWidth="1.536"
-                  />
-                  <path
-                    d="M31.1957 15.4272L27.7619 14.9029L26.2192 11.6174C26.0877 11.3369 25.8064 11.1592 25.498 11.1592C25.1896 11.1592 24.9083 11.3377 24.7768 11.6174L23.2341 14.9029L19.8004 15.4272C19.5055 15.4735 19.2601 15.6783 19.1652 15.9619C19.0704 16.2456 19.1421 16.5572 19.3501 16.7716L21.8571 19.3431L21.2634 22.98C21.214 23.2812 21.3423 23.5841 21.5909 23.7602C21.8396 23.9363 22.1687 23.9538 22.4364 23.8072L25.4972 22.1154L28.558 23.8072C28.6799 23.8733 28.813 23.906 28.9453 23.906C29.1063 23.906 29.2672 23.8566 29.4043 23.7594C29.6529 23.5833 29.7812 23.2804 29.7318 22.9792L29.1381 19.3423L31.6451 16.7708C31.8539 16.5564 31.9256 16.2448 31.83 15.9611C31.7344 15.6775 31.4913 15.4735 31.1957 15.4272ZM27.7165 18.5175C27.5396 18.6992 27.4599 18.9526 27.5006 19.202L27.895 21.6158L25.8853 20.5041C25.765 20.438 25.6327 20.4045 25.4996 20.4045C25.3665 20.4045 25.2342 20.438 25.1139 20.5041L23.1042 21.6158L23.4987 19.202C23.5393 18.9526 23.4588 18.6984 23.2827 18.5175L21.5766 16.77L23.8979 16.4146C24.1601 16.3747 24.3856 16.2066 24.4987 15.9659L25.5004 13.8319L26.5021 15.9659C26.6152 16.2074 26.8407 16.3755 27.1029 16.4146L29.4242 16.77L27.7165 18.5175Z"
-                    fill="#702848"
-                    stroke="#702848"
-                    strokeWidth="1.536"
-                  />
-                </svg>
-              </div>
-              <div className="card-body">
-                <div className="flex flex-col items-center">
-                  <h2 className="card-title py-2 font-semibold">Dummy Card 2</h2>
-                  <p className="py-1 font-thin">3 cards in a flex-wrap box</p>
-                  {/* <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Listen</button>
-                  </div> */}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* my trophies tile */}
-          <div className="flex flex-wrap justify-center">
-            <div className="card glass m-2 w-80 cursor-pointer rounded-lg bg-gray-900 p-6 shadow-xl transition-transform lg:card-side hover:scale-110">
-              <div className="flex min-w-36 flex-col items-center justify-center">
-                <svg width="50" height="50" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M47.8125 4.78125H42.2344V3.1875C42.2344 1.42481 40.8088 0 39.0469 0H11.9531C10.1912 0 8.76562 1.42481 8.76562 3.1875V4.78125H3.1875C1.42561 4.78125 0 6.20606 0 7.96875V14.3438C0 19.184 3.92461 23.1094 8.76562 23.1094H8.84212C9.57047 30.8064 15.5207 36.971 23.1094 38.0595V44.625H17.5312C15.7694 44.625 14.3438 46.0498 14.3438 47.8125V50.2031C14.3438 50.643 14.7 51 15.1406 51H35.8594C36.3 51 36.6562 50.643 36.6562 50.2031V47.8125C36.6562 46.0498 35.2306 44.625 33.4688 44.625H27.8906V38.0595C35.4793 36.971 41.4255 30.808 42.1539 23.1094H42.2344C47.0754 23.1094 51 19.184 51 14.3438V7.96875C51 6.20606 49.5744 4.78125 47.8125 4.78125ZM8.76562 18.3281C6.56466 18.3281 4.78125 16.5439 4.78125 14.3438V9.5625H8.76562V18.3281ZM1.59375 14.3438V7.96875C1.59375 7.0882 2.30775 6.375 3.1875 6.375H8.76562V7.96875H3.98438C3.5437 7.96875 3.1875 8.32416 3.1875 8.76562V14.3438C3.1875 17.4237 5.68491 19.9219 8.76562 19.9219V21.5156C4.80436 21.5156 1.59375 18.3042 1.59375 14.3438ZM33.4688 46.2188C34.3485 46.2188 35.0625 46.932 35.0625 47.8125V49.4062H15.9375V47.8125C15.9375 46.932 16.6515 46.2188 17.5312 46.2188H33.4688ZM24.7031 44.625V38.2086C24.9693 38.2213 25.2307 38.25 25.5 38.25C25.7693 38.25 26.0307 38.2213 26.2969 38.2086V44.625H24.7031ZM40.6406 21.5156C40.6406 29.8764 33.8616 36.6562 25.5 36.6562C17.1384 36.6562 10.3594 29.8764 10.3594 21.5156V3.1875C10.3594 2.30695 11.0734 1.59375 11.9531 1.59375H39.0469C39.9266 1.59375 40.6406 2.30695 40.6406 3.1875V21.5156ZM42.2344 9.5625H46.2188V14.3438C46.2188 16.5439 44.4353 18.3281 42.2344 18.3281V9.5625ZM49.4062 14.3438C49.4062 18.3042 46.1956 21.5156 42.2344 21.5156V19.9219C45.3151 19.9219 47.8125 17.4237 47.8125 14.3438V8.76562C47.8125 8.32416 47.4563 7.96875 47.0156 7.96875H42.2344V6.375H47.8125C48.6922 6.375 49.4062 7.0882 49.4062 7.96875V14.3438Z"
-                    fill="#702848"
-                    stroke="#702848"
-                    strokeWidth="1.536"
-                  />
-                  <path
-                    d="M31.1957 15.4272L27.7619 14.9029L26.2192 11.6174C26.0877 11.3369 25.8064 11.1592 25.498 11.1592C25.1896 11.1592 24.9083 11.3377 24.7768 11.6174L23.2341 14.9029L19.8004 15.4272C19.5055 15.4735 19.2601 15.6783 19.1652 15.9619C19.0704 16.2456 19.1421 16.5572 19.3501 16.7716L21.8571 19.3431L21.2634 22.98C21.214 23.2812 21.3423 23.5841 21.5909 23.7602C21.8396 23.9363 22.1687 23.9538 22.4364 23.8072L25.4972 22.1154L28.558 23.8072C28.6799 23.8733 28.813 23.906 28.9453 23.906C29.1063 23.906 29.2672 23.8566 29.4043 23.7594C29.6529 23.5833 29.7812 23.2804 29.7318 22.9792L29.1381 19.3423L31.6451 16.7708C31.8539 16.5564 31.9256 16.2448 31.83 15.9611C31.7344 15.6775 31.4913 15.4735 31.1957 15.4272ZM27.7165 18.5175C27.5396 18.6992 27.4599 18.9526 27.5006 19.202L27.895 21.6158L25.8853 20.5041C25.765 20.438 25.6327 20.4045 25.4996 20.4045C25.3665 20.4045 25.2342 20.438 25.1139 20.5041L23.1042 21.6158L23.4987 19.202C23.5393 18.9526 23.4588 18.6984 23.2827 18.5175L21.5766 16.77L23.8979 16.4146C24.1601 16.3747 24.3856 16.2066 24.4987 15.9659L25.5004 13.8319L26.5021 15.9659C26.6152 16.2074 26.8407 16.3755 27.1029 16.4146L29.4242 16.77L27.7165 18.5175Z"
-                    fill="#702848"
-                    stroke="#702848"
-                    strokeWidth="1.536"
-                  />
-                </svg>
-              </div>
-              <div className="card-body">
-                <div className="flex flex-col items-center">
-                  <h2 className="card-title py-2 font-semibold">Dummy Card 3</h2>
-                  <p className="py-1 font-thin">3 cards in a flex-wrap box</p>
-                  {/* <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Listen</button>
-                  </div> */}
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        {/* -- 5. grid-flow-row auto-rows-max -- */}
-        <div className="grid grid-flow-row auto-rows-max grid-cols-2 bg-blue-900">
-          {/* Dummy Card 1 */}
-          <div className="m-w-40 card glass m-6 cursor-pointer rounded-lg bg-gray-900 p-4 shadow-xl transition-transform lg:card-side hover:scale-105">
-            <div className="flex min-w-36 flex-col items-center justify-center">
-              <svg width="50" height="50" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M47.8125 4.78125H42.2344V3.1875C42.2344 1.42481 40.8088 0 39.0469 0H11.9531C10.1912 0 8.76562 1.42481 8.76562 3.1875V4.78125H3.1875C1.42561 4.78125 0 6.20606 0 7.96875V14.3438C0 19.184 3.92461 23.1094 8.76562 23.1094H8.84212C9.57047 30.8064 15.5207 36.971 23.1094 38.0595V44.625H17.5312C15.7694 44.625 14.3438 46.0498 14.3438 47.8125V50.2031C14.3438 50.643 14.7 51 15.1406 51H35.8594C36.3 51 36.6562 50.643 36.6562 50.2031V47.8125C36.6562 46.0498 35.2306 44.625 33.4688 44.625H27.8906V38.0595C35.4793 36.971 41.4255 30.808 42.1539 23.1094H42.2344C47.0754 23.1094 51 19.184 51 14.3438V7.96875C51 6.20606 49.5744 4.78125 47.8125 4.78125ZM8.76562 18.3281C6.56466 18.3281 4.78125 16.5439 4.78125 14.3438V9.5625H8.76562V18.3281ZM1.59375 14.3438V7.96875C1.59375 7.0882 2.30775 6.375 3.1875 6.375H8.76562V7.96875H3.98438C3.5437 7.96875 3.1875 8.32416 3.1875 8.76562V14.3438C3.1875 17.4237 5.68491 19.9219 8.76562 19.9219V21.5156C4.80436 21.5156 1.59375 18.3042 1.59375 14.3438ZM33.4688 46.2188C34.3485 46.2188 35.0625 46.932 35.0625 47.8125V49.4062H15.9375V47.8125C15.9375 46.932 16.6515 46.2188 17.5312 46.2188H33.4688ZM24.7031 44.625V38.2086C24.9693 38.2213 25.2307 38.25 25.5 38.25C25.7693 38.25 26.0307 38.2213 26.2969 38.2086V44.625H24.7031ZM40.6406 21.5156C40.6406 29.8764 33.8616 36.6562 25.5 36.6562C17.1384 36.6562 10.3594 29.8764 10.3594 21.5156V3.1875C10.3594 2.30695 11.0734 1.59375 11.9531 1.59375H39.0469C39.9266 1.59375 40.6406 2.30695 40.6406 3.1875V21.5156ZM42.2344 9.5625H46.2188V14.3438C46.2188 16.5439 44.4353 18.3281 42.2344 18.3281V9.5625ZM49.4062 14.3438C49.4062 18.3042 46.1956 21.5156 42.2344 21.5156V19.9219C45.3151 19.9219 47.8125 17.4237 47.8125 14.3438V8.76562C47.8125 8.32416 47.4563 7.96875 47.0156 7.96875H42.2344V6.375H47.8125C48.6922 6.375 49.4062 7.0882 49.4062 7.96875V14.3438Z"
-                  fill="#702848"
-                  stroke="#702848"
-                  strokeWidth="1.536"
-                />
-                <path
-                  d="M31.1957 15.4272L27.7619 14.9029L26.2192 11.6174C26.0877 11.3369 25.8064 11.1592 25.498 11.1592C25.1896 11.1592 24.9083 11.3377 24.7768 11.6174L23.2341 14.9029L19.8004 15.4272C19.5055 15.4735 19.2601 15.6783 19.1652 15.9619C19.0704 16.2456 19.1421 16.5572 19.3501 16.7716L21.8571 19.3431L21.2634 22.98C21.214 23.2812 21.3423 23.5841 21.5909 23.7602C21.8396 23.9363 22.1687 23.9538 22.4364 23.8072L25.4972 22.1154L28.558 23.8072C28.6799 23.8733 28.813 23.906 28.9453 23.906C29.1063 23.906 29.2672 23.8566 29.4043 23.7594C29.6529 23.5833 29.7812 23.2804 29.7318 22.9792L29.1381 19.3423L31.6451 16.7708C31.8539 16.5564 31.9256 16.2448 31.83 15.9611C31.7344 15.6775 31.4913 15.4735 31.1957 15.4272ZM27.7165 18.5175C27.5396 18.6992 27.4599 18.9526 27.5006 19.202L27.895 21.6158L25.8853 20.5041C25.765 20.438 25.6327 20.4045 25.4996 20.4045C25.3665 20.4045 25.2342 20.438 25.1139 20.5041L23.1042 21.6158L23.4987 19.202C23.5393 18.9526 23.4588 18.6984 23.2827 18.5175L21.5766 16.77L23.8979 16.4146C24.1601 16.3747 24.3856 16.2066 24.4987 15.9659L25.5004 13.8319L26.5021 15.9659C26.6152 16.2074 26.8407 16.3755 27.1029 16.4146L29.4242 16.77L27.7165 18.5175Z"
-                  fill="#702848"
-                  stroke="#702848"
-                  strokeWidth="1.536"
-                />
-              </svg>
-            </div>
-            <div className="card-body">
-              <div className="flex flex-col items-center">
-                <h2 className="card-title py-2 font-semibold text-white">Dummy Card 2</h2>
-                <p className="py-1 font-thin text-white">3 cards in a 2 cols grid</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Dummy Card 2 */}
-          <div className="m-w-40 card glass m-6 cursor-pointer rounded-lg bg-gray-900 p-4 shadow-xl transition-transform lg:card-side hover:scale-105">
-            <div className="flex min-w-36 flex-col items-center justify-center">
-              <svg width="50" height="50" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M47.8125 4.78125H42.2344V3.1875C42.2344 1.42481 40.8088 0 39.0469 0H11.9531C10.1912 0 8.76562 1.42481 8.76562 3.1875V4.78125H3.1875C1.42561 4.78125 0 6.20606 0 7.96875V14.3438C0 19.184 3.92461 23.1094 8.76562 23.1094H8.84212C9.57047 30.8064 15.5207 36.971 23.1094 38.0595V44.625H17.5312C15.7694 44.625 14.3438 46.0498 14.3438 47.8125V50.2031C14.3438 50.643 14.7 51 15.1406 51H35.8594C36.3 51 36.6562 50.643 36.6562 50.2031V47.8125C36.6562 46.0498 35.2306 44.625 33.4688 44.625H27.8906V38.0595C35.4793 36.971 41.4255 30.808 42.1539 23.1094H42.2344C47.0754 23.1094 51 19.184 51 14.3438V7.96875C51 6.20606 49.5744 4.78125 47.8125 4.78125ZM8.76562 18.3281C6.56466 18.3281 4.78125 16.5439 4.78125 14.3438V9.5625H8.76562V18.3281ZM1.59375 14.3438V7.96875C1.59375 7.0882 2.30775 6.375 3.1875 6.375H8.76562V7.96875H3.98438C3.5437 7.96875 3.1875 8.32416 3.1875 8.76562V14.3438C3.1875 17.4237 5.68491 19.9219 8.76562 19.9219V21.5156C4.80436 21.5156 1.59375 18.3042 1.59375 14.3438ZM33.4688 46.2188C34.3485 46.2188 35.0625 46.932 35.0625 47.8125V49.4062H15.9375V47.8125C15.9375 46.932 16.6515 46.2188 17.5312 46.2188H33.4688ZM24.7031 44.625V38.2086C24.9693 38.2213 25.2307 38.25 25.5 38.25C25.7693 38.25 26.0307 38.2213 26.2969 38.2086V44.625H24.7031ZM40.6406 21.5156C40.6406 29.8764 33.8616 36.6562 25.5 36.6562C17.1384 36.6562 10.3594 29.8764 10.3594 21.5156V3.1875C10.3594 2.30695 11.0734 1.59375 11.9531 1.59375H39.0469C39.9266 1.59375 40.6406 2.30695 40.6406 3.1875V21.5156ZM42.2344 9.5625H46.2188V14.3438C46.2188 16.5439 44.4353 18.3281 42.2344 18.3281V9.5625ZM49.4062 14.3438C49.4062 18.3042 46.1956 21.5156 42.2344 21.5156V19.9219C45.3151 19.9219 47.8125 17.4237 47.8125 14.3438V8.76562C47.8125 8.32416 47.4563 7.96875 47.0156 7.96875H42.2344V6.375H47.8125C48.6922 6.375 49.4062 7.0882 49.4062 7.96875V14.3438Z"
-                  fill="#702848"
-                  stroke="#702848"
-                  strokeWidth="1.536"
-                />
-                <path
-                  d="M31.1957 15.4272L27.7619 14.9029L26.2192 11.6174C26.0877 11.3369 25.8064 11.1592 25.498 11.1592C25.1896 11.1592 24.9083 11.3377 24.7768 11.6174L23.2341 14.9029L19.8004 15.4272C19.5055 15.4735 19.2601 15.6783 19.1652 15.9619C19.0704 16.2456 19.1421 16.5572 19.3501 16.7716L21.8571 19.3431L21.2634 22.98C21.214 23.2812 21.3423 23.5841 21.5909 23.7602C21.8396 23.9363 22.1687 23.9538 22.4364 23.8072L25.4972 22.1154L28.558 23.8072C28.6799 23.8733 28.813 23.906 28.9453 23.906C29.1063 23.906 29.2672 23.8566 29.4043 23.7594C29.6529 23.5833 29.7812 23.2804 29.7318 22.9792L29.1381 19.3423L31.6451 16.7708C31.8539 16.5564 31.9256 16.2448 31.83 15.9611C31.7344 15.6775 31.4913 15.4735 31.1957 15.4272ZM27.7165 18.5175C27.5396 18.6992 27.4599 18.9526 27.5006 19.202L27.895 21.6158L25.8853 20.5041C25.765 20.438 25.6327 20.4045 25.4996 20.4045C25.3665 20.4045 25.2342 20.438 25.1139 20.5041L23.1042 21.6158L23.4987 19.202C23.5393 18.9526 23.4588 18.6984 23.2827 18.5175L21.5766 16.77L23.8979 16.4146C24.1601 16.3747 24.3856 16.2066 24.4987 15.9659L25.5004 13.8319L26.5021 15.9659C26.6152 16.2074 26.8407 16.3755 27.1029 16.4146L29.4242 16.77L27.7165 18.5175Z"
-                  fill="#702848"
-                  stroke="#702848"
-                  strokeWidth="1.536"
-                />
-              </svg>
-            </div>
-            <div className="card-body">
-              <div className="flex flex-col items-center">
-                <h2 className="card-titlefont-semibold py-2 text-white">Dummy Card 2</h2>
-                <p className="py-1 font-thin text-white">3 cards in a 2 cols grid</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Dummy Card 3 */}
-          <div className="m-w-40 card glass m-6 cursor-pointer rounded-lg bg-gray-900 p-4 shadow-xl transition-transform lg:card-side hover:scale-105">
-            <div className="flex min-w-36 flex-col items-center justify-center">
-              <svg width="50" height="50" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M47.8125 4.78125H42.2344V3.1875C42.2344 1.42481 40.8088 0 39.0469 0H11.9531C10.1912 0 8.76562 1.42481 8.76562 3.1875V4.78125H3.1875C1.42561 4.78125 0 6.20606 0 7.96875V14.3438C0 19.184 3.92461 23.1094 8.76562 23.1094H8.84212C9.57047 30.8064 15.5207 36.971 23.1094 38.0595V44.625H17.5312C15.7694 44.625 14.3438 46.0498 14.3438 47.8125V50.2031C14.3438 50.643 14.7 51 15.1406 51H35.8594C36.3 51 36.6562 50.643 36.6562 50.2031V47.8125C36.6562 46.0498 35.2306 44.625 33.4688 44.625H27.8906V38.0595C35.4793 36.971 41.4255 30.808 42.1539 23.1094H42.2344C47.0754 23.1094 51 19.184 51 14.3438V7.96875C51 6.20606 49.5744 4.78125 47.8125 4.78125ZM8.76562 18.3281C6.56466 18.3281 4.78125 16.5439 4.78125 14.3438V9.5625H8.76562V18.3281ZM1.59375 14.3438V7.96875C1.59375 7.0882 2.30775 6.375 3.1875 6.375H8.76562V7.96875H3.98438C3.5437 7.96875 3.1875 8.32416 3.1875 8.76562V14.3438C3.1875 17.4237 5.68491 19.9219 8.76562 19.9219V21.5156C4.80436 21.5156 1.59375 18.3042 1.59375 14.3438ZM33.4688 46.2188C34.3485 46.2188 35.0625 46.932 35.0625 47.8125V49.4062H15.9375V47.8125C15.9375 46.932 16.6515 46.2188 17.5312 46.2188H33.4688ZM24.7031 44.625V38.2086C24.9693 38.2213 25.2307 38.25 25.5 38.25C25.7693 38.25 26.0307 38.2213 26.2969 38.2086V44.625H24.7031ZM40.6406 21.5156C40.6406 29.8764 33.8616 36.6562 25.5 36.6562C17.1384 36.6562 10.3594 29.8764 10.3594 21.5156V3.1875C10.3594 2.30695 11.0734 1.59375 11.9531 1.59375H39.0469C39.9266 1.59375 40.6406 2.30695 40.6406 3.1875V21.5156ZM42.2344 9.5625H46.2188V14.3438C46.2188 16.5439 44.4353 18.3281 42.2344 18.3281V9.5625ZM49.4062 14.3438C49.4062 18.3042 46.1956 21.5156 42.2344 21.5156V19.9219C45.3151 19.9219 47.8125 17.4237 47.8125 14.3438V8.76562C47.8125 8.32416 47.4563 7.96875 47.0156 7.96875H42.2344V6.375H47.8125C48.6922 6.375 49.4062 7.0882 49.4062 7.96875V14.3438Z"
-                  fill="#702848"
-                  stroke="#702848"
-                  strokeWidth="1.536"
-                />
-                <path
-                  d="M31.1957 15.4272L27.7619 14.9029L26.2192 11.6174C26.0877 11.3369 25.8064 11.1592 25.498 11.1592C25.1896 11.1592 24.9083 11.3377 24.7768 11.6174L23.2341 14.9029L19.8004 15.4272C19.5055 15.4735 19.2601 15.6783 19.1652 15.9619C19.0704 16.2456 19.1421 16.5572 19.3501 16.7716L21.8571 19.3431L21.2634 22.98C21.214 23.2812 21.3423 23.5841 21.5909 23.7602C21.8396 23.9363 22.1687 23.9538 22.4364 23.8072L25.4972 22.1154L28.558 23.8072C28.6799 23.8733 28.813 23.906 28.9453 23.906C29.1063 23.906 29.2672 23.8566 29.4043 23.7594C29.6529 23.5833 29.7812 23.2804 29.7318 22.9792L29.1381 19.3423L31.6451 16.7708C31.8539 16.5564 31.9256 16.2448 31.83 15.9611C31.7344 15.6775 31.4913 15.4735 31.1957 15.4272ZM27.7165 18.5175C27.5396 18.6992 27.4599 18.9526 27.5006 19.202L27.895 21.6158L25.8853 20.5041C25.765 20.438 25.6327 20.4045 25.4996 20.4045C25.3665 20.4045 25.2342 20.438 25.1139 20.5041L23.1042 21.6158L23.4987 19.202C23.5393 18.9526 23.4588 18.6984 23.2827 18.5175L21.5766 16.77L23.8979 16.4146C24.1601 16.3747 24.3856 16.2066 24.4987 15.9659L25.5004 13.8319L26.5021 15.9659C26.6152 16.2074 26.8407 16.3755 27.1029 16.4146L29.4242 16.77L27.7165 18.5175Z"
-                  fill="#702848"
-                  stroke="#702848"
-                  strokeWidth="1.536"
-                />
-              </svg>
-            </div>
-            <div className="card-body">
-              <div className="flex flex-col items-center">
-                <h2 className="card-title py-2 font-semibold text-white">Dummy Card 2</h2>
-                <p className="py-1 font-thin text-white">3 cards in a 2 cols grid</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        {/* -- 6. grid-flow-row auto-rows-max -- */}
-        <div className="grid grid-flow-row auto-rows-max grid-cols-1 bg-purple-900">
-          {/* Dummy Card 3 */}
-          <div className="m-w-40 card glass m-6 cursor-pointer rounded-lg bg-gray-900 p-4 shadow-xl transition-transform lg:card-side hover:scale-105">
-            <div className="flex min-w-36 flex-col items-center justify-center">
-              <svg width="50" height="50" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M47.8125 4.78125H42.2344V3.1875C42.2344 1.42481 40.8088 0 39.0469 0H11.9531C10.1912 0 8.76562 1.42481 8.76562 3.1875V4.78125H3.1875C1.42561 4.78125 0 6.20606 0 7.96875V14.3438C0 19.184 3.92461 23.1094 8.76562 23.1094H8.84212C9.57047 30.8064 15.5207 36.971 23.1094 38.0595V44.625H17.5312C15.7694 44.625 14.3438 46.0498 14.3438 47.8125V50.2031C14.3438 50.643 14.7 51 15.1406 51H35.8594C36.3 51 36.6562 50.643 36.6562 50.2031V47.8125C36.6562 46.0498 35.2306 44.625 33.4688 44.625H27.8906V38.0595C35.4793 36.971 41.4255 30.808 42.1539 23.1094H42.2344C47.0754 23.1094 51 19.184 51 14.3438V7.96875C51 6.20606 49.5744 4.78125 47.8125 4.78125ZM8.76562 18.3281C6.56466 18.3281 4.78125 16.5439 4.78125 14.3438V9.5625H8.76562V18.3281ZM1.59375 14.3438V7.96875C1.59375 7.0882 2.30775 6.375 3.1875 6.375H8.76562V7.96875H3.98438C3.5437 7.96875 3.1875 8.32416 3.1875 8.76562V14.3438C3.1875 17.4237 5.68491 19.9219 8.76562 19.9219V21.5156C4.80436 21.5156 1.59375 18.3042 1.59375 14.3438ZM33.4688 46.2188C34.3485 46.2188 35.0625 46.932 35.0625 47.8125V49.4062H15.9375V47.8125C15.9375 46.932 16.6515 46.2188 17.5312 46.2188H33.4688ZM24.7031 44.625V38.2086C24.9693 38.2213 25.2307 38.25 25.5 38.25C25.7693 38.25 26.0307 38.2213 26.2969 38.2086V44.625H24.7031ZM40.6406 21.5156C40.6406 29.8764 33.8616 36.6562 25.5 36.6562C17.1384 36.6562 10.3594 29.8764 10.3594 21.5156V3.1875C10.3594 2.30695 11.0734 1.59375 11.9531 1.59375H39.0469C39.9266 1.59375 40.6406 2.30695 40.6406 3.1875V21.5156ZM42.2344 9.5625H46.2188V14.3438C46.2188 16.5439 44.4353 18.3281 42.2344 18.3281V9.5625ZM49.4062 14.3438C49.4062 18.3042 46.1956 21.5156 42.2344 21.5156V19.9219C45.3151 19.9219 47.8125 17.4237 47.8125 14.3438V8.76562C47.8125 8.32416 47.4563 7.96875 47.0156 7.96875H42.2344V6.375H47.8125C48.6922 6.375 49.4062 7.0882 49.4062 7.96875V14.3438Z"
-                  fill="#702848"
-                  stroke="#702848"
-                  strokeWidth="1.536"
-                />
-                <path
-                  d="M31.1957 15.4272L27.7619 14.9029L26.2192 11.6174C26.0877 11.3369 25.8064 11.1592 25.498 11.1592C25.1896 11.1592 24.9083 11.3377 24.7768 11.6174L23.2341 14.9029L19.8004 15.4272C19.5055 15.4735 19.2601 15.6783 19.1652 15.9619C19.0704 16.2456 19.1421 16.5572 19.3501 16.7716L21.8571 19.3431L21.2634 22.98C21.214 23.2812 21.3423 23.5841 21.5909 23.7602C21.8396 23.9363 22.1687 23.9538 22.4364 23.8072L25.4972 22.1154L28.558 23.8072C28.6799 23.8733 28.813 23.906 28.9453 23.906C29.1063 23.906 29.2672 23.8566 29.4043 23.7594C29.6529 23.5833 29.7812 23.2804 29.7318 22.9792L29.1381 19.3423L31.6451 16.7708C31.8539 16.5564 31.9256 16.2448 31.83 15.9611C31.7344 15.6775 31.4913 15.4735 31.1957 15.4272ZM27.7165 18.5175C27.5396 18.6992 27.4599 18.9526 27.5006 19.202L27.895 21.6158L25.8853 20.5041C25.765 20.438 25.6327 20.4045 25.4996 20.4045C25.3665 20.4045 25.2342 20.438 25.1139 20.5041L23.1042 21.6158L23.4987 19.202C23.5393 18.9526 23.4588 18.6984 23.2827 18.5175L21.5766 16.77L23.8979 16.4146C24.1601 16.3747 24.3856 16.2066 24.4987 15.9659L25.5004 13.8319L26.5021 15.9659C26.6152 16.2074 26.8407 16.3755 27.1029 16.4146L29.4242 16.77L27.7165 18.5175Z"
-                  fill="#702848"
-                  stroke="#702848"
-                  strokeWidth="1.536"
-                />
-              </svg>
-            </div>
-            <div className="card-body">
-              <div className="flex flex-col items-center">
-                <h2 className="card-title py-2 font-semibold text-white">Dummy Card 1</h2>
-                <p className="py-1 font-thin text-white">3 cards in a 1 cols grid</p>
-              </div>
-            </div>
-          </div>
-
-           {/* Dummy Card 2 */}
-           <div className="m-w-40 card glass m-6 cursor-pointer rounded-lg bg-gray-900 p-4 shadow-xl transition-transform lg:card-side hover:scale-105">
-            <div className="flex min-w-36 flex-col items-center justify-center">
-              <svg width="50" height="50" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M47.8125 4.78125H42.2344V3.1875C42.2344 1.42481 40.8088 0 39.0469 0H11.9531C10.1912 0 8.76562 1.42481 8.76562 3.1875V4.78125H3.1875C1.42561 4.78125 0 6.20606 0 7.96875V14.3438C0 19.184 3.92461 23.1094 8.76562 23.1094H8.84212C9.57047 30.8064 15.5207 36.971 23.1094 38.0595V44.625H17.5312C15.7694 44.625 14.3438 46.0498 14.3438 47.8125V50.2031C14.3438 50.643 14.7 51 15.1406 51H35.8594C36.3 51 36.6562 50.643 36.6562 50.2031V47.8125C36.6562 46.0498 35.2306 44.625 33.4688 44.625H27.8906V38.0595C35.4793 36.971 41.4255 30.808 42.1539 23.1094H42.2344C47.0754 23.1094 51 19.184 51 14.3438V7.96875C51 6.20606 49.5744 4.78125 47.8125 4.78125ZM8.76562 18.3281C6.56466 18.3281 4.78125 16.5439 4.78125 14.3438V9.5625H8.76562V18.3281ZM1.59375 14.3438V7.96875C1.59375 7.0882 2.30775 6.375 3.1875 6.375H8.76562V7.96875H3.98438C3.5437 7.96875 3.1875 8.32416 3.1875 8.76562V14.3438C3.1875 17.4237 5.68491 19.9219 8.76562 19.9219V21.5156C4.80436 21.5156 1.59375 18.3042 1.59375 14.3438ZM33.4688 46.2188C34.3485 46.2188 35.0625 46.932 35.0625 47.8125V49.4062H15.9375V47.8125C15.9375 46.932 16.6515 46.2188 17.5312 46.2188H33.4688ZM24.7031 44.625V38.2086C24.9693 38.2213 25.2307 38.25 25.5 38.25C25.7693 38.25 26.0307 38.2213 26.2969 38.2086V44.625H24.7031ZM40.6406 21.5156C40.6406 29.8764 33.8616 36.6562 25.5 36.6562C17.1384 36.6562 10.3594 29.8764 10.3594 21.5156V3.1875C10.3594 2.30695 11.0734 1.59375 11.9531 1.59375H39.0469C39.9266 1.59375 40.6406 2.30695 40.6406 3.1875V21.5156ZM42.2344 9.5625H46.2188V14.3438C46.2188 16.5439 44.4353 18.3281 42.2344 18.3281V9.5625ZM49.4062 14.3438C49.4062 18.3042 46.1956 21.5156 42.2344 21.5156V19.9219C45.3151 19.9219 47.8125 17.4237 47.8125 14.3438V8.76562C47.8125 8.32416 47.4563 7.96875 47.0156 7.96875H42.2344V6.375H47.8125C48.6922 6.375 49.4062 7.0882 49.4062 7.96875V14.3438Z"
-                  fill="#702848"
-                  stroke="#702848"
-                  strokeWidth="1.536"
-                />
-                <path
-                  d="M31.1957 15.4272L27.7619 14.9029L26.2192 11.6174C26.0877 11.3369 25.8064 11.1592 25.498 11.1592C25.1896 11.1592 24.9083 11.3377 24.7768 11.6174L23.2341 14.9029L19.8004 15.4272C19.5055 15.4735 19.2601 15.6783 19.1652 15.9619C19.0704 16.2456 19.1421 16.5572 19.3501 16.7716L21.8571 19.3431L21.2634 22.98C21.214 23.2812 21.3423 23.5841 21.5909 23.7602C21.8396 23.9363 22.1687 23.9538 22.4364 23.8072L25.4972 22.1154L28.558 23.8072C28.6799 23.8733 28.813 23.906 28.9453 23.906C29.1063 23.906 29.2672 23.8566 29.4043 23.7594C29.6529 23.5833 29.7812 23.2804 29.7318 22.9792L29.1381 19.3423L31.6451 16.7708C31.8539 16.5564 31.9256 16.2448 31.83 15.9611C31.7344 15.6775 31.4913 15.4735 31.1957 15.4272ZM27.7165 18.5175C27.5396 18.6992 27.4599 18.9526 27.5006 19.202L27.895 21.6158L25.8853 20.5041C25.765 20.438 25.6327 20.4045 25.4996 20.4045C25.3665 20.4045 25.2342 20.438 25.1139 20.5041L23.1042 21.6158L23.4987 19.202C23.5393 18.9526 23.4588 18.6984 23.2827 18.5175L21.5766 16.77L23.8979 16.4146C24.1601 16.3747 24.3856 16.2066 24.4987 15.9659L25.5004 13.8319L26.5021 15.9659C26.6152 16.2074 26.8407 16.3755 27.1029 16.4146L29.4242 16.77L27.7165 18.5175Z"
-                  fill="#702848"
-                  stroke="#702848"
-                  strokeWidth="1.536"
-                />
-              </svg>
-            </div>
-            <div className="card-body">
-              <div className="flex flex-col items-center">
-                <h2 className="card-title py-2 font-semibold text-white">Dummy Card 2</h2>
-                <p className="py-1 font-thin text-white">3 cards in a 1 cols grid</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Dummy Card 3 */}
-          <div className="m-w-40 card glass m-6 cursor-pointer rounded-lg bg-gray-900 p-4 shadow-xl transition-transform lg:card-side hover:scale-105">
-            <div className="flex min-w-36 flex-col items-center justify-center">
-              <svg width="50" height="50" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M47.8125 4.78125H42.2344V3.1875C42.2344 1.42481 40.8088 0 39.0469 0H11.9531C10.1912 0 8.76562 1.42481 8.76562 3.1875V4.78125H3.1875C1.42561 4.78125 0 6.20606 0 7.96875V14.3438C0 19.184 3.92461 23.1094 8.76562 23.1094H8.84212C9.57047 30.8064 15.5207 36.971 23.1094 38.0595V44.625H17.5312C15.7694 44.625 14.3438 46.0498 14.3438 47.8125V50.2031C14.3438 50.643 14.7 51 15.1406 51H35.8594C36.3 51 36.6562 50.643 36.6562 50.2031V47.8125C36.6562 46.0498 35.2306 44.625 33.4688 44.625H27.8906V38.0595C35.4793 36.971 41.4255 30.808 42.1539 23.1094H42.2344C47.0754 23.1094 51 19.184 51 14.3438V7.96875C51 6.20606 49.5744 4.78125 47.8125 4.78125ZM8.76562 18.3281C6.56466 18.3281 4.78125 16.5439 4.78125 14.3438V9.5625H8.76562V18.3281ZM1.59375 14.3438V7.96875C1.59375 7.0882 2.30775 6.375 3.1875 6.375H8.76562V7.96875H3.98438C3.5437 7.96875 3.1875 8.32416 3.1875 8.76562V14.3438C3.1875 17.4237 5.68491 19.9219 8.76562 19.9219V21.5156C4.80436 21.5156 1.59375 18.3042 1.59375 14.3438ZM33.4688 46.2188C34.3485 46.2188 35.0625 46.932 35.0625 47.8125V49.4062H15.9375V47.8125C15.9375 46.932 16.6515 46.2188 17.5312 46.2188H33.4688ZM24.7031 44.625V38.2086C24.9693 38.2213 25.2307 38.25 25.5 38.25C25.7693 38.25 26.0307 38.2213 26.2969 38.2086V44.625H24.7031ZM40.6406 21.5156C40.6406 29.8764 33.8616 36.6562 25.5 36.6562C17.1384 36.6562 10.3594 29.8764 10.3594 21.5156V3.1875C10.3594 2.30695 11.0734 1.59375 11.9531 1.59375H39.0469C39.9266 1.59375 40.6406 2.30695 40.6406 3.1875V21.5156ZM42.2344 9.5625H46.2188V14.3438C46.2188 16.5439 44.4353 18.3281 42.2344 18.3281V9.5625ZM49.4062 14.3438C49.4062 18.3042 46.1956 21.5156 42.2344 21.5156V19.9219C45.3151 19.9219 47.8125 17.4237 47.8125 14.3438V8.76562C47.8125 8.32416 47.4563 7.96875 47.0156 7.96875H42.2344V6.375H47.8125C48.6922 6.375 49.4062 7.0882 49.4062 7.96875V14.3438Z"
-                  fill="#702848"
-                  stroke="#702848"
-                  strokeWidth="1.536"
-                />
-                <path
-                  d="M31.1957 15.4272L27.7619 14.9029L26.2192 11.6174C26.0877 11.3369 25.8064 11.1592 25.498 11.1592C25.1896 11.1592 24.9083 11.3377 24.7768 11.6174L23.2341 14.9029L19.8004 15.4272C19.5055 15.4735 19.2601 15.6783 19.1652 15.9619C19.0704 16.2456 19.1421 16.5572 19.3501 16.7716L21.8571 19.3431L21.2634 22.98C21.214 23.2812 21.3423 23.5841 21.5909 23.7602C21.8396 23.9363 22.1687 23.9538 22.4364 23.8072L25.4972 22.1154L28.558 23.8072C28.6799 23.8733 28.813 23.906 28.9453 23.906C29.1063 23.906 29.2672 23.8566 29.4043 23.7594C29.6529 23.5833 29.7812 23.2804 29.7318 22.9792L29.1381 19.3423L31.6451 16.7708C31.8539 16.5564 31.9256 16.2448 31.83 15.9611C31.7344 15.6775 31.4913 15.4735 31.1957 15.4272ZM27.7165 18.5175C27.5396 18.6992 27.4599 18.9526 27.5006 19.202L27.895 21.6158L25.8853 20.5041C25.765 20.438 25.6327 20.4045 25.4996 20.4045C25.3665 20.4045 25.2342 20.438 25.1139 20.5041L23.1042 21.6158L23.4987 19.202C23.5393 18.9526 23.4588 18.6984 23.2827 18.5175L21.5766 16.77L23.8979 16.4146C24.1601 16.3747 24.3856 16.2066 24.4987 15.9659L25.5004 13.8319L26.5021 15.9659C26.6152 16.2074 26.8407 16.3755 27.1029 16.4146L29.4242 16.77L27.7165 18.5175Z"
-                  fill="#702848"
-                  stroke="#702848"
-                  strokeWidth="1.536"
-                />
-              </svg>
-            </div>
-            <div className="card-body">
-              <div className="flex flex-col items-center">
-                <h2 className="card-title py-2 font-semibold text-white">Dummy Card 3</h2>
-                <p className="py-1 font-thin text-white">3 cards in a 1 cols grid</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        </div>
+ 
       </div>
 
       </div> 
