@@ -12,12 +12,9 @@ import resume from '/src/assets/documents/pdf/Sebastian_Weber_-_CV_-_UX-UI_Desig
 // Logos
 import RH_Logo from '/src/assets/logos/RH_Logo.png'
 import RH_Logo_white from '/src/assets/logos/RH_Logo_weiss.png'
-
 import BUW_Logo_white from '/src/assets/logos/Unilogo_schwarz_T3.png'
-
 import WBS_Logo_red from '/src/assets/logos/WBSCS-Red-logo.webp'
 import WBS_Logo_white from '/src/assets/logos/WBSCS-full-logo-white.webp'
-
 
 
 // Taskify
@@ -38,13 +35,18 @@ import HackerNewsMacBookAir from '/src/assets/images/png/Hackernews/HackerNews_m
 // PICAPI
 import PICAPIWireframe from '/src/assets/images/png/PICAPI/PICAPI_wireframe.png'
 import PICAPIDetailPage2 from '/src/assets/images/png/PICAPI/PICAPI_DetailPage_2.png'
-import PICAPIMacBookAir from '/src/assets/images/png/PICAPI/PICAPI_MacBookAir.png'
 import PICAPIWIPTopbar from '/src/assets/images/png/PICAPI/PICAPI_WIP_Topbar.png'
-
+import PICAPIMacBookAir from '/src/assets/images/png/PICAPI/PICAPI_MacBookAir.png'
 
 
 // PokéFight
-import PokeFight from '/src/assets/images/png/PokeFight/Pokefight_arena.png'
+import PokeFightLogin from '/src/assets/images/png/PokeFight/Pokefight_login.png'
+import PokeFightArena from '/src/assets/images/png/PokeFight/Pokefight_arena.png'
+import PokeFightPokedex from '/src/assets/images/png/PokeFight/PokeFight_Pokedex_2.png'
+import PokeFightBattle from '/src/assets/images/png/PokeFight/PokeFight_battle.png'
+import PokeFightMacBookAir from '/src/assets/images/png/PokeFight/PokeFight_MacBookAir.png'
+
+
 
 // Elder Gym Bro App
 import ElderGymBroWireframeDashboard from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Wireframe_Dashboard.png'
@@ -62,7 +64,7 @@ const aboutSection = [
 
 const projectsSection = [
   {
-    introduction: 'Transitioning from a UX/UI design background to developing web applications using React, I want to use this space share the learnings and insights gained from my journey. Working on the projects documented in my porfolio has deepened my understanding of how design decisions directly impact user experience and taught me how to bring those designs to life through code. I\'ve explored building dynamic interfaces, managing state, and integrating APIs, all while keeping a focus on usability and aesthetics. These projects highlight my ability to blend design principles with modern development practices, creating engaging, functional, and user-friendly digital experiences.'
+    introduction: 'Transitioning from a UX/UI design background to web application development, I wanr to document the lessons and insights I have gained while working on different projects. My journey so far has taught me at least three valuable lessons. First, how to bring my designs to life through code, second, it has deepened my understanding of how design decisions directly impact user experience, and third, to always keep usability and aesthetics in mind when coding.' 
   },
 ];
 
@@ -193,7 +195,7 @@ const projectCards = [
     heading: 'HackerNews',
     subheading: 'What\'s up in Tech? — The latest news fetched from Agolia API & styled with TailwindCSS',
     description: 'Coming from a design background, I\'ve always been more involved with front-end technologies than back-end technologies. Fetching data from an API and JSon files were things I had heard about, but had never done myself. While working on this HackerNews group project, I not only got my first taste of backend technologies, but also discovered npm packages for pre-built components like busy spinners and pagination. After using Bootstrap, I experimented with TailwindCSS and spent hours perfecting the layout and styling. The simplicity of TailwindCSS won me over, making it easier to write and maintain CSS, even with its limitations - well worth the tradeoffs from a UX designer\'s perspective.',
-    linkNetlify: 'https://',
+    linkNetlify: 'https://hackernewsfromagolia.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/HackerNews',
   },
   {
@@ -214,15 +216,19 @@ const projectCards = [
   },
   {
     // PokeFight
-    image1: PokeFight,
-      image1Description: 'Wireframe',
-    image2: PokeFight,
-      image2Description: 'Wireframe',
+    image1: PokeFightLogin,
+      image1Description: 'Login',
+    image2: PokeFightPokedex,
+      image2Description: 'Pokedex ',
+    image3: PokeFightBattle,
+      image3Description: 'Arena (Concept)',
+    image4: PokeFightMacBookAir,
+      image4Description: 'Mockup',
     heading: 'PokeFight',
     subheading: 'PokeFight — Got to fetch them all!',
     description: '...',
-    linkNetlify: 'https://',
-    linkGitHub: 'https://github.com/Sebastian-Weber/Contentful_CMS_Rework',
+    linkNetlify: 'https://pokebattler.netlify.app',
+    linkGitHub: 'https://github.com/ReynkeDeVos/PokeBattle',
   },
   {
     // Elder Gym Bro App
@@ -234,9 +240,9 @@ const projectCards = [
       image3Description: 'Workouts',
     image4: ElderGymBroAppDemo,
       image4Description: 'Mockup',  
-    heading: 'ElderGymBroApp',
+    heading: 'ElderGymBro',
     subheading: 'Elder Gym Bro — Join the Cult!',
-    description: '"Elder Gym Bro" was the grand finale of my WBS Coding School bootcamp. For the last time, I teamed up with three people I had never met in person to tackle one final coding challenge. This time we had the freedom to choose any topic we wanted. We decided to shake things up with a fitness app that was not only functional - it was fun! And thus, Elder Gym Bro was born! ElderGymBroApp is a Lovecraftian-themed fitness app for humans, blobs and other abominations. This project was an incredible learning experience full of valuable lessons. We took a mobile-first approach for the first time, and it made me truly appreciate the importance of responsiveness in UI layouts. I dove deep into experimenting with a variety of tools and frameworks such as TailwindCSS, SASS, DaisyUI, WindUI, and Material UI, each with their own unique strengths and challenges. Together, we worked hard to find the perfect balance between design aesthetics and usability, from the first wireframes in Figma to the final deployed MERN application. Last but not least, we had the fantastic opportunity to present our work at the WBS Coding School Community Day in Berlin.',
+    description: '"Elder Gym Bro was the grand finale of my WBS Coding School bootcamp. This time we had the freedom to choose any topic we wanted to tackle as our final coding challenge. We decided to shake things up with a fitness app that was not only functional, but fun, and thus ElderGymBro was born! ElderGymBro is a Lovecraftian-themed fitness app for humans, blobs, and other abominations. For the first time, we took a mobile-first approach. Coming from a native software development background, it really made me realize the importance of responsiveness in UI layouts when developing for the web. I dove deep into experimenting with a variety of tools and frameworks such as SASS, DaisyUI, WindUI, and Material UI, each with their own unique strengths and challenges. Together, we worked hard to find the perfect balance between design aesthetics and usability, from the first wireframes in Figma to the final deployed MERN application. This project was an incredible learning experience full of valuable lessons, and we had the fantastic opportunity to present our work at the WBS Coding School Community Day in Berlin.',
     linkNetlify: 'https://eldergymbro.netlify.app/',
     linkGitHub: 'https://github.com/MichalWollny/ElderGymBroApp',
   },
@@ -268,10 +274,11 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
 
+    <>
+        <html>
       {/* SW TEMPLATE */}
-      <div class="min-h-svh flex flex-col justify-center items-center bg-gray-950 text-gray-200">
+      <div class="min-h-svh flex flex-col justify-center items-center bg-gray-950">
 
         {/* sticky top bar */}
         <div class="min-w-full flex flex-row sticky top-0 justify-between items-center bg-slate-900">
@@ -287,16 +294,24 @@ function App() {
         {/* -- 4. info section */}
         <div class="p-4 pt-6">
 
-          <div class="flex flex-row justify-start">
-              <p class="font-normal text-2xl md:text-4xl">
-                Sebastian Weber
-              </p>
-            </div>
-            <div class="flex flex-row justify-start">
-              <p class="font-extralight text-2xl md:text-4xl">
-              UX designer & frontend developer 
-              </p>
-            </div>
+        <div class="flex flex-row">
+          <div class="flex flex-col justify-end items-end">
+            <p class="font-normal text-2xl md:text-3xl xl:text-5xl">
+               Sebastian&nbsp;
+            </p>
+            <p class="font-normal text-2xl md:text-3xl xl:text-5xl">
+              Weber&nbsp; 
+            </p>
+          </div>
+          <div class="flex flex-col justify-start">
+            <p class="font-extralight text-2xl md:text-3xl xl:text-5xl">
+              UX designer
+            </p>
+            <p class="font-extralight text-2xl md:text-3xl xl:text-5xl">
+              frontend developer 
+            </p>
+          </div>
+         </div> 
             <br></br>
 
           <div class="flex flex-row justify-end">
@@ -382,27 +397,40 @@ function App() {
       <div class="flex flex-col items-start">
         <div class="flex flex-wrap justify-start lg:flex-grow flex-1">
           <div class="flex flex-col px-4 items-start">
-            <a class="" >
-              <div class="text-2xl font-semibold">{card.heading}</div>
+            <a class="flex flex-row pr-2 text-lg sm:text-xl md:text-2xl xl:text-2xl" href={card.linkNetlify}>
+              <div class="font-semibold">{card.heading}</div>
+                <div class="pl-1">
+                  <svg class="pt-1 size-7 sm:size-8 md:size-9 xl:size-10" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="#d1d5db" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  </svg>
+              </div> 
             </a>
-            <br></br>
+          <br></br>
           </div>  
           <div class="flex flex-col p-4 items-start">
             <div class="flex flex-wrap items-start">
               <div class="flex flex-col min-w-56 mx-4 justify-center items-center">
-                <img class="h-32 md:h-36 lg:h-42 px-2 pb-1" src={card.image1}></img>
+                <a href={card.image1} target="_blank">
+                  <img class="h-32 md:h-36 lg:h-42 px-2 pb-1" src={card.image1}></img>
+                </a>  
                 <div class="font-thin pb-4">{card.image1Description}</div>
               </div>
               <div class="flex flex-col min-w-56 mx-4 justify-center items-center">
-                <img class="h-32 md:h-36 lg:h-42 px-2 p-1" src={card.image2}></img>
+                <a href={card.image2} target="_blank">
+                  <img class="h-32 md:h-36 lg:h-42 px-2 p-1" src={card.image2}></img>
+                </a>
                 <div class="font-thin pb-4">{card.image2Description}</div>
               </div>
               <div class="flex flex-col min-w-56 mx-4 justify-center items-center">
-                <img class="h-32 md:h-36 lg:h-42 px-2 p-1" src={card.image3}></img>
+              <a href={card.image3} target="_blank">
+                  <img class="h-32 md:h-36 lg:h-42 px-2 p-1" src={card.image3}></img>
+                </a>
                 <div class="font-thin pb-4">{card.image3Description}</div>
               </div>
               <div class="flex flex-col min-w-56 mx-4 justify-center items-center">
-                <img class="h-32 md:h-36 lg:h-42 px-2 p-1" src={card.image4}></img>
+                <a href={card.image4} target="_blank">
+                  <img class="h-32 md:h-36 lg:h-42 px-2 p-1" src={card.image4}></img>
+                </a>
                 <div class="font-thin pb-4">{card.image4Description}</div>
               </div>
             </div>  
@@ -464,7 +492,7 @@ function App() {
                 <div class="flex flex-grow">
                     <div class="flex flex-col items-end w-full m-auto justify-end">
                       <div class="p-2">{card.startDate} — {card.endDate}</div>  
-                      <div class="w-36 font-semibold xl:w-42">{card.company}</div>
+                      <div class="p-2 w-36 font-semibold xl:w-42">{card.company}</div>
                     </div>
                     </div>
                   <div class="flex flex-row justify-start">
@@ -519,7 +547,7 @@ function App() {
                 <div class="flex flex-grow">
                     <div class="flex flex-col items-end w-full m-auto justify-end">
                       <div class="p-2">{card.startDate} — {card.endDate}</div> 
-                      <img class="w-36 font-semibold xl:w-42" src={card.logotype}></img>
+                      <img class="p-2 w-36 font-semibold xl:w-42" src={card.logotype}></img>
                     </div>
                     </div>
                   <div class="px-4 my-2 flex flex-row justify-start">
@@ -615,7 +643,9 @@ function App() {
 
 
         </div>
+        <br></br>
         <div>© 2024 Sebastian Weber</div>
+        <br></br>
         </div>
 
  
@@ -770,7 +800,9 @@ function App() {
       </div>
 
       </div> 
+      </html>
     </>
+
   )
 }
 
