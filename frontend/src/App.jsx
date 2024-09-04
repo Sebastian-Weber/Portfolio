@@ -64,7 +64,7 @@ const aboutSection = [
 
 const projectsSection = [
   {
-    introduction: 'Transitioning from a UX/UI design background to web application development, I wanr to document the lessons and insights I have gained while working on different projects. My journey so far has taught me at least three valuable lessons. First, how to bring my designs to life through code, second, it has deepened my understanding of how design decisions directly impact user experience, and third, to always keep usability and aesthetics in mind when coding.' 
+    introduction: 'Transitioning from a UX/UI design background to web application development, I want to document the lessons and insights I have gained while working on different projects. My journey so far has taught me at least three valuable lessons. First, how to bring my designs to life through code, second, it has deepened my understanding of how design decisions directly impact user experience, and third, to always keep usability and aesthetics in mind when coding.' 
   },
 ];
 
