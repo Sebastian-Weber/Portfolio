@@ -96,8 +96,8 @@ const workCards = [
     company: 'empower GmbH',
     bullet1: '• Created ux personas for the company\'s ux department.',
     bullet2: '• Crafted pixel-perfect icons in various sizes, formats and color schemes.',
-    bullet3: '• Created concepts for marketing materials, such as website and broschures, business cards, product mockups, (html) banners.',
-    bullet4: '• Image editing.',
+    bullet3: '• Crafted and edited marketing materials, such as website and broschures, business cards, product mockups and (html) banners.',
+    bullet4: '',
     tag1: 'Adobe XD',
     tag2: 'Adobe Illustrator',
     tag3: 'Adobe Photoshop',
@@ -193,7 +193,7 @@ const projectCards = [
     heading: 'HackerNews',
     subheading: 'What\'s up in Tech? — The latest news fetched from Agolia API & styled with TailwindCSS',
     description: 'Coming from a design background, I\'ve always been more involved with front-end technologies than back-end technologies. Fetching data from an API and JSon files were things I had heard about, but had never done myself. While working on this HackerNews group project, I not only got my first taste of backend technologies, but also discovered npm packages for pre-built components like busy spinners and pagination. After using Bootstrap, I experimented with TailwindCSS and spent hours perfecting the layout and styling. The simplicity of TailwindCSS won me over, making it easier to write and maintain CSS, even with its limitations - well worth the tradeoffs from a UX designer\'s perspective.',
-    linkNetlify: 'https://taskifyinreact.netlify.app/',
+    linkNetlify: 'https://',
     linkGitHub: 'https://github.com/Sebastian-Weber/HackerNews',
   },
   {
@@ -221,26 +221,29 @@ const projectCards = [
     heading: 'PokeFight',
     subheading: 'PokeFight — Got to fetch them all!',
     description: '...',
-    linkNetlify: 'https://picapi.netlify.app/',
+    linkNetlify: 'https://',
     linkGitHub: 'https://github.com/Sebastian-Weber/Contentful_CMS_Rework',
   },
   {
     // Elder Gym Bro App
     image1: ElderGymBroWireframeDashboard,
-      image1Description: 'Dashboard (Figma prototype)',
+      image1Description: 'Figma prototype',
     image2: ElderGymBroDashboard,
-      image2Description: 'Dashboard (Finalized)',
+      image2Description: 'Dashboard',
     image3: ElderGymBroWorkouts,
-      image3Description: 'Workouts (Finalized)',
+      image3Description: 'Workouts',
     image4: ElderGymBroAppDemo,
-      image4Description: 'App Mockup',  
+      image4Description: 'Mockup',  
     heading: 'ElderGymBroApp',
-    subheading: 'ElderGymBroApp — Join the Cult!',
-    description: 'ElderGymBroApp is a lovecraft-themed fitness app for blobs and other abominations.',
-    linkNetlify: 'https://picapi.netlify.app/',
-    linkGitHub: 'https://github.com/Sebastian-Weber/Contentful_CMS_Rework',
+    subheading: 'Elder Gym Bro — Join the Cult!',
+    description: '"Elder Gym Bro" was the grand finale of my WBS Coding School bootcamp. For the last time, I teamed up with three people I had never met in person to tackle one final coding challenge. This time we had the freedom to choose any topic we wanted. We decided to shake things up with a fitness app that was not only functional - it was fun! And thus, Elder Gym Bro was born! ElderGymBroApp is a Lovecraftian-themed fitness app for humans, blobs and other abominations. This project was an incredible learning experience full of valuable lessons. We took a mobile-first approach for the first time, and it made me truly appreciate the importance of responsiveness in UI layouts. I dove deep into experimenting with a variety of tools and frameworks such as TailwindCSS, SASS, DaisyUI, WindUI, and Material UI, each with their own unique strengths and challenges. Together, we worked hard to find the perfect balance between design aesthetics and usability, from the first wireframes in Figma to the final deployed MERN application. Last but not least, we had the fantastic opportunity to present our work at the WBS Coding School Community Day in Berlin.',
+    linkNetlify: 'https://eldergymbro.netlify.app/',
+    linkGitHub: 'https://github.com/MichalWollny/ElderGymBroApp',
   },
 ];
+
+
+
 
 
 
@@ -295,20 +298,30 @@ function App() {
               </p>
             </div>
             <br></br>
+
+          <div class="flex flex-row justify-end">
+
+            {/* Email icon */}
+            {/* <div class='flex flex-row pt-48 px-'>
+              <div class="italic text-4xl font-thin text-cyan-900">Say hello ...</div>
+            </div> */}
+
             <div class="flex flex-col justify-end items-end mt-2">
-              <p class="text-right font-extralight line-clamp-6 px-4 pb-4 leading-6 text-2xl md:text-4xl xl:text-5xl">
-              building
+              <p class="text-right font-extralight px-4 leading-none pb-1 text-3xl md:text-4xl xl:text-5xl">
+              crafting
               </p>
-              <p class="text-right font-extralight line-clamp-6 px-4 pb-4 leading-6 text-2xl md:text-4xl xl:text-5xl">
+              <p class="text-right font-extralight px-4 leading-none pb-1 text-3xl md:text-4xl xl:text-5xl">
               engaging 
               </p>
-              <p class="text-right font-extralight line-clamp-6 px-4 pb-4 leading-6 text-2xl md:text-4xl xl:text-5xl">
+              <p class="text-right font-extralight px-4 leading-none pb-1 text-3xl md:text-4xl xl:text-5xl">
               digital 
               </p>
-              <p class="text-right font-extralight line-clamp-6 px-4 pb-4 leading-6 text-2xl md:text-4xl xl:text-5xl">
+              <p class="text-right font-extralight px-4 leading-none pb-1 text-3xl md:text-4xl xl:text-5xl">
               experiences 
               </p>
             </div>
+          </div>
+
           <br></br>
 
           </div>
@@ -369,28 +382,28 @@ function App() {
       <div class="flex flex-col items-start">
         <div class="flex flex-wrap justify-start lg:flex-grow flex-1">
           <div class="flex flex-col px-4 items-start">
-            <a class="text-indigo-300/90" href="https://taskifyinreact.netlify.app/">
-              <h2 class="text-xl underline font-semibold">{card.heading}</h2>
+            <a class="" >
+              <div class="text-2xl font-semibold">{card.heading}</div>
             </a>
             <br></br>
           </div>  
-          <div class="flex flex-col px-4 items-start">
+          <div class="flex flex-col p-4 items-start">
             <div class="flex flex-wrap items-start">
-              <div class="flex flex-col mx-4 justify-center items-center">
-                <img class="h-32 md:h-36 lg:h-42 p-2" src={card.image1}></img>
-                <div class="font-thin">{card.image1Description}</div>
+              <div class="flex flex-col min-w-56 mx-4 justify-center items-center">
+                <img class="h-32 md:h-36 lg:h-42 px-2 pb-1" src={card.image1}></img>
+                <div class="font-thin pb-4">{card.image1Description}</div>
               </div>
-              <div class="flex flex-col mx-4 justify-center items-center">
-                <img class="h-32 md:h-36 lg:h-42 p-2" src={card.image2}></img>
-                <div class="font-thin">{card.image2Description}</div>
+              <div class="flex flex-col min-w-56 mx-4 justify-center items-center">
+                <img class="h-32 md:h-36 lg:h-42 px-2 p-1" src={card.image2}></img>
+                <div class="font-thin pb-4">{card.image2Description}</div>
               </div>
-              <div class="flex flex-col mx-4 justify-center items-center">
-                <img class="h-32 md:h-36 lg:h-42 p-2" src={card.image3}></img>
-                <div class="font-thin">{card.image3Description}</div>
+              <div class="flex flex-col min-w-56 mx-4 justify-center items-center">
+                <img class="h-32 md:h-36 lg:h-42 px-2 p-1" src={card.image3}></img>
+                <div class="font-thin pb-4">{card.image3Description}</div>
               </div>
-              <div class="flex flex-col mx-4 justify-center items-center">
-                <img class="h-32 md:h-36 lg:h-42 p-2" src={card.image4}></img>
-                <div class="font-thin">{card.image4Description}</div>
+              <div class="flex flex-col min-w-56 mx-4 justify-center items-center">
+                <img class="h-32 md:h-36 lg:h-42 px-2 p-1" src={card.image4}></img>
+                <div class="font-thin pb-4">{card.image4Description}</div>
               </div>
             </div>  
             <br></br>
@@ -400,13 +413,23 @@ function App() {
             <br></br>
             <div class="flex flex-row">
 
-              <a class="text-color-white pr-2 underline" href={card.linkNetlify}>
-                <h2 class="text-lg font-semibold">Netlify</h2>
+              <a class="flex flex-row text-color-white pr-2 underline" href={card.linkNetlify}>
+                <div class="text-lg font-semibold">Netlify</div>
+                <div class="pl-1">
+                  <svg class="pt-1" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="#d1d5db" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  </svg>
+                 </div> 
               </a>
 
               <br></br>
-              <a class="text-color-white pr-2 underline" href={card.linkGitHub}>
-                <h2 class="text-lg font-semibold">GitHub</h2>
+              <a class="flex flex-row text-color-white pr-2 underline" href={card.linkGitHub}>
+                <div class="text-lg font-semibold">GitHub</div>
+                <div class="pl-1">
+                  <svg class="pt-1" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="#d1d5db" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  </svg>
+                 </div> 
               </a>
             </div>
 
@@ -446,8 +469,8 @@ function App() {
                     </div>
                   <div class="flex flex-row justify-start">
                     <div class="flex flex-col justify-start items-start">
-                    <h2 class="p-2 font-semibold sm:text-md md:text-md">{card.position}</h2>
-                    <h2 class="p-2 font-light italic sm:text-md md:text-lg">{card.contract}</h2>
+                    <div class="p-2 font-semibold sm:text-md md:text-md">{card.position}</div>
+                    <div class="p-2 font-light italic sm:text-md md:text-lg">{card.contract}</div>
                   </div>
                   </div>
                   <p class="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base"></p>
@@ -480,7 +503,7 @@ function App() {
           
           ))}
 
-          {/* -- 4. eduaction section */}
+          {/* -- 4. education section */}
           <div class="p-4 pt-12">
             <p class="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight sm:text-xl md:text-2xl xl:text-4xl">
               _education
@@ -501,8 +524,8 @@ function App() {
                     </div>
                   <div class="px-4 my-2 flex flex-row justify-start">
                     <div class="flex flex-col justify-start items-start">
-                      <h2 class="p-2 font-semibold sm:text-md md:text-md">{card.degree}</h2>
-                      <h2 class="p-2 font-light italic sm:text-md md:text-lg">{card.program}</h2>
+                      <div class="p-2 font-semibold sm:text-md md:text-md">{card.degree}</div>
+                      <div class="p-2 font-light italic sm:text-md md:text-lg">{card.program}</div>
                     </div>
                   </div>
                   <p class="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base"></p>
@@ -535,13 +558,12 @@ function App() {
           
           ))}
 
-        {/* -- 3. Tech stack icons --*/}
-        <div>
-        <div class="">
-          <div class="pt-2 flex flex-row justify-center ">
+                  {/* -- 3. Tech stack icons --*/}
+        <div className="flex flex-col justify-center items-center px-4">
+          <div className="pt-2 flex flex-row justify-center ">
 
             {/* GitHub icon */}
-            <div class='px-2'>
+            <div className='px-2'>
               <a href="https://github.com/Sebastian-Weber"> 
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 0C5.37 0 0 5.50583 0 12.3035C0 17.7478 3.435 22.3463 8.205 23.9765C8.805 24.0842 9.03 23.715 9.03 23.3921C9.03 23.0999 9.015 22.131 9.015 21.1005C6 21.6696 5.22 20.347 4.98 19.6549C4.845 19.3012 4.26 18.2092 3.75 17.917C3.33 17.6863 2.73 17.1173 3.735 17.1019C4.68 17.0865 5.355 17.9939 5.58 18.363C6.66 20.2239 8.385 19.701 9.075 19.3781C9.18 18.5783 9.495 18.04 9.84 17.7325C7.17 17.4249 4.38 16.3637 4.38 11.6576C4.38 10.3196 4.845 9.21226 5.61 8.35102C5.49 8.04343 5.07 6.78232 5.73 5.09058C5.73 5.09058 6.735 4.76762 9.03 6.3517C9.99 6.07487 11.01 5.93645 12.03 5.93645C13.05 5.93645 14.07 6.07487 15.03 6.3517C17.325 4.75224 18.33 5.09058 18.33 5.09058C18.99 6.78232 18.57 8.04343 18.45 8.35102C19.215 9.21226 19.68 10.3042 19.68 11.6576C19.68 16.3791 16.875 17.4249 14.205 17.7325C14.64 18.1169 15.015 18.8552 15.015 20.0086C15.015 21.6542 15 22.9768 15 23.3921C15 23.715 15.225 24.0995 15.825 23.9765C20.565 22.3463 24 17.7325 24 12.3035C24 5.50583 18.63 0 12 0Z" 
@@ -551,7 +573,7 @@ function App() {
             </div>
 
             {/* Codecademy icon */}
-            <div class='px-2'>
+            <div className='px-2'>
               <a href="https://www.codecademy.com/profiles/Sebastian-Weber1708">
                 <svg width="31" height="24" viewBox="0 0 31 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M29.8288 21.6752H22.8245C22.7068 21.6752 22.6117 21.7478 22.6117 21.8906V23.7872C22.6117 23.9049 22.6843 24 22.827 24H29.8301C29.9503 24 30.0454 23.9449 30.0454 23.7947V21.8981C30.0454 21.7666 29.9741 21.6903 29.8288 21.6903V21.6727V21.6752ZM20.6099 0.0613427C20.6299 0.105159 20.6475 0.146471 20.6688 0.21157V23.7346C20.6688 23.811 20.6437 23.8548 20.6224 23.8773C20.6018 23.9019 20.5759 23.9214 20.5466 23.9344C20.5173 23.9475 20.4855 23.9536 20.4534 23.9524H0.191572C0.144 23.9524 0.0976801 23.9524 0.0701385 23.9274C0.0475033 23.9058 0.0295884 23.8797 0.0175226 23.8509C0.00545685 23.822 -0.000498235 23.7909 3.26114e-05 23.7596V0.187784C3.26114e-05 0.09264 0.0501082 0.0200303 0.120214 0H20.4534C20.5035 0 20.5736 0.0212823 20.5974 0.0425645V0.0625948L20.6099 0.0613427ZM2.27597 21.4812C2.27597 21.5726 2.32354 21.6515 2.39615 21.6727H18.2238C18.2964 21.6489 18.344 21.5776 18.344 21.4799V2.48876C18.344 2.39737 18.2952 2.32101 18.2213 2.30098H2.3974C2.3273 2.32601 2.27722 2.39236 2.27722 2.48876L2.27347 21.4799L2.27597 21.4812ZM8.75325 10.9979C9.56698 10.9979 10.0227 11.2194 10.5009 11.7728C10.5735 11.8667 10.6924 11.8905 10.7888 11.8166L12.0833 10.6649C12.1772 10.6098 12.1559 10.4595 12.1083 10.3844C11.3134 9.42799 10.1629 8.82708 8.67814 8.82708C6.68763 8.82708 5.18536 9.82234 4.60324 11.5888C4.39667 12.2084 4.30278 12.9984 4.30278 14.0662C4.30278 15.1366 4.39667 15.9241 4.62201 16.545C5.20414 18.3302 6.70641 19.3054 8.69692 19.3054C10.1992 19.3054 11.3447 18.7045 12.1334 17.7831C12.1897 17.6905 12.2085 17.5765 12.1146 17.5002L10.8164 16.3547C10.725 16.2959 10.6123 16.2959 10.5359 16.3885C10.0477 16.9519 9.54069 17.2523 8.7157 17.2523C7.83186 17.2523 7.15709 16.8204 6.87542 15.9566C6.70516 15.4684 6.6676 14.8675 6.6676 14.1C6.6676 13.3301 6.72394 12.763 6.89294 12.2585C7.1934 11.4335 7.85189 10.9979 8.75325 10.9979Z" 
@@ -561,7 +583,7 @@ function App() {
             </div>
 
             {/* LinkedIn icon */}
-            <div class='px-2'>
+            <div className='px-2'>
               <a href="https://www.linkedin.com/in/sebastian-weber1708/"> 
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21.3333 24H2.66667C1.19391 24 0 22.8061 0 21.3333V2.66667C0 1.19391 1.19391 0 2.66667 0H21.3333C22.8061 0 24 1.19391 24 2.66667V21.3333C24 22.8061 22.8061 24 21.3333 24ZM17.1052 20.6667H20.6667V13.3504C20.6667 10.2548 18.9119 8.75807 16.4608 8.75807C14.0087 8.75807 12.9767 10.6676 12.9767 10.6676V9.11111H9.54444V20.6667H12.9767V14.6007C12.9767 12.9754 13.7249 12.0082 15.1569 12.0082C16.4733 12.0082 17.1052 12.9376 17.1052 14.6007V20.6667ZM3.33333 5.46567C3.33333 6.64322 4.28069 7.598 5.44978 7.598C6.61888 7.598 7.56567 6.64322 7.56567 5.46567C7.56567 4.28812 6.61888 3.33333 5.44978 3.33333C4.28069 3.33333 3.33333 4.28812 3.33333 5.46567ZM7.25647 20.6667H3.67752V9.11111H7.25647V20.6667Z"
@@ -571,7 +593,7 @@ function App() {
             </div>
 
             {/* Behance icon */}
-            <div class='px-2'>
+            <div className='px-2'>
               <a href="https://www.behance.net/sebastian-weber">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM9.8947 6.69987C9.46751 6.60867 8.99519 6.56259 8.47775 6.56259H3.35999V17.4384H8.63135C9.11135 17.4394 9.59039 17.378 10.055 17.256C10.5168 17.1341 10.9277 16.9469 11.2886 16.6925C11.6496 16.4391 11.9366 16.1117 12.1497 15.7104C12.3629 15.3092 12.4694 14.834 12.4694 14.2858C12.4694 13.6052 12.3043 13.0234 11.9741 12.5415C11.6438 12.0596 11.1437 11.7216 10.4736 11.5287C10.9603 11.2954 11.3289 10.9959 11.5776 10.6301C11.8262 10.2644 11.951 9.80739 11.951 9.25923C11.951 8.75139 11.8675 8.32515 11.6995 7.97955C11.5315 7.63395 11.2953 7.35747 10.991 7.14915C10.6867 6.94083 10.3219 6.79107 9.8947 6.69987ZM9.22463 10.6599C8.95007 10.8624 8.59967 10.9642 8.17343 10.9642L5.75231 10.9661V8.42211H7.99007C8.19743 8.42115 8.40383 8.43939 8.60735 8.47491C8.80511 8.51043 8.97983 8.57379 9.13247 8.66499C9.28511 8.75619 9.40703 8.88387 9.49823 9.04611C9.58943 9.20835 9.63551 9.41667 9.63551 9.67011C9.63647 10.1271 9.49919 10.4564 9.22463 10.6599ZM8.98079 15.5108C8.76095 15.5568 8.53631 15.5799 8.31071 15.5789L5.75231 15.5799V12.5943H8.35679C8.87423 12.5943 9.29086 12.7133 9.60575 12.9524C9.92063 13.1904 10.0781 13.5898 10.0781 14.1476C10.0781 14.4317 10.0291 14.666 9.93311 14.8484C9.83615 15.0308 9.70655 15.1757 9.54431 15.2823C9.38207 15.3888 9.19391 15.4647 8.98079 15.5108ZM16.8797 15.8228C16.2701 15.8228 15.8025 15.6653 15.4781 15.3504C15.1536 15.0365 14.976 14.5287 14.9462 13.8308H20.6275C20.6678 13.2212 20.6169 12.6375 20.4749 12.0788C20.3328 11.52 20.1014 11.0228 19.7817 10.586C19.4621 10.1492 19.0531 9.80163 18.5558 9.54243C18.0576 9.28323 17.4739 9.15363 16.8038 9.15363C16.2048 9.15363 15.6585 9.26019 15.1661 9.47331C14.6736 9.68643 14.2493 9.97827 13.8941 10.3488C13.5389 10.7194 13.2643 11.1581 13.0713 11.666C12.8784 12.1738 12.7824 12.722 12.7824 13.3104C12.7824 13.9191 12.8765 14.4778 13.0637 14.9856C13.2509 15.4935 13.5177 15.9293 13.8633 16.2951C14.2089 16.6608 14.6304 16.9431 15.1277 17.1408C15.6249 17.3386 16.1837 17.4375 16.8029 17.4375C17.6966 17.4375 18.4579 17.234 19.0877 16.8279C19.7174 16.4218 20.1849 15.7469 20.4893 14.8023H18.5856C18.5145 15.0461 18.3216 15.2775 18.0067 15.4954C17.6918 15.7133 17.3165 15.8228 16.8797 15.8228ZM16.7424 10.7818C17.2704 10.7818 17.664 10.9239 17.9232 11.208C18.1814 11.4922 18.3619 11.9088 18.4646 12.456H14.9462C14.9558 12.3044 14.9894 12.1316 15.0451 11.9386C15.1008 11.7456 15.1968 11.5632 15.3341 11.3904C15.4713 11.2176 15.6537 11.0736 15.8822 10.9565C16.1097 10.8404 16.3968 10.7818 16.7424 10.7818ZM18.9715 7.11459H14.5757V8.33379H18.9715V7.11459Z"
@@ -581,18 +603,19 @@ function App() {
             </div>
 
             {/* Email icon */}
-            <div class='px-2'>
-              <a lass="email-link" href="mailto:sebastian.weber1708@gmail.com" rel="noopener noreferrer" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" class="size-9">
+            <div className='px-2'>
+              <a href="mailto:sebastian.weber1708@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" className="size-9">
                   <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" fill="#d1d5db"/>
                   <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" fill="#d1d5db"/>
                 </svg>
               </a>
             </div>
-          </div> 
+
+
+
         </div>
-          <br></br>
-          <div>© 2024 Sebastian Weber</div>
+        <div>© 2024 Sebastian Weber</div>
         </div>
 
  
@@ -621,8 +644,8 @@ function App() {
                     <div class="flex flex-row">
                     <hr class='mx-auto'></hr>
                     </div>
-                    <h2 class="py-2 font-light sm:text-md md:text-lg">Continuing education at WBS Coding School Berlin </h2>
-                    <h2 class="py-2 sm:text-md md:text-md">Fulltime web & app development bootcamp</h2>
+                    <div class="py-2 font-light sm:text-md md:text-lg">Continuing education at WBS Coding School Berlin </div>
+                    <div class="py-2 sm:text-md md:text-md">Fulltime web & app development bootcamp</div>
                     <p class="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base">
                     </p>
 
@@ -672,13 +695,13 @@ function App() {
 
   
                     </div>
-                    <h2 class="text-start p-2 font-semibold sm:text-md md:text-lg">User Experience Design</h2>
+                    <div class="text-start p-2 font-semibold sm:text-md md:text-lg">User Experience Design</div>
                       <div class="flex flex-col px-4 w-full items-end bg-red-500">
                         <div class="p-2 flex flex-row">03/2018 — 07/2021</div>
                         <img class="w-36 xl:w-42" src={RH_Logo_white}></img>
                      </div>
 
-                      <h2 class="p-2 font-semibold sm:text-md md:text-md">- Master of Arts -</h2>
+                      <div class="p-2 font-semibold sm:text-md md:text-md">- Master of Arts -</div>
                         <ul>
                           <li>• Learned how to analyze user needs and user experiences with scientific and practical methods</li>
                           <li>• Designed concepts for interactive services and products with focus on psychology, empathy, diversity and social responsibility.</li>
@@ -718,8 +741,8 @@ function App() {
                     <div class="flex flex-row">
                     <hr class='mx-auto'></hr>
                     </div>
-                    <h2 class="text-start p-2 font-light sm:text-md md:text-lg">Media Design & Design Technology / English Studies at University of Wuppertal</h2>
-                    <h2 class="p-2 sm:text-md md:text-md">Bachelor of Arts</h2>
+                    <div class="text-start p-2 font-light sm:text-md md:text-lg">Media Design & Design Technology / English Studies at University of Wuppertal</div>
+                    <div class="p-2 sm:text-md md:text-md">Bachelor of Arts</div>
                     <p class="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base"></p>
 
                     <p class="font-light text-white/75 px-2 text-start leading-tight sm:text-lg md:text-base">
