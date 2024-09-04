@@ -73,7 +73,7 @@ const workCards = [
   {
     // associate at empower
     startDate: '09/2021 ',
-    endDate: '09/2023',
+    endDate: '10/2023',
     contract: 'Fulltime Associate',
     position: 'UX & UI Designer',
     company: 'empower GmbH',
@@ -215,7 +215,7 @@ const projectCards = [
     linkGitHub: 'https://github.com/Sebastian-Weber/Contentful_CMS_Rework',
   },
   {
-    // PokeFight
+    // PokéFight
     image1: PokeFightLogin,
       image1Description: 'Login',
     image2: PokeFightPokedex,
@@ -224,9 +224,9 @@ const projectCards = [
       image3Description: 'Arena (Concept)',
     image4: PokeFightMacBookAir,
       image4Description: 'Mockup',
-    heading: 'PokeFight',
-    subheading: 'PokeFight — Got to fetch them all!',
-    description: '...',
+    heading: 'PokéFight',
+    subheading: 'PokéFight — Got to fetch them all!',
+    description: '"PokéFight" was an exciting web development project that brings the world of Pokémon to life by retrieving the stats of thousands of Pokémon via a REST API. This group project was a great opportunity to combine creative design with technical development, and I contributed by designing a dynamic, responsive Pokémon card layout. Using the Daisy UI card component as a base, I extensively redesigned it to ensure that it could serve as the primary element of our Arena Battles, as well as our Pokédex, an overview of thousands of Pokémon, regardless of screen size or device. We also pushed the envelope by experimenting with AI tools such as Leonardo AI to create unique Pokémon visuals to complement the existing images and animated Pokémon sprites from the JSON data. This experience provided valuable lessons, such as the importance of using global objects to simplify data management and understanding the impact of fetching large data sets on the performance of UI components from a library.',
     linkNetlify: 'https://pokebattler.netlify.app',
     linkGitHub: 'https://github.com/ReynkeDeVos/PokeBattle',
   },
@@ -276,12 +276,12 @@ function App() {
   return (
 
     <>
-        <html>
+    <html>
       {/* SW TEMPLATE */}
       <div class="min-h-svh flex flex-col justify-center items-center bg-gray-950">
 
         {/* sticky top bar */}
-        <div class="min-w-full flex flex-row sticky top-0 justify-between items-center bg-slate-900">
+        <div class="min-w-full flex flex-row sticky top-0 border-solid border-b-2 border-slate-800  justify-between items-center bg-slate-900">
 
           {/* Logo */}
           <img src={swLogo} class="h-10 w-10 m-4 md:h-16 md:w-16 md:mx-12" alt="Sebastian Weber logo" />
