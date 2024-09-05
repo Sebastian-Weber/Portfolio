@@ -58,13 +58,13 @@ import ElderGymBroAppDemo from '/src/assets/images/gif/ElderGymBroApp/ElderGymBr
 
 const aboutSection = [
   {
-    introduction: 'I am a graduate UX designer with a total of +10 years of experience in Tech. I have a passion for everything related to UIs, frontend technologies and visual design in general. I am also interested in the history of information technology, especially its earliest ideas and concepts. After working mainly in native software development for 5 years, I recently started learning how to code frontends for the web.'
+    introduction: 'I am a graduate UX designer with a total of +10 years of experience in Tech. I\'m interested in everything related to UIs, especially frontend technologies and visual design in general. I\'m also interested in the history of information technology, especially its earliest ideas and concepts. After working mainly in native software development for 5 years, I recently started learning how to code frontends for the web.'
   },
 ];
 
 const projectsSection = [
   {
-    introduction: 'Transitioning from a UX/UI design background to web application development, I want to document the lessons and insights I have gained while working on different projects. My journey so far has taught me at least three valuable lessons. First, how to bring my designs to life through code, second, it has deepened my understanding of how design decisions directly impact user experience, and third, to always keep usability and aesthetics in mind when coding.' 
+    introduction: 'Welcome to my web development portfolio! Here, you\'ll find a collection of projects that showcase my journey in building dynamic, user-friendly websites and applications. Each project reflects my growth as a developer, from mastering foundational technologies like HTML, CSS, and JavaScript, to exploring advanced frameworks and tools. These experiences have honed my skills in problem-solving, responsive design, and creating intuitive user experiences. I’ve learned the importance of writing clean, efficient code and the value of continuous iteration and feedback. I\'m excited to share these projects and the insights gained along the way.' 
   },
 ];
 
