@@ -117,7 +117,7 @@ const educationCards = [
     logotype: WBS_Logo_white,
     degree: 'Certified Fullstack Web and App Developer',
     program: 'Fullstack Web and App Development Bootcamp',
-    bullet1: '• Learned how to apply frontend, backend and middleware technologies for web and app development. ',
+    bullet1: '• Learned how to apply frontend, backend and middleware technologies for web and app development using MERN stack. ',
     tag1: 'VS Code',
     tag2: 'Figma',
     tag3: 'Project management',
