@@ -391,12 +391,12 @@ function App() {
 
 {/* -- Projects -- */}
 {projectCards.map((card, index) => (
-<div class="m-w-40 m-6 rounded-lg bg-gray-900 p-4 shadow-xl transition-transform ">
+<div class="m-w-40 m-6 rounded-lg bg-gray-900 p-4 shadow-xl transition-transform">
   <div key={index} class="">
     <div class="p-2">
-      <div class="flex flex-col items-start">
-        <div class="flex flex-wrap justify-start lg:flex-grow flex-1">
-          <div class="flex flex-col px-4 items-start">
+      <div class="flex flex-col items-start ">
+        <div class="flex flex-wrap justify-start lg:flex-grow flex-1 ">
+          <div class="flex flex-col px-4 items-start ">
             <a class="flex flex-row pr-2 text-lg sm:text-xl md:text-2xl xl:text-2xl" href={card.linkNetlify}>
               <div class="font-semibold">{card.heading}</div>
                 <div class="pl-1">
@@ -405,7 +405,6 @@ function App() {
                   </svg>
               </div> 
             </a>
-          <br></br>
           </div>  
           <div class="flex flex-col p-4 justify-center items-center sm:justify-start sm:items-start md:justify-start md:items-start lg:justify-start lg:items-start xl:justify-start xl:items-start">
 
