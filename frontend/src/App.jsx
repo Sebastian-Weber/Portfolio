@@ -407,32 +407,42 @@ function App() {
             </a>
           <br></br>
           </div>  
-          <div class="flex flex-col p-4 items-start">
-            <div class="flex flex-wrap items-start">
-              <div class="flex flex-col min-w-56 mx-4 justify-center items-center">
+          <div class="flex flex-col p-4 justify-center items-center sm:justify-start sm:items-start md:justify-start md:items-start lg:justify-start lg:items-start xl:justify-start xl:items-start">
+
+                <a href={card.image4} target="_blank">
+                  <img class="h-36 md:h-42 lg:h-48 xl:h-56 px-2 p-1" src={card.image4}></img>
+                </a>
+                <div class="font-thin pb-4"></div>
+                <br></br>
+
+          <div class="flex flex-col min-w-42 mx-4 justify-start items-start sm:justify-start sm:items-start md:justify-start md:items-start lg:justify-start lg:items-start xl:justify-start xl:items-start">
+
+              </div>
+            <div class="flex flex-wrap justify-center items-center ">
+              <div class="flex flex-col mx-2 justify-center items-center">
                 <a href={card.image1} target="_blank">
-                  <img class="h-32 md:h-36 lg:h-42 px-2 pb-1" src={card.image1}></img>
+                  <img class="h-28 md:h-32 lg:h-36 xl:h-42 px-2 p-1" src={card.image1}></img>
                 </a>  
                 <div class="font-thin pb-4">{card.image1Description}</div>
               </div>
-              <div class="flex flex-col min-w-56 mx-4 justify-center items-center">
+              <div class="flex flex-col min-w-42 mx-4 justify-center items-center">
                 <a href={card.image2} target="_blank">
-                  <img class="h-32 md:h-36 lg:h-42 px-2 p-1" src={card.image2}></img>
+                  <img class="h-28 md:h-32 lg:h-36 xl:h-42 px-2 p-1" src={card.image2}></img>
                 </a>
                 <div class="font-thin pb-4">{card.image2Description}</div>
               </div>
-              <div class="flex flex-col min-w-56 mx-4 justify-center items-center">
+              <div class="flex flex-col min-w-42 mx-4 justify-center items-center">
               <a href={card.image3} target="_blank">
-                  <img class="h-32 md:h-36 lg:h-42 px-2 p-1" src={card.image3}></img>
+                  <img class="h-28 md:h-32 lg:h-36 xl:h-42 px-2 p-1" src={card.image3}></img>
                 </a>
                 <div class="font-thin pb-4">{card.image3Description}</div>
               </div>
-              <div class="flex flex-col min-w-56 mx-4 justify-center items-center">
+              {/* <div class="flex flex-col min-w-42 mx-4 justify-center items-center">
                 <a href={card.image4} target="_blank">
                   <img class="h-32 md:h-36 lg:h-42 px-2 p-1" src={card.image4}></img>
                 </a>
                 <div class="font-thin pb-4">{card.image4Description}</div>
-              </div>
+              </div> */}
             </div>  
             <br></br>
             <p class="font-thin text-xl italic text-start text-balance text-white/75">{card.subheading}</p>
