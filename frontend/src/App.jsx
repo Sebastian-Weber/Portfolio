@@ -287,10 +287,10 @@ function App() {
           </div>
           <div class="flex flex-col justify-start">
             <p class="font-extralight text-2xl md:text-3xl xl:text-5xl">
-              UX designer
+              UX Designer
             </p>
             <p class="font-extralight text-2xl md:text-3xl xl:text-5xl">
-              frontend developer 
+              Frontend Developer 
             </p>
           </div>
          </div> 
@@ -417,29 +417,28 @@ function App() {
                       <p class="font-thin text-xl italic text-start text-balance text-white/75">{card.subheading}</p>
                       <br></br>
                       <p class="font-normal text-start text-balance prose text-white/75">{card.description}</p>
+
+                    </div>
+                    <div class="flex flex-row ml-4 justify-start items-start">
+
+                      <a class="flex flex-row text-color-white pr-2 underline" href={card.linkNetlify}>
+                        <div class="text-lg font-semibold">Netlify</div>
+                        <div class="pl-1">
+                          <svg class="pt-1" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="#d1d5db" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                          </svg>
+                        </div> 
+                      </a>
+
                       <br></br>
-                      <div class="flex flex-row">
-
-                        <a class="flex flex-row text-color-white pr-2 underline" href={card.linkNetlify}>
-                          <div class="text-lg font-semibold">Netlify</div>
-                          <div class="pl-1">
-                            <svg class="pt-1" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="#d1d5db" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            </svg>
-                          </div> 
-                        </a>
-
-                        <br></br>
-                        <a class="flex flex-row text-color-white pr-2 underline" href={card.linkGitHub}>
-                          <div class="text-lg font-semibold">GitHub</div>
-                          <div class="pl-1">
-                            <svg class="pt-1" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="#d1d5db" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            </svg>
-                          </div> 
-                        </a>
-                      </div>
-
+                      <a class="flex flex-row text-color-white pr-2 underline" href={card.linkGitHub}>
+                        <div class="text-lg font-semibold">GitHub</div>
+                        <div class="pl-1">
+                          <svg class="pt-1" fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="#d1d5db" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                          </svg>
+                        </div> 
+                      </a>
                     </div>
                     <br></br>
                   </div>
@@ -618,7 +617,7 @@ function App() {
 
                 </div>
                 <br></br>
-                <div>© 2024 Sebastian Weber</div>
+                <div>©2024 Sebastian Weber</div>
                 <br></br>
               </div>
 
