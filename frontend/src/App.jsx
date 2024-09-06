@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 
-// --- images ---
+// --- Image resources ---
 
-// svgs
+// SVGs
 import swLogo from '/src/assets/icons/svg/swlogo.svg'
 
-// Documents
+// PDFs
 import resume from '/src/assets/documents/pdf/Sebastian_Weber_-_CV_-_UX-UI_Designer_and_Frontend_Developer_07-2024.pdf'
-
 
 // Logos
 import RH_Logo from '/src/assets/logos/RH_Logo.png'
@@ -16,6 +15,7 @@ import BUW_Logo_white from '/src/assets/logos/Unilogo_schwarz_T3.png'
 import WBS_Logo_red from '/src/assets/logos/WBSCS-Red-logo.webp'
 import WBS_Logo_white from '/src/assets/logos/WBSCS-full-logo-white.webp'
 
+// --- Web Development Projects ---
 
 // Taskify
 import TaskifyExcalidraw from '/src/assets/images/png/Taskify/Taskify.excalidraw.png'
@@ -31,13 +31,11 @@ import HackerNewsDarkmode from '/src/assets/images/png/Hackernews/HackerNewsDark
 import HackerNewsTailwindCSS from '/src/assets/images/png/Hackernews/HackerNewsTailwind.png'
 import HackerNewsMacBookAir from '/src/assets/images/png/Hackernews/HackerNews_macbook_air_mockup_2023.png'
 
-
 // PICAPI
 import PICAPIWireframe from '/src/assets/images/png/PICAPI/PICAPI_wireframe.png'
 import PICAPIDetailPage2 from '/src/assets/images/png/PICAPI/PICAPI_DetailPage_2.png'
 import PICAPIWIPTopbar from '/src/assets/images/png/PICAPI/PICAPI_WIP_Topbar.png'
 import PICAPIMacBookAir from '/src/assets/images/png/PICAPI/PICAPI_MacBookAir.png'
-
 
 // PokéFight
 import PokeFightLogin from '/src/assets/images/png/PokeFight/Pokefight_login.png'
@@ -46,16 +44,24 @@ import PokeFightPokedex from '/src/assets/images/png/PokeFight/PokeFight_Pokedex
 import PokeFightBattle from '/src/assets/images/png/PokeFight/PokeFight_battle.png'
 import PokeFightMacBookAir from '/src/assets/images/png/PokeFight/PokeFight_MacBookAir.png'
 
-
-
 // Elder Gym Bro App
 import ElderGymBroWireframeDashboard from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Wireframe_Dashboard.png'
 import ElderGymBroDashboard from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Dashboard.png'
 import ElderGymBroWorkouts from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Workouts.png'
 import ElderGymBroAppDemo from '/src/assets/images/gif/ElderGymBroApp/ElderGymBro_Demo.gif'
 
+// --- Media Design ---
 
-// --- Texts ---
+// Besucherzentrum
+import Besucherzentrum from '/src/assets/images/png/Besucherzentrum/Entwurf_Besucherzentrum_Wirtschaftshof_Glienicke.png'
+import BesucherzentrumEG from '/src/assets/images/png/Besucherzentrum/Entwurf_Besucherzentrum_Wirtschaftshof_Glienicke_EG.png'
+import BesucherzentrumOG from '/src/assets/images/png/Besucherzentrum/Entwurf_Besucherzentrum_Wirtschaftshof_Glienicke_OG.png'
+
+// FashionPlattform
+import FashionPlattform from '/src/assets/images/png/FashionPlattform/FashionPlattform.png'
+
+
+// --- Text Recources ---
 
 const aboutSection = [
   {
@@ -70,6 +76,8 @@ const projectsSection = [
 ];
 
 // --- Cards ---
+
+// --- Work ---
 
 const workCards = [
   {
@@ -110,6 +118,7 @@ const workCards = [
   },
 ];
 
+// --- Education ---
 
 const educationCards = [
   {
@@ -155,7 +164,7 @@ const educationCards = [
     logotype: BUW_Logo_white,
     degree: 'Bachelor of Arts',
     program: 'Media Design / Design Technology & English Studies',
-    bullet1: '• Studied the principles of different field of design, e.g. visual design, layout, typography, film and the history and theory of design.',
+    bullet1: '• Studied the principles of different fields of design, e.g. visual design, layout, typography, film and the history and theory of design.',
     bullet2: '• Created concepts for various media projects using a broad stack of media and design technologies.',
     tag1: 'Academic Writing',
     tag2: 'Business English',
@@ -166,6 +175,10 @@ const educationCards = [
     tag7: '...',
   },
 ];
+
+// --- Projects ---
+
+// --- Web Development ---
 
 const projectCards = [
   {
@@ -250,15 +263,15 @@ const projectCards = [
   },
 ];
 
-
+// --- Media Design ---
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-
     <>
-    <html>
+    <html lang="en">
+    <body>
+      
       {/* SW TEMPLATE */}
       <div class="min-h-svh flex flex-col justify-center items-center bg-gray-950">
 
@@ -623,7 +636,8 @@ function App() {
 
         </div>
 
-      </div> 
+      </div>
+      </body>
     </html>
     </>
 
