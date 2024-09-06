@@ -243,8 +243,8 @@ const projectCards = [
     image4: ElderGymBroAppDemo,
       image4Description: 'Mockup',  
     heading: 'ElderGymBro',
-    subheading: 'Elder Gym Bro — Join the Cult!',
-    description: '"Elder Gym Bro was the grand finale of my WBS Coding School bootcamp. This time we had the freedom to choose any topic we wanted to tackle as our final coding challenge. We decided to shake things up with a fitness app that was not only functional, but fun, and thus ElderGymBro was born! ElderGymBro is a Lovecraftian-themed fitness app for humans, blobs, and other abominations. For the first time, we took a mobile-first approach. Coming from a native software development background, it really made me realize the importance of responsiveness in UI layouts when developing for the web. I dove deep into experimenting with a variety of tools and frameworks such as SASS, DaisyUI, WindUI, and Material UI, each with their own unique strengths and challenges. Together, we worked hard to find the perfect balance between design aesthetics and usability, from the first wireframes in Figma to the final deployed MERN application. This project was an incredible learning experience full of valuable lessons, and we had the fantastic opportunity to present our work at the WBS Coding School Community Day in Berlin.',
+    subheading: 'ElderGymBro — Join the Cult!',
+    description: 'Working on "ElderGymBro" was the grand finale of my WBS Coding School bootcamp experience. This last time we had the freedom to choose any topic we wanted to tackle as our final coding challenge. We decided to shake things up with a fitness app that was not only functional, but fun, and thus ElderGymBro was born, an Lovecraftian-themed fitness app for humans, blobs, and other abominations! For the first time, we took a mobile-first approach for one of our projects. Coming from a native software development background, this made me understand how web apps work and how to use TailwindCSS\'s flex-box and grid classes in order to craft responsive UIs for web apps. I dove deep into experimenting with a variety of tools and frameworks such as SASS, DaisyUI, WindUI, and Material UI, each with their own unique strengths and challenges. Together, we worked hard to find the perfect balance between design aesthetics and usability, from the first wireframes in Figma to the final deployed MERN app. This project was an incredible learning experience full of valuable lessons, and we had the fantastic opportunity to present our work at the WBS Coding School Community Day on campus in Berlin.',
     linkNetlify: 'https://eldergymbro.netlify.app/',
     linkGitHub: 'https://github.com/MichalWollny/ElderGymBroApp',
   },
@@ -321,7 +321,7 @@ function App() {
          {/* -- 4. About section */}
          <div class="p-4">
           	<div class="flex flex-row justify-start">
-              <p class="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight sm:text-xl md:text-2xl xl:text-4xl">
+              <p class="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl">
                 _about 
               </p>
             </div>
@@ -333,35 +333,35 @@ function App() {
             ))}
 
             <div class="flex flex-row justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="size-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" strokeWidth={1.5} stroke="currentColor" class="size-6 mt-1 -mr-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
               </svg>
               <a class="mx-2 font-semibold" href={resume}>Dowload full CV</a>
             </div>
             <br></br>
 
-            <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+            <hr class="h-px my-2 mx-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
           </div>
 
 
           {/* -- 4. Projects section */}
-          <div class="p-4 pt-12">
+          <div class="p-4 pt-6">
             <div class="flex flex-row justify-start">
-              <p class="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight sm:text-xl md:text-2xl xl:text-4xl">
+              <p class="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl">
                 _projects
               </p>
             </div>
 
             {projectsSection.map((card, index) => (
-                            <div class="flex flex-col justify-center text-start items-center py-6 px-4 font-light text-balance text-white leading-tight sm:text-lg md:text-base">
-                            {card.introduction}
-                            </div>
-                                    ))}
+              <div class="flex flex-col justify-center text-start items-center py-6 px-4 font-light text-balance text-white leading-tight sm:text-lg md:text-base">
+                {card.introduction}
+              </div>
+                ))}
           </div>
 
           {/* -- Projects -- */}
           {projectCards.map((card, index) => (
-          <div class="m-w-40 m-6 rounded-lg bg-gray-900 p-4 shadow-xl transition-transform">
+          <div class="m-w-40 mx-6 my-2 rounded-lg bg-gray-900 p-4 shadow-xl transition-transform">
             <div key={index} class="">
               <div class="p-2">
                 <div class="flex flex-col items-start ">
@@ -387,7 +387,7 @@ function App() {
                     <div class="flex flex-col min-w-42 mx-4 justify-start items-start sm:justify-start sm:items-start md:justify-start md:items-start lg:justify-start lg:items-start xl:justify-start xl:items-start">
 
                         </div>
-                      <div class="flex flex-wrap justify-center items-center ">
+                      <div class="flex flex-wrap justify-center items-center">
                         <div class="flex flex-col mx-2 justify-center items-center">
                           <a href={card.image1} target="_blank">
                             <img class="h-28 md:h-32 lg:h-36 xl:h-42 px-2 p-1" src={card.image1}></img>
@@ -451,12 +451,10 @@ function App() {
 
         {/* -- 4. Work experience section */}
         <div class="p-4 pt-6">
-
-          <div class="flex flex-row justify-start">
-            <p class="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight sm:text-xl md:text-2xl xl:text-4xl">
-               _work experience
+          <p class="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl">
+              _work experience
             </p>
-          </div>
+            <br></br>
 
         </div>
 
@@ -509,8 +507,8 @@ function App() {
           ))}
 
           {/* -- 4. education section */}
-          <div class="p-4 pt-12">
-            <p class="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight sm:text-xl md:text-2xl xl:text-4xl">
+          <div class="p-4 pt-6">
+          <p class="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl">
               _education
             </p>
             <br></br>
