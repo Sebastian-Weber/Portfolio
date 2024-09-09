@@ -17,25 +17,11 @@ import WBS_Logo_white from '/src/assets/logos/WBSCS-full-logo-white.webp'
 
 // --- Web Development Projects ---
 
-// Taskify
-import TaskifyExcalidraw from '/src/assets/images/png/Taskify/Taskify.excalidraw.png'
-import TaskifyWIP from '/src/assets/images/png/Taskify/Taskify2.png'
-import TaskifyFinal from '/src/assets/images/png/Taskify/Taskify.png'
-import TaskifyConcept from '/src/assets/images/png/Taskify/Taskify5.png'
-import TaskifyMacBookAir from '/src/assets/images/png/Taskify/Taskify_macbook_air_mockup_2023.png'
-
-// HackerNews
-import HackerNewsStyleExploration from '/src/assets/images/png/Hackernews/HackerNewsStyleExploration.png'
-import HackerNewsVanillaCSS from '/src/assets/images/png/Hackernews/HackerNewsVanillaCSS.png' 
-import HackerNewsDarkmode from '/src/assets/images/png/Hackernews/HackerNewsDarkmode.png'
-import HackerNewsTailwindCSS from '/src/assets/images/png/Hackernews/HackerNewsTailwind.png'
-import HackerNewsMacBookAir from '/src/assets/images/png/Hackernews/HackerNews_macbook_air_mockup_2023.png'
-
-// PICAPI
-import PICAPIWireframe from '/src/assets/images/png/PICAPI/PICAPI_wireframe.png'
-import PICAPIDetailPage2 from '/src/assets/images/png/PICAPI/PICAPI_DetailPage_2.png'
-import PICAPIWIPTopbar from '/src/assets/images/png/PICAPI/PICAPI_WIP_Topbar.png'
-import PICAPIMacBookAir from '/src/assets/images/png/PICAPI/PICAPI_MacBookAir.png'
+// Elder Gym Bro App
+import ElderGymBroWireframeDashboard from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Wireframe_Dashboard.png'
+import ElderGymBroDashboard from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Dashboard.png'
+import ElderGymBroWorkouts from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Workouts.png'
+import ElderGymBroAppDemo from '/src/assets/images/gif/ElderGymBroApp/ElderGymBro_Demo.gif'
 
 // PokéFight
 import PokeFightLogin from '/src/assets/images/png/PokeFight/Pokefight_login.png'
@@ -44,11 +30,25 @@ import PokeFightPokedex from '/src/assets/images/png/PokeFight/PokeFight_Pokedex
 import PokeFightBattle from '/src/assets/images/png/PokeFight/PokeFight_battle.png'
 import PokeFightMacBookAir from '/src/assets/images/png/PokeFight/PokeFight_MacBookAir.png'
 
-// Elder Gym Bro App
-import ElderGymBroWireframeDashboard from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Wireframe_Dashboard.png'
-import ElderGymBroDashboard from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Dashboard.png'
-import ElderGymBroWorkouts from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Workouts.png'
-import ElderGymBroAppDemo from '/src/assets/images/gif/ElderGymBroApp/ElderGymBro_Demo.gif'
+// PICAPI
+import PICAPIWireframe from '/src/assets/images/png/PICAPI/PICAPI_wireframe.png'
+import PICAPIDetailPage2 from '/src/assets/images/png/PICAPI/PICAPI_DetailPage_2.png'
+import PICAPIWIPTopbar from '/src/assets/images/png/PICAPI/PICAPI_WIP_Topbar.png'
+import PICAPIMacBookAir from '/src/assets/images/png/PICAPI/PICAPI_MacBookAir.png'
+
+// HackerNews
+import HackerNewsStyleExploration from '/src/assets/images/png/Hackernews/HackerNewsStyleExploration.png'
+import HackerNewsVanillaCSS from '/src/assets/images/png/Hackernews/HackerNewsVanillaCSS.png' 
+import HackerNewsDarkmode from '/src/assets/images/png/Hackernews/HackerNewsDarkmode.png'
+import HackerNewsTailwindCSS from '/src/assets/images/png/Hackernews/HackerNewsTailwind.png'
+import HackerNewsMacBookAir from '/src/assets/images/png/Hackernews/HackerNews_macbook_air_mockup_2023.png'
+
+// Taskify
+import TaskifyExcalidraw from '/src/assets/images/png/Taskify/Taskify.excalidraw.png'
+import TaskifyWIP from '/src/assets/images/png/Taskify/Taskify2.png'
+import TaskifyFinal from '/src/assets/images/png/Taskify/Taskify.png'
+import TaskifyConcept from '/src/assets/images/png/Taskify/Taskify5.png'
+import TaskifyMacBookAir from '/src/assets/images/png/Taskify/Taskify_macbook_air_mockup_2023.png'
 
 // --- Media Design ---
 
@@ -182,52 +182,20 @@ const educationCards = [
 
 const projectCards = [
   {
-    // Taskify
-    image1: TaskifyExcalidraw,
-      image1Description: 'Wireframe',
-    image2: TaskifyWIP,
-      image2Description: 'Work in progress',
-    image3: TaskifyConcept,
-      image3Description: 'Work in progress',
-    image4: TaskifyMacBookAir,
-      image4Description: 'Mockup',
-    heading: 'Taskify',
-    subheading: 'Stay organized and focused with Taskify!',
-    description: '"Taskify" is a to-do list app created during the WBS Coding School bootcamp, marking my first deep dive into JavaScript and React.js. Collaborating on this project, I discovered the power of collaborative wireframing using Excalidraw. It not only clarified our projects UX but also helped us, as beginners, build a shared understanding of how UIs work and translate into code. Despite our team of four being mostly new to web development, we successfully built a functional app using tools like Git, Slack and Trello. With Taskify we did not create a new gold standard ofor to-do-lists but the learning experience was invaluable and unforgettable!',
-    linkNetlify: 'https://taskifyinreact.netlify.app/',
-    linkGitHub: 'https://github.com/tarekelg/ToDoListReact',
-  },
-  {
-    // HackerNews
-    image1: HackerNewsStyleExploration,
-      image1Description: 'Style exploration',
-    image2: HackerNewsVanillaCSS,
-      image2Description: 'Work in progress', 
-    image3: HackerNewsTailwindCSS,
-      image3Description: 'Work in progress', 
-    image4: HackerNewsMacBookAir,
-      image4Description: 'Mockup',
-    heading: 'HackerNews',
-    subheading: 'What\'s up in Tech? — The latest news fetched from Agolia API & styled with TailwindCSS',
-    description: 'Coming from a design background, I\'ve always been more involved with front-end technologies than back-end technologies. Fetching data from an API and JSon files were things I had heard about, but had never done myself. While working on this HackerNews group project, I not only got my first taste of backend technologies, but also discovered npm packages for pre-built components like busy spinners and pagination. After using Bootstrap, I experimented with TailwindCSS and spent hours perfecting the layout and styling. The simplicity of TailwindCSS won me over, making it easier to write and maintain CSS, even with its limitations - well worth the tradeoffs from a UX designer\'s perspective.',
-    linkNetlify: 'https://hackernewsfromagolia.netlify.app/',
-    linkGitHub: 'https://github.com/Sebastian-Weber/HackerNews',
-  },
-  {
-    // PICAPI
-    image1: PICAPIWireframe,
-      image1Description: 'Wireframe',
-    image2: PICAPIWIPTopbar,
-      image2Description: 'Work in progress',
-    image3: PICAPIDetailPage2,
-      image3Description: 'Details page',
-    image4: PICAPIMacBookAir,
-      image4Description: 'Mockup',
-    heading: 'PICAPI',
-    subheading: 'PICAPI — All your favorite APIs at your fingertips!',
-    description: 'This group project was primarily focused on gaining practical experience in fetching data from both a headless CMS and a backend server. To accomplish this, we began by creating our own API collection, which we initially hosted on the Contentful platform, a popular headless CMS. After successfully setting up the API, we transferred the collection into a custom JSON file, which was then hosted on an Express server for greater flexibility and control over the backend processes. In addition, we enhanced the user interface by implementing an off-canvas sidebar, which was managed through the useState hook, a dedicated details page, pagination with npm\'s pagination library, the "slick slider carousel" for dynamic content display, a search bar using Daisy UI with an efficient search function, and clickable category tags to serve as filter options.',
-    linkNetlify: 'https://picapi.netlify.app/',
-    linkGitHub: 'https://github.com/Sebastian-Weber/Contentful_CMS_Rework',
+    // Elder Gym Bro App
+    image1: ElderGymBroWireframeDashboard,
+      image1Description: 'Figma prototype',
+    image2: ElderGymBroDashboard,
+      image2Description: 'Dashboard',
+    image3: ElderGymBroWorkouts,
+      image3Description: 'Workouts',
+    image4: ElderGymBroAppDemo,
+      image4Description: 'Mockup',  
+    heading: 'ElderGymBro',
+    subheading: 'ElderGymBro — Join the Cult!',
+    description: 'Working on "ElderGymBro" was the grand finale of my WBS Coding School bootcamp experience. This last time we had the freedom to choose any topic we wanted to tackle as our final coding challenge. We decided to shake things up with a fitness app that was not only functional, but fun, and thus ElderGymBro was born, an Lovecraftian-themed fitness app for humans, blobs, and other abominations! For the first time, we took a mobile-first approach for one of our projects. Coming from a native software development background, this made me understand how web apps work and how to use TailwindCSS\'s flex-box and grid classes in order to craft responsive UIs for web apps. I dove deep into experimenting with a variety of tools and frameworks such as SASS, DaisyUI, WindUI, and Material UI, each with their own unique strengths and challenges. Together, we worked hard to find the perfect balance between design aesthetics and usability, from the first wireframes in Figma to the final deployed MERN app. This project was an incredible learning experience full of valuable lessons, and we had the fantastic opportunity to present our work at the WBS Coding School Community Day on campus in Berlin.',
+    linkNetlify: 'https://eldergymbro.netlify.app/',
+    linkGitHub: 'https://github.com/MichalWollny/ElderGymBroApp',
   },
   {
     // PokéFight
@@ -246,20 +214,52 @@ const projectCards = [
     linkGitHub: 'https://github.com/ReynkeDeVos/PokeBattle',
   },
   {
-    // Elder Gym Bro App
-    image1: ElderGymBroWireframeDashboard,
-      image1Description: 'Figma prototype',
-    image2: ElderGymBroDashboard,
-      image2Description: 'Dashboard',
-    image3: ElderGymBroWorkouts,
-      image3Description: 'Workouts',
-    image4: ElderGymBroAppDemo,
-      image4Description: 'Mockup',  
-    heading: 'ElderGymBro',
-    subheading: 'ElderGymBro — Join the Cult!',
-    description: 'Working on "ElderGymBro" was the grand finale of my WBS Coding School bootcamp experience. This last time we had the freedom to choose any topic we wanted to tackle as our final coding challenge. We decided to shake things up with a fitness app that was not only functional, but fun, and thus ElderGymBro was born, an Lovecraftian-themed fitness app for humans, blobs, and other abominations! For the first time, we took a mobile-first approach for one of our projects. Coming from a native software development background, this made me understand how web apps work and how to use TailwindCSS\'s flex-box and grid classes in order to craft responsive UIs for web apps. I dove deep into experimenting with a variety of tools and frameworks such as SASS, DaisyUI, WindUI, and Material UI, each with their own unique strengths and challenges. Together, we worked hard to find the perfect balance between design aesthetics and usability, from the first wireframes in Figma to the final deployed MERN app. This project was an incredible learning experience full of valuable lessons, and we had the fantastic opportunity to present our work at the WBS Coding School Community Day on campus in Berlin.',
-    linkNetlify: 'https://eldergymbro.netlify.app/',
-    linkGitHub: 'https://github.com/MichalWollny/ElderGymBroApp',
+    // PICAPI
+    image1: PICAPIWireframe,
+      image1Description: 'Wireframe',
+    image2: PICAPIWIPTopbar,
+      image2Description: 'Work in progress',
+    image3: PICAPIDetailPage2,
+      image3Description: 'Details page',
+    image4: PICAPIMacBookAir,
+      image4Description: 'Mockup',
+    heading: 'PICAPI',
+    subheading: 'PICAPI — All your favorite APIs at your fingertips!',
+    description: 'This group project was primarily focused on gaining practical experience in fetching data from both a headless CMS and a backend server. To accomplish this, we began by creating our own API collection, which we initially hosted on the Contentful platform, a popular headless CMS. After successfully setting up the API, we transferred the collection into a custom JSON file, which was then hosted on an Express server for greater flexibility and control over the backend processes. In addition, we enhanced the user interface by implementing an off-canvas sidebar, which was managed through the useState hook, a dedicated details page, pagination with npm\'s pagination library, the "slick slider carousel" for dynamic content display, a search bar using Daisy UI with an efficient search function, and clickable category tags to serve as filter options.',
+    linkNetlify: 'https://picapi.netlify.app/',
+    linkGitHub: 'https://github.com/Sebastian-Weber/Contentful_CMS_Rework',
+  },
+  {
+    // HackerNews
+    image1: HackerNewsStyleExploration,
+      image1Description: 'Style exploration',
+    image2: HackerNewsVanillaCSS,
+      image2Description: 'Work in progress', 
+    image3: HackerNewsTailwindCSS,
+      image3Description: 'Work in progress', 
+    image4: HackerNewsMacBookAir,
+      image4Description: 'Mockup',
+    heading: 'HackerNews',
+    subheading: 'What\'s up in Tech? — The latest news fetched from Agolia API & styled with TailwindCSS',
+    description: 'Coming from a design background, I\'ve always been more involved with front-end technologies than back-end technologies. Fetching data from an API and JSon files were things I had heard about, but had never done myself. While working on this HackerNews group project, I not only got my first taste of backend technologies, but also discovered npm packages for pre-built components like busy spinners and pagination. After using Bootstrap, I experimented with TailwindCSS and spent hours perfecting the layout and styling. The simplicity of TailwindCSS won me over, making it easier to write and maintain CSS, even with its limitations - well worth the tradeoffs from a UX designer\'s perspective.',
+    linkNetlify: 'https://hackernewsfromagolia.netlify.app/',
+    linkGitHub: 'https://github.com/Sebastian-Weber/HackerNews',
+  },
+  {
+    // Taskify
+    image1: TaskifyExcalidraw,
+      image1Description: 'Wireframe',
+    image2: TaskifyWIP,
+      image2Description: 'Work in progress',
+    image3: TaskifyConcept,
+      image3Description: 'Work in progress',
+    image4: TaskifyMacBookAir,
+      image4Description: 'Mockup',
+    heading: 'Taskify',
+    subheading: 'Stay organized and focused with Taskify!',
+    description: '"Taskify" is a to-do list app created during the WBS Coding School bootcamp, marking my first deep dive into JavaScript and React.js. Collaborating on this project, I discovered the power of collaborative wireframing using Excalidraw. It not only clarified our projects UX but also helped us, as beginners, build a shared understanding of how UIs work and translate into code. Despite our team of four being mostly new to web development, we successfully built a functional app using tools like Git, Slack and Trello. With Taskify we did not create a new gold standard ofor to-do-lists but the learning experience was invaluable and unforgettable!',
+    linkNetlify: 'https://taskifyinreact.netlify.app/',
+    linkGitHub: 'https://github.com/tarekelg/ToDoListReact',
   },
 ];
 
