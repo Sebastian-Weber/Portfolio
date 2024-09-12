@@ -195,7 +195,7 @@ const projectCards = [
     subheading: 'ElderGymBro — Join the Cult!',
     description: 'Working on "ElderGymBro" was the grand finale of my WBS Coding School bootcamp experience. This last time we had the freedom to choose any topic we wanted to tackle as our final coding challenge. We decided to shake things up with a fitness app that was not only functional, but fun, and thus ElderGymBro was born, an Lovecraftian-themed fitness app for humans, blobs, and other abominations! For the first time, we took a mobile-first approach for one of our projects. Coming from a native software development background, this made me understand how web apps work and how to use TailwindCSS\'s flex-box and grid classes in order to craft responsive UIs for web apps. I dove deep into experimenting with a variety of tools and frameworks such as SASS, DaisyUI, WindUI, and Material UI, each with their own unique strengths and challenges. Together, we worked hard to find the perfect balance between design aesthetics and usability, from the first wireframes in Figma to the final deployed MERN app. This project was an incredible learning experience full of valuable lessons, and we had the fantastic opportunity to present our work at the WBS Coding School Community Day on campus in Berlin.',
     linkNetlify: 'https://eldergymbro.netlify.app/',
-    linkGitHub: 'https://github.com/MichalWollny/ElderGymBroApp',
+    linkGitHub: 'https://github.com/Sebastian-Weber/ElderGymBroApp',
   },
   {
     // PokéFight
@@ -211,7 +211,7 @@ const projectCards = [
     subheading: 'PokéFight — Got to fetch them all!',
     description: '"PokéFight" was an exciting web development project that brings the world of Pokémon to life by retrieving the stats of thousands of Pokémon via a REST API. This group project was a great opportunity to combine creative design with technical development, and I contributed by designing a dynamic, responsive Pokémon card layout. Using the Daisy UI card component as a base, I extensively redesigned it to ensure that it could serve as the primary element of our Arena Battles, as well as our Pokédex, an overview of thousands of Pokémon, regardless of screen size or device. We also pushed the envelope by experimenting with AI tools such as Leonardo AI to create unique Pokémon visuals to complement the existing images and animated Pokémon sprites from the JSON data. This experience provided valuable lessons, such as the importance of using global objects to simplify data management and understanding the impact of fetching large data sets on the performance of UI components from a library.',
     linkNetlify: 'https://pokebattler.netlify.app',
-    linkGitHub: 'https://github.com/ReynkeDeVos/PokeBattle',
+    linkGitHub: 'https://github.com/Sebastian-Weber/PokemonBattle',
   },
   {
     // PICAPI
@@ -259,7 +259,7 @@ const projectCards = [
     subheading: 'Stay organized and focused with Taskify!',
     description: '"Taskify" is a to-do list app created during the WBS Coding School bootcamp, marking my first deep dive into JavaScript and React.js. Collaborating on this project, I discovered the power of collaborative wireframing using Excalidraw. It not only clarified our projects UX but also helped us, as beginners, build a shared understanding of how UIs work and translate into code. Despite our team of four being mostly new to web development, we successfully built a functional app using tools like Git, Slack and Trello. With Taskify we did not create a new gold standard ofor to-do-lists but the learning experience was invaluable and unforgettable!',
     linkNetlify: 'https://taskifyinreact.netlify.app/',
-    linkGitHub: 'https://github.com/tarekelg/ToDoListReact',
+    linkGitHub: 'https://github.com/Sebastian-Weber/ToDoListReact',
   },
 ];
 
