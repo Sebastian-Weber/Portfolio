@@ -273,7 +273,7 @@ function App() {
     <body>
       
       {/* SW TEMPLATE */}
-      <div class="min-h-svh flex flex-col justify-center items-center bg-gray-950">
+      <div class="min-h-svh flex flex-col justify-center items-center">
 
         {/* sticky top bar */}
         <div class="min-w-full flex flex-row sticky top-0 border-solid border-b-2 border-slate-800  justify-between items-center bg-slate-900">
