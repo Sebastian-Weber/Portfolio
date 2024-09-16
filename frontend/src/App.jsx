@@ -257,7 +257,7 @@ const projectCards = [
       image4Description: 'Mockup',
     heading: 'Taskify',
     subheading: 'Stay organized and focused with Taskify!',
-    description: '"Taskify" is a to-do list app created during the WBS Coding School bootcamp, marking my first deep dive into JavaScript and React.js. Collaborating on this project, I discovered the power of collaborative wireframing using Excalidraw. It not only clarified our projects UX but also helped us, as beginners, build a shared understanding of how UIs work and translate into code. Despite our team of four being mostly new to web development, we successfully built a functional app using tools like Git, Slack and Trello. With Taskify we did not create a new gold standard ofor to-do-lists but the learning experience was invaluable and unforgettable!',
+    description: '"Taskify" is a to-do list app created during the WBS Coding School bootcamp, marking my first deep dive into JavaScript and React.js. Collaborating on this project, I discovered the power of collaborative wireframing using Excalidraw. It not only clarified our projects UX but also helped us, as beginners, build a shared understanding of how UIs work and translate into code. Despite our team of four being mostly new to web development, we successfully built a functional app using tools like Git, Slack and Trello. With Taskify we did not create a new gold standard for to-do-lists but the learning experience was invaluable and unforgettable!',
     linkNetlify: 'https://taskifyinreact.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/ToDoListReact',
   },
