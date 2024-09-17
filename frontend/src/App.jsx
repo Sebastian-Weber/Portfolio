@@ -276,7 +276,7 @@ function App() {
       <div class="min-h-svh flex flex-col justify-center items-center">
 
         {/* sticky top bar */}
-        <div class="min-w-full flex flex-row sticky top-0 border-solid border-b-2 border-slate-800  justify-between items-center bg-slate-900">
+        <div class="min-w-full flex flex-row sticky top-0 border-solid border-b-2 border-slate-800 justify-between items-center bg-slate-900">
 
           {/* Logo */}
           <img src={swLogo} class="h-10 w-10 m-4 md:h-16 md:w-16 md:mx-12" alt="Sebastian Weber logo" />
@@ -374,7 +374,7 @@ function App() {
 
           {/* -- Projects -- */}
           {projectCards.map((card, index) => (
-          <div class="m-w-40 mx-6 my-2 rounded-lg bg-gray-900 p-4 shadow-xl transition-transform">
+          <div class="m-w-40 mx-6 my-2 rounded-lg bg-sky-950 p-4 shadow-xl transition-transform">
             <div key={index} class="">
               <div class="p-2">
                 <div class="flex flex-col items-start ">
