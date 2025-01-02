@@ -3,7 +3,7 @@
 // --- Image resources ---
 
 // SVGs
-import swLogo from '/src/assets/icons/svg/swlogo.svg'
+// import swLogo from '/src/assets/icons/svg/swlogo.svg'
 
 // PDFs
 import resume from '/src/assets/documents/pdf/Sebastian_Weber_-_CV_-_UX-UI_Designer_and_Frontend_Developer.pdf'
