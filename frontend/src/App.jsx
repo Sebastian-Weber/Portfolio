@@ -3,7 +3,7 @@
 // --- Image resources ---
 
 // SVGs
-import swLogo from '/src/assets/icons/svg/swlogo.svg'
+// import swLogo from '/src/assets/icons/svg/swlogo.svg'
 
 // PDFs
 import resume from '/src/assets/documents/pdf/Sebastian_Weber_-_CV_-_UX-UI_Designer_and_Frontend_Developer.pdf'
@@ -17,6 +17,14 @@ import WBS_Logo_white from '/src/assets/logos/WBSCS-full-logo-white.webp'
 import Future_education_Logo_white from '/src/assets/logos/future_education.png'
 
 // --- Web Development Projects ---
+
+
+// Peters Elektro GmbH
+import PetersElektroGmbHMacBookAir from '/src/assets/images/png/PetersElektroGmbH/MacbookAirMockup.png'
+import PetersElektroGmbHHome from '/src/assets/images/png/PetersElektroGmbH/Home.png'
+import PetersElektroGmbHNavbarXL from '/src/assets/images/png/PetersElektroGmbH/NavbarXL.png'
+import PetersElektroGmbHNavbarSmall from '/src/assets/images/png/PetersElektroGmbH/NavbarSmall.png'
+// import PetersElektroGmbHUICards from '/src/assets/images/png/PetersElektroGmbH/UICard.png'
 
 // Elder Gym Bro App
 import ElderGymBroWireframeDashboard from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Wireframe_Dashboard.png'
@@ -206,6 +214,24 @@ document.addEventListener('mousemove', (e) => {
 // --- Web Development ---
 
 const projectCards = [
+  {
+    // Peters Elektro GmbH
+    image1: PetersElektroGmbHHome,
+      image1Description: 'Hero Section',
+    image2: PetersElektroGmbHNavbarXL,
+      image2Description: 'Navbar XL',
+    image3: PetersElektroGmbHNavbarSmall,
+      image3Description: 'Navbar Small',
+    image4: PetersElektroGmbHMacBookAir,
+      image4Description: 'Navbar mobile',  
+    heading: 'Peters Elektro GmbH Website',
+    subheading: 'Peters Elektro GmbH Website',
+    description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+    linkNetlify: 'https://peters-elektro.netlify.app/',
+    linkGitHub: 'https://github.com/Sebastian-Weber/TEMPLATE-business-and-services',
+  },
+
+
   {
     // Elder Gym Bro App
     image1: ElderGymBroWireframeDashboard,
