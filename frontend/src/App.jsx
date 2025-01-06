@@ -221,7 +221,7 @@ const projectCards = [
     image2: PetersElektroGmbHNavbarXL,
       image2Description: 'Navbar XL',
     image3: PetersElektroGmbHNavbarSmall,
-      image3Description: 'Navbar Small',
+      image3Description: 'Navbar small',
     image4: PetersElektroGmbHMacBookAir,
       image4Description: 'Navbar mobile',  
     heading: 'Peters Elektro GmbH Website',
