@@ -226,7 +226,15 @@ const projectCards = [
       image4Description: 'Navbar mobile',  
     heading: 'Peters Elektro GmbH Website',
     subheading: 'Peters Elektro GmbH Website',
-    description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+    description: `This project showcases my ability to design and develop a modern, responsive website that communicates both the energy and sustainability of renewable technologies. The process began with a detailed design mockup in Figma, where I crafted a clean, vibrant aesthetic. I carefully chose a color palette that reflected the dynamic power of electricity while emphasizing the harmony and balance of renewability.
+
+To complement the design, I sourced high-quality images from Unsplash and utilized illustrations from UnDraw. However, instead of using the illustrations as-is, I heavily edited them to better align with the project’s theme. This customization gave the visuals a distinctive look that retained the essence of the original while making them more cohesive and unique to the site.
+
+For the development phase, I used React Router to create a seamless multi-page experience, along with tools like VS Code, Node.js, Vite, Git, and TypeScript to ensure efficient and maintainable code. The website’s design divided into modular sections, such as a hero section, a text-and-image section, and a text-and-cards section. These sections were built as reusable UI components, making it easy to assemble pages with flexibility and scalability.
+
+To enhance the reusability of the components, I utilized techniques such as passing props and leveraging React’s Context API to manage state. TailwindCSS was my styling framework of choice, which not only ensured the design was consistent but also allowed me to make the website fully responsive across all devices.
+
+This project highlights my ability to combine thoughtful design principles with modern web development techniques to create a visually compelling and highly functional user experience.`,
     linkNetlify: 'https://peters-elektro.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/TEMPLATE-business-and-services',
   },
