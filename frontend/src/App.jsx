@@ -471,7 +471,7 @@ function App() {
             ))}
 
             <div className='flex flex-col justify-center items-center'>
-            <div className="flex flex-row w-fit h-auto justify-center items-center transition-transform hover:bg-slate-800 hover:scale-110 bg-slate-900 px-4 py-2 rounded-md">
+            <div className="flex flex-row w-fit h-auto justify-center items-center transition-transform hover:bg-slate-900 bg-sky-950 hover:scale-105 px-4 py-2 rounded-md">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" strokeWidth={1.5} stroke="currentColor" className="size-6 mt-1 -mr-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
               </svg>
