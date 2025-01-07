@@ -217,7 +217,7 @@ const projectCards = [
   {
     // Peters Elektro GmbH
     image1: PetersElektroGmbHHome,
-      image1Description: 'Hero Section',
+      image1Description: 'Hero section',
     image2: PetersElektroGmbHNavbarXL,
       image2Description: 'Navbar XL',
     image3: PetersElektroGmbHNavbarSmall,
@@ -226,7 +226,15 @@ const projectCards = [
       image4Description: 'Navbar mobile',  
     heading: 'Peters Elektro GmbH Website',
     subheading: 'Peters Elektro GmbH Website',
-    description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+    description: `This project showcases my ability to design and develop a modern, responsive website that communicates both the energy and sustainability of renewable technologies. The process began with a detailed design mockup in Figma, where I crafted a clean, vibrant aesthetic. I carefully chose a color palette that reflected the dynamic power of electricity while emphasizing the harmony and balance of renewability.
+
+To complement the design, I sourced high-quality images from Unsplash and utilized illustrations from UnDraw. However, instead of using the illustrations as-is, I heavily edited them to better align with the project’s theme. This customization gave the visuals a distinctive look that retained the essence of the original while making them more cohesive and unique to the site.
+
+For the development phase, I used React Router to create a seamless multi-page experience, along with tools like VS Code, Node.js, Vite, Git, and TypeScript to ensure efficient and maintainable code. The website’s design divided into modular sections, such as a hero section, a text-and-image section, and a text-and-cards section. These sections were built as reusable UI components, making it easy to assemble pages with flexibility and scalability.
+
+To enhance the reusability of the components, I utilized techniques such as passing props and leveraging React’s Context API to manage state. TailwindCSS was my styling framework of choice, which not only ensured the design was consistent but also allowed me to make the website fully responsive across all devices.
+
+This project highlights my ability to combine thoughtful design principles with modern web development techniques to create a visually compelling and highly functional user experience.`,
     linkNetlify: 'https://peters-elektro.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/TEMPLATE-business-and-services',
   },
@@ -471,7 +479,7 @@ function App() {
             ))}
 
             <div className='flex flex-col justify-center items-center'>
-            <div className="flex flex-row w-fit h-auto justify-center items-center transition-transform hover:bg-slate-900 bg-sky-950 hover:scale-105 px-4 py-2 rounded-md">
+            <div className="flex flex-row w-fit h-auto justify-center items-center transition-transform hover:bg-sky-950 bg-slate-900 px-4 py-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" strokeWidth={1.5} stroke="currentColor" className="size-6 mt-1 -mr-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
               </svg>
