@@ -18,6 +18,12 @@ import Future_education_Logo_white from '/src/assets/logos/future_education.png'
 
 // --- Web Development Projects ---
 
+// Lost in Translation - Card Matching Game
+// import LostinTranslationMacBookAir from '/src/assets/images/png/LostinTranslation/...'
+import LostinTranslationHome from '/src/assets/images/png/LostinTranslation/LostinTranslationGameboardDesktop.png'
+import LostinTranslationHomeAllPairedCards from '/src/assets/images/png/LostinTranslation/LostinTranslationGameboardDesktopAllMatchingPairs.png'
+import LostinTranslationMobileView from '/src/assets/images/png/LostinTranslation/LostinTranslationGameboardMobile.png'
+// import PetersElektroGmbHUICards from '/src/assets/images/png/PetersElektroGmbH/UICard.png'
 
 // Peters Elektro GmbH
 import PetersElektroGmbHMacBookAir from '/src/assets/images/png/PetersElektroGmbH/MacbookAirMockup.png'
@@ -215,6 +221,22 @@ document.addEventListener('mousemove', (e) => {
 
 const projectCards = [
   {
+    // Lost in Translation - Card Matching Game
+    image1: LostinTranslationHome,
+      image1Description: 'Game board',
+    image2: LostinTranslationHomeAllPairedCards,
+      image2Description: 'All cards uncovered',
+    image3: LostinTranslationMobileView,
+      image3Description: 'Mobile view',
+    image4: LostinTranslationHomeAllPairedCards,
+      image4Description: 'Mockup',  
+    heading: 'Lost in Translation',
+    subheading: 'Lost in Translation – A Card Matching Game',
+    description: `FILL IN LATER Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.`,
+    linkNetlify: 'https://lostintranslation.netlify.app/',
+    linkGitHub: 'https://github.com/Sebastian-Weber/words-images-matching-game',
+  },
+  {
     // Peters Elektro GmbH
     image1: PetersElektroGmbHHome,
       image1Description: 'Hero section',
@@ -238,8 +260,6 @@ This project highlights my ability to combine thoughtful design principles with 
     linkNetlify: 'https://peters-elektro.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/TEMPLATE-business-and-services',
   },
-
-
   {
     // Elder Gym Bro App
     image1: ElderGymBroWireframeDashboard,
@@ -479,7 +499,7 @@ function App() {
             ))}
 
             <div className='flex flex-col justify-center items-center'>
-            <div className="flex flex-row w-fit h-auto justify-center items-center transition-transform hover:bg-sky-950 bg-slate-900 px-4 py-2">
+            <div className="flex flex-row w-fit h-auto justify-center items-center transition-transform  ease-in-out delay-150 hover:bg-sky-950 bg-slate-900 px-4 py-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" strokeWidth={1.5} stroke="currentColor" className="size-6 mt-1 -mr-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
               </svg>
@@ -508,7 +528,7 @@ function App() {
 
           {/* -- Projects -- */}
           {projectCards.map((card, index) => (
-          <div key={index} className="m-w-40 mx-6 my-2 transition-transform ease-in-out delay-150 rounded-md duration-500 hover:bg-slate-800 hover:bg-opacity-30">
+          <div key={index} className="m-w-40 mx-6 my-2 transition-transform ease-in-out delay-700 duration-500 rounded-md  hover:bg-slate-800 hover:bg-opacity-30">
             
             <div className="">
               <div className="px-4 py-6">
