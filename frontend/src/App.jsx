@@ -21,8 +21,8 @@ import Future_education_Logo_white from '/src/assets/logos/future_education.png'
 // Lost in Translation - Card Matching Game
 // import LostinTranslationMacBookAir from '/src/assets/images/png/LostinTranslation/...'
 import LostinTranslationHome from '/src/assets/images/png/LostinTranslation/LostinTranslationGameboardDesktop.png'
+import LostinTranslationCardConcept from '/src/assets/images/png/LostinTranslation/LostinTranslationCardConcept.png'
 import LostinTranslationHomeAllPairedCards from '/src/assets/images/png/LostinTranslation/LostinTranslationGameboardDesktopAllMatchingPairs.png'
-import LostinTranslationMobileView from '/src/assets/images/png/LostinTranslation/LostinTranslationGameboardMobile.png'
 // import PetersElektroGmbHUICards from '/src/assets/images/png/PetersElektroGmbH/UICard.png'
 
 // Peters Elektro GmbH
@@ -222,17 +222,17 @@ document.addEventListener('mousemove', (e) => {
 const projectCards = [
   {
     // Lost in Translation - Card Matching Game
-    image1: LostinTranslationHome,
-      image1Description: 'Game board',
-    image2: LostinTranslationHomeAllPairedCards,
-      image2Description: 'All cards uncovered',
-    image3: LostinTranslationMobileView,
-      image3Description: 'Mobile view',
+    image1: LostinTranslationCardConcept,
+      image1Description: 'Card concept',
+    // image2: LostinTranslationCardConcept,
+    //   image2Description: 'All cards uncovered',
+    // image3: LostinTranslationCardConcept,
+    //   image3Description: 'Card concept',
     image4: LostinTranslationHomeAllPairedCards,
       image4Description: 'Mockup',  
     heading: 'Lost in Translation',
     subheading: 'Lost in Translation – A Card Matching Game',
-    description: `FILL IN LATER Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.`,
+    description: `I developed a memory/card matching game based on a React & TypeScript YouTube tutorial. Using GitHub Copilot, I customized the code to fit my vision, where players match images with terms to create an educational and poetic experience. The game aims to spark curiosity about different cultures, languages, and perspectives on life, thoughts, and emotions. For styling, I used a combination of vanilla CSS and Tailwind CSS, implementing a fully responsive grid layout for an optimal user experience on various screen sizes.`,
     linkNetlify: 'https://lostintranslation.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/words-images-matching-game',
   },
