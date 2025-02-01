@@ -20,7 +20,7 @@ import Future_education_Logo_white from '/src/assets/logos/future_education.png'
 
 // Lost in Translation - Card Matching Game
 // import LostinTranslationMacBookAir from '/src/assets/images/png/LostinTranslation/...'
-import LostinTranslationHome from '/src/assets/images/png/LostinTranslation/LostinTranslationGameboardDesktop.png'
+import LostinTranslationWIP from '/src/assets/images/png/LostinTranslation/LostinTranslationWIP.png'
 import LostinTranslationCardConcept from '/src/assets/images/png/LostinTranslation/LostinTranslationCardConcept.png'
 import LostinTranslationHomeAllPairedCards from '/src/assets/images/png/LostinTranslation/LostinTranslationGameboardDesktopAllMatchingPairs.png'
 // import PetersElektroGmbHUICards from '/src/assets/images/png/PetersElektroGmbH/UICard.png'
@@ -222,10 +222,10 @@ document.addEventListener('mousemove', (e) => {
 const projectCards = [
   {
     // Lost in Translation - Card Matching Game
-    image1: LostinTranslationCardConcept,
-      image1Description: 'Card concept',
-    // image2: LostinTranslationCardConcept,
-    //   image2Description: 'All cards uncovered',
+    image1: LostinTranslationWIP,
+      image1Description: 'Original card matching game',
+    image2: LostinTranslationCardConcept,
+      image2Description: 'Extended card concept',
     // image3: LostinTranslationCardConcept,
     //   image3Description: 'Card concept',
     image4: LostinTranslationHomeAllPairedCards,
