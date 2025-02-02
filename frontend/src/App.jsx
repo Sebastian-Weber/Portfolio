@@ -26,9 +26,9 @@ import LostinTranslationCardsInFigma from '/src/assets/images/png/LostinTranslat
 
 // Peters Elektro GmbH
 import PetersElektroGmbHMockup from '/src/assets/images/png/PetersElektroGmbH/MacbookAirMockup.png'
-import PetersElektroGmbHHome from '/src/assets/images/png/PetersElektroGmbH/Home.png'
-import PetersElektroGmbHNavbarXL from '/src/assets/images/png/PetersElektroGmbH/NavbarXL.png'
-import PetersElektroGmbHNavbarSmall from '/src/assets/images/png/PetersElektroGmbH/NavbarSmall.png'
+import PetersElektroGmbHFigmaResponsiveMockup2 from '/src/assets/images/png/PetersElektroGmbH/FigmaResponsiveMockup2.png'
+import PetersElektroGmbHNResponsiveNavbarMockup from '/src/assets/images/png/PetersElektroGmbH/ResponsiveNavbarMockup.png'
+import PetersElektroGmbHPetersElektroGmbHMoodboard from '/src/assets/images/png/PetersElektroGmbH/PetersElektroGmbHMoodboard.png'
 // import PetersElektroGmbHUICards from '/src/assets/images/png/PetersElektroGmbH/UICard.png'
 
 // Elder Gym Bro App
@@ -237,12 +237,12 @@ const projectCards = [
   },
   {
     // Peters Elektro GmbH
-    image1: PetersElektroGmbHHome,
-      image1Description: 'Hero section',
-    image2: PetersElektroGmbHNavbarXL,
-      image2Description: 'Navbar XL',
-    image3: PetersElektroGmbHNavbarSmall,
-      image3Description: 'Navbar small',
+    image1: PetersElektroGmbHPetersElektroGmbHMoodboard,
+      image1Description: 'CI moodboard (Figma)',
+    image2: PetersElektroGmbHFigmaResponsiveMockup2,
+      image2Description: 'Grid mockup (Figma)',
+    image3: PetersElektroGmbHNResponsiveNavbarMockup,
+      image3Description: 'Responsive navbar (Figma)',
     image4: PetersElektroGmbHMockup,
       image4Description: 'Navbar mobile',  
     heading: 'Peters Elektro GmbH Website',
