@@ -22,8 +22,8 @@ import Future_education_Logo_white from '/src/assets/logos/future_education.png'
 // import LostinTranslationMacBookAir from '/src/assets/images/png/LostinTranslation/...'
 import LostinTranslationWIP from '/src/assets/images/png/LostinTranslation/LostinTranslationWIP.png'
 import LostinTranslationCardConcept from '/src/assets/images/png/LostinTranslation/LostinTranslationCardConcept.png'
-import LostinTranslationHomeAllPairedCards from '/src/assets/images/png/LostinTranslation/LostinTranslationGameboardDesktopAllMatchingPairs.png'
-// import PetersElektroGmbHUICards from '/src/assets/images/png/PetersElektroGmbH/UICard.png'
+import LostinTranslationMockup from '/src/assets/images/png/LostinTranslation/LostInTranslation_MacBookAir.png'
+import LostinTranslationCardsInFigma from '/src/assets/images/png/LostinTranslation/LostinTranslationCardsInFigma.png'
 
 // Peters Elektro GmbH
 import PetersElektroGmbHMacBookAir from '/src/assets/images/png/PetersElektroGmbH/MacbookAirMockup.png'
@@ -225,9 +225,9 @@ const projectCards = [
     image1: LostinTranslationWIP,
       image1Description: 'Original card matching game',
     image2: LostinTranslationCardConcept,
-      image2Description: 'Extended card concept',
-    // image3: LostinTranslationCardConcept,
-    //   image3Description: 'Card concept',
+      image2Description: 'Extended card wireframe',
+    image3: LostinTranslationCardsInFigma,
+      image3Description: 'Cards mockup (Figma)',
     image4: LostinTranslationHomeAllPairedCards,
       image4Description: 'Mockup',  
     heading: 'Lost in Translation',
@@ -244,7 +244,7 @@ const projectCards = [
       image2Description: 'Navbar XL',
     image3: PetersElektroGmbHNavbarSmall,
       image3Description: 'Navbar small',
-    image4: PetersElektroGmbHMacBookAir,
+    image4: LostinTranslationMockup,
       image4Description: 'Navbar mobile',  
     heading: 'Peters Elektro GmbH Website',
     subheading: 'Peters Elektro GmbH Website',
