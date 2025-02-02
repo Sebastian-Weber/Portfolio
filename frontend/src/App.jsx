@@ -3,7 +3,7 @@
 // --- Image resources ---
 
 // SVGs
-import swLogo from '/src/assets/icons/svg/swlogo.svg'
+// import swLogo from '/src/assets/icons/svg/swlogo.svg'
 
 // PDFs
 import resume from '/src/assets/documents/pdf/Sebastian_Weber_-_CV_-_UX-UI_Designer_and_Frontend_Developer.pdf'
@@ -17,6 +17,19 @@ import WBS_Logo_white from '/src/assets/logos/WBSCS-full-logo-white.webp'
 import Future_education_Logo_white from '/src/assets/logos/future_education.png'
 
 // --- Web Development Projects ---
+
+// Lost in Translation - Card Matching Game
+import LostinTranslationMockup from '/src/assets/images/png/LostinTranslation/LostInTranslation_MacBookAir.png'
+import LostinTranslationWIP from '/src/assets/images/png/LostinTranslation/LostinTranslationWIP.png'
+import LostinTranslationCardConcept from '/src/assets/images/png/LostinTranslation/LostinTranslationCardConcept.png'
+import LostinTranslationCardsInFigma from '/src/assets/images/png/LostinTranslation/LostinTranslationCardsInFigma.png'
+
+// Peters Elektro GmbH
+import PetersElektroGmbHMockup from '/src/assets/images/png/PetersElektroGmbH/MacbookAirMockup.png'
+import PetersElektroGmbHHome from '/src/assets/images/png/PetersElektroGmbH/Home.png'
+import PetersElektroGmbHNavbarXL from '/src/assets/images/png/PetersElektroGmbH/NavbarXL.png'
+import PetersElektroGmbHNavbarSmall from '/src/assets/images/png/PetersElektroGmbH/NavbarSmall.png'
+// import PetersElektroGmbHUICards from '/src/assets/images/png/PetersElektroGmbH/UICard.png'
 
 // Elder Gym Bro App
 import ElderGymBroWireframeDashboard from '/src/assets/images/png/ElderGymBroApp/ElderGymBro_Wireframe_Dashboard.png'
@@ -206,6 +219,46 @@ document.addEventListener('mousemove', (e) => {
 // --- Web Development ---
 
 const projectCards = [
+  {
+    // Lost in Translation - Card Matching Game
+    image1: LostinTranslationWIP,
+      image1Description: 'Original card matching game',
+    image2: LostinTranslationCardConcept,
+      image2Description: 'Extended card wireframe',
+    image3: LostinTranslationCardsInFigma,
+      image3Description: 'Cards mockup (Figma)',
+    image4: LostinTranslationMockup,
+      image4Description: 'Mockup',  
+    heading: 'Lost in Translation',
+    subheading: 'Lost in Translation – A Card Matching Game',
+    description: `I developed a memory/card matching game based on a React & TypeScript YouTube tutorial. Using GitHub Copilot, I customized the code to fit my vision, where players match images with terms to create an educational and poetic experience. The game aims to spark curiosity about different cultures, languages, and perspectives on life, thoughts, and emotions. For styling, I used a combination of vanilla CSS and Tailwind CSS, implementing a fully responsive grid layout for an optimal user experience on various screen sizes.`,
+    linkNetlify: 'https://lostintranslation.netlify.app/',
+    linkGitHub: 'https://github.com/Sebastian-Weber/words-images-matching-game',
+  },
+  {
+    // Peters Elektro GmbH
+    image1: PetersElektroGmbHHome,
+      image1Description: 'Hero section',
+    image2: PetersElektroGmbHNavbarXL,
+      image2Description: 'Navbar XL',
+    image3: PetersElektroGmbHNavbarSmall,
+      image3Description: 'Navbar small',
+    image4: PetersElektroGmbHMockup,
+      image4Description: 'Navbar mobile',  
+    heading: 'Peters Elektro GmbH Website',
+    subheading: 'Peters Elektro GmbH Website',
+    description: `This project showcases my ability to design and develop a modern, responsive website that communicates both the energy and sustainability of renewable technologies. The process began with a detailed design mockup in Figma, where I crafted a clean, vibrant aesthetic. I carefully chose a color palette that reflected the dynamic power of electricity while emphasizing the harmony and balance of renewability.
+
+To complement the design, I sourced high-quality images from Unsplash and utilized illustrations from UnDraw. However, instead of using the illustrations as-is, I heavily edited them to better align with the project’s theme. This customization gave the visuals a distinctive look that retained the essence of the original while making them more cohesive and unique to the site.
+
+For the development phase, I used React Router to create a seamless multi-page experience, along with tools like VS Code, Node.js, Vite, Git, and TypeScript to ensure efficient and maintainable code. The website’s design divided into modular sections, such as a hero section, a text-and-image section, and a text-and-cards section. These sections were built as reusable UI components, making it easy to assemble pages with flexibility and scalability.
+
+To enhance the reusability of the components, I utilized techniques such as passing props and leveraging React’s Context API to manage state. TailwindCSS was my styling framework of choice, which not only ensured the design was consistent but also allowed me to make the website fully responsive across all devices.
+
+This project highlights my ability to combine thoughtful design principles with modern web development techniques to create a visually compelling and highly functional user experience.`,
+    linkNetlify: 'https://peters-elektro.netlify.app/',
+    linkGitHub: 'https://github.com/Sebastian-Weber/TEMPLATE-business-and-services',
+  },
   {
     // Elder Gym Bro App
     image1: ElderGymBroWireframeDashboard,
@@ -445,7 +498,7 @@ function App() {
             ))}
 
             <div className='flex flex-col justify-center items-center'>
-            <div className="flex flex-row w-fit h-auto justify-center items-center transition-transform hover:bg-slate-800 hover:scale-110 bg-slate-900 px-4 py-2 rounded-md">
+            <div className="flex flex-row w-fit h-auto justify-center items-center transition-transform  ease-in-out delay-150 hover:bg-sky-950 bg-slate-900 px-4 py-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" strokeWidth={1.5} stroke="currentColor" className="size-6 mt-1 -mr-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
               </svg>
@@ -474,7 +527,7 @@ function App() {
 
           {/* -- Projects -- */}
           {projectCards.map((card, index) => (
-          <div key={index} className="m-w-40 mx-6 my-2 transition-transform ease-in-out delay-150 rounded-md duration-500 hover:bg-slate-800 hover:bg-opacity-30">
+          <div key={index} className="m-w-40 mx-6 my-2 transition-transform ease-in-out delay-700 duration-500 rounded-md  hover:bg-slate-800 hover:bg-opacity-30">
             
             <div className="">
               <div className="px-4 py-6">

@@ -9,14 +9,44 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Hide horizontal scrollbar */
+body {
+  overflow-x: hidden;
+}
+
+/* Optional: Hide horizontal scrollbar for specific elements */
+.some-element {
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light grey background */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Dark grey handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker grey on hover */
+}
+
+
+
 body {
   @apply bg-fixed bg-slate-950;
 }
-
