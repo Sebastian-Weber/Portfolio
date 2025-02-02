@@ -19,14 +19,13 @@ import Future_education_Logo_white from '/src/assets/logos/future_education.png'
 // --- Web Development Projects ---
 
 // Lost in Translation - Card Matching Game
-// import LostinTranslationMacBookAir from '/src/assets/images/png/LostinTranslation/...'
+import LostinTranslationMockup from '/src/assets/images/png/LostinTranslation/LostInTranslation_MacBookAir.png'
 import LostinTranslationWIP from '/src/assets/images/png/LostinTranslation/LostinTranslationWIP.png'
 import LostinTranslationCardConcept from '/src/assets/images/png/LostinTranslation/LostinTranslationCardConcept.png'
-import LostinTranslationMockup from '/src/assets/images/png/LostinTranslation/LostInTranslation_MacBookAir.png'
 import LostinTranslationCardsInFigma from '/src/assets/images/png/LostinTranslation/LostinTranslationCardsInFigma.png'
 
 // Peters Elektro GmbH
-import PetersElektroGmbHMacBookAir from '/src/assets/images/png/PetersElektroGmbH/MacbookAirMockup.png'
+import PetersElektroGmbHMockup from '/src/assets/images/png/PetersElektroGmbH/MacbookAirMockup.png'
 import PetersElektroGmbHHome from '/src/assets/images/png/PetersElektroGmbH/Home.png'
 import PetersElektroGmbHNavbarXL from '/src/assets/images/png/PetersElektroGmbH/NavbarXL.png'
 import PetersElektroGmbHNavbarSmall from '/src/assets/images/png/PetersElektroGmbH/NavbarSmall.png'
@@ -228,7 +227,7 @@ const projectCards = [
       image2Description: 'Extended card wireframe',
     image3: LostinTranslationCardsInFigma,
       image3Description: 'Cards mockup (Figma)',
-    image4: LostinTranslationHomeAllPairedCards,
+    image4: LostinTranslationMockup,
       image4Description: 'Mockup',  
     heading: 'Lost in Translation',
     subheading: 'Lost in Translation – A Card Matching Game',
@@ -244,7 +243,7 @@ const projectCards = [
       image2Description: 'Navbar XL',
     image3: PetersElektroGmbHNavbarSmall,
       image3Description: 'Navbar small',
-    image4: LostinTranslationMockup,
+    image4: PetersElektroGmbHMockup,
       image4Description: 'Navbar mobile',  
     heading: 'Peters Elektro GmbH Website',
     subheading: 'Peters Elektro GmbH Website',
