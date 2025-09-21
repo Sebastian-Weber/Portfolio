@@ -6,7 +6,7 @@
 // import swLogo from '/src/assets/icons/svg/swlogo.svg'
 
 // PDFs
-import resume from '/src/assets/documents/pdf/Sebastian_Weber_-_CV_-_UX-UI_Designer_und_Frontend_Developer.pdf'
+import resume from '/src/assets/documents/pdf/Lebenslauf_Sebastian_Weber_-_UX-UI_Designer_und_Frontend_Developer.pdf'
 
 // Logos
 // import RH_Logo from '/src/assets/logos/RH_Logo.png'
@@ -784,7 +784,7 @@ function App() {
 
                 </div>
                 <br></br>
-                <div>©2024 Sebastian Weber</div>
+                <div>©2025 Sebastian Weber</div>
                 <br></br>
               </div>
 
