@@ -6,7 +6,7 @@
 // import swLogo from '/src/assets/icons/svg/swlogo.svg'
 
 // PDFs
-import resume from '/src/assets/documents/pdf/Lebenslauf_Sebastian_Weber_-_UX-UI_Designer_und_Frontend_Developer.pdf'
+import resume from '/src/assets/documents/pdf/Sebastian_Weber_CV_-_UX-UI_Designer_und_Frontend_Developer.pdf'
 
 // Logos
 // import RH_Logo from '/src/assets/logos/RH_Logo.png'
