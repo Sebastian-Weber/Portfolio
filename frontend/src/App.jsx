@@ -487,7 +487,7 @@ function App() {
          <div className="p-4">
             <div className="flex flex-row justify-start">
               <p className="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl">
-                _about 
+                _about
               </p>
             </div>
 
@@ -505,6 +505,7 @@ function App() {
               <a className="mx-2 font-semibold" href={resume}>Download full CV</a>
             </div>
             <br></br>
+
 
             <hr className="h-px my-2 mx-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
           </div>
