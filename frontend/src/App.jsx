@@ -385,40 +385,35 @@ function App() {
            
            
            
-            <div className="flex flex-col justify-end items-end">
+            <div className="flex flex-col justify-start items-start">
               <p className="font-normal text-2xl md:text-3xl xl:text-5xl text-slate-300">
-                Sebastian&nbsp;
+                Sebastian Weber
               </p>
-              <p className="font-normal text-2xl md:text-3xl xl:text-5xl text-slate-300">
-                Weber&nbsp; 
-              </p>
+            <p className="font-extralight text-2xl md:text-3xl xl:text-5xl text-slate-300">
+              UX Designer & Frontend Developer 
+            </p>
           </div>
           </div>
           <div className="flex flex-col justify-start">
-            <p className="font-extralight text-2xl md:text-3xl xl:text-5xl text-slate-300">
-              UX Designer
-            </p>
-            <p className="font-extralight text-2xl md:text-3xl xl:text-5xl text-slate-300">
-              Frontend Developer 
-            </p>
+
           </div>
          </div> 
             <br></br>
 
           <div className="flex flex-row justify-end">
 
-            <div className="flex flex-col justify-end items-end mt-2">
+            <div className="flex flex-col justify-end items-start mt-2">
               <p className="text-right font-extralight px-4 leading-none pb-1 text-3xl md:text-4xl xl:text-5xl">
-              crafting
+              Bridging 
               </p>
               <p className="text-right font-extralight px-4 leading-none pb-1 text-3xl md:text-4xl xl:text-5xl">
-              engaging 
+              Design 
               </p>
               <p className="text-right font-extralight px-4 leading-none pb-1 text-3xl md:text-4xl xl:text-5xl">
-              digital 
+              & 
               </p>
               <p className="text-right font-extralight px-4 leading-none pb-1 text-3xl md:text-4xl xl:text-5xl">
-              experiences 
+              Development 
               </p>
             </div>
           </div>
