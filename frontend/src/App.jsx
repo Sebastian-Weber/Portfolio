@@ -423,7 +423,7 @@ function App() {
          </div> 
             <br></br>
 
-          <div className="flex flex-row justify-start">
+          <div className="flex flex-row justify-end xl:pr-32">
 
             <div className="flex flex-col justify-start items-start mt-2">
               <h2 className="text-right font-extralight  leading-none pb-1 text-2xl md:text-3xl xl:text-4xl">
@@ -562,23 +562,23 @@ function App() {
             ))}
 
             <div className='flex flex-col justify-center items-center'>
-            <div className="flex flex-row w-fit h-auto justify-center items-center transition-transform ease-in-out delay-150 hover:cursor-pointer hover:bg-sky-950 bg-slate-900 px-4 py-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" strokeWidth={1.5} stroke="currentColor" className="size-6 mt-2 mr-1">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-              </svg>
-                <a
-                  href={resume}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                  aria-label="Download Sebastian Weber's CV als PDF. Öffnet in neuem Tab."
-                  title="Download CV (PDF) — öffnet in neuem Tab"
-                  className="inline-flex items-center "
-                >
-                  <span className="font-semibold">Download full CV (PDF)</span>
-                  <span className="sr-only"> — Öffnet in neuem Tab</span>
-                </a>
-            </div>
+<div className="flex flex-row w-fit h-auto justify-center items-center transition-transform ease-in-out delay-150 hover:cursor-pointer hover:bg-sky-950 bg-slate-900 px-4 py-2">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" strokeWidth={1.5} stroke="currentColor" className="size-6 mt-2 mr-1" aria-hidden="true" focusable="false">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+  </svg>
+
+  <a
+    href={resume}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="CV als PDF in neuem Tab öffnen"
+    title="CV (PDF) — öffnet in neuem Tab"
+    className="inline-flex items-center"
+  >
+    <span className="font-semibold">Download full CV (PDF)</span>
+    <span className="sr-only"> — Öffnet in neuem Tab</span>
+  </a>
+</div>
             <br></br>
 
             <hr className="h-px my-2 mx-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
