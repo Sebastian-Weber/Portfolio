@@ -405,7 +405,7 @@ function App() {
               UX/UI Designer 
             </h1>
             <h2 className="font-extralight text-xl md:text-2xl xl:text-3xl text-slate-300">
-              mit Entwicklerblick
+              mit technischem Fokus
             </h2>
           </div>
           </div>
