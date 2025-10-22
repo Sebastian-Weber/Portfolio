@@ -85,7 +85,11 @@ const aboutSection = [
 
 const projectsSection = [
   {
-    introduction: 'Welcome to my web development portfolio! Here, you\'ll find a collection of projects that showcase my journey in building dynamic, user-friendly websites and applications. Each project reflects my growth as a developer, from mastering foundational technologies like HTML, CSS, and JavaScript, to exploring advanced frameworks and tools. These experiences have honed my skills in problem-solving, responsive design, and creating intuitive user experiences. I’ve learned the importance of writing clean, efficient code and the value of continuous iteration and feedback. I\'m excited to share these projects and the insights gained along the way.' 
+    introduction: `Hier stelle ich eine Auswahl meiner Projekte vor, in denen ich nutzerfreundliche und leistungsstarke Websites und Web-Anwendungen entwickelt habe.
+Jedes Projekt steht für einen Schritt meiner Entwicklung – vom sauberen HTML/CSS-Fundament bis hin zu modernen Frameworks wie React und TypeScript. Dabei habe ich gelernt, komplexe Anforderungen in klare, funktionale Benutzeroberflächen zu übersetzen.
+Meine Schwerpunkte liegen auf responsivem Design, durchdachter User Experience (UX) und sauberem Code, der sich leicht warten und erweitern lässt.
+Großen Wert lege ich auf strukturierte Workflows, iterative Verbesserung und die enge Abstimmung zwischen Design und Entwicklung, denn gute digitale Erlebnisse entstehen dort, wo Ästhetik und Funktion perfekt zusammenspielen.
+` 
   },
 ];
 
@@ -211,9 +215,10 @@ const educationCards = [
 ];
 
 
-const cursorGlow = document.querySelector('.cursor-glow');
+const cursorGlow = typeof document !== 'undefined' ? document.querySelector('.cursor-glow') : null;
 
 document.addEventListener('mousemove', (e) => {
+  if (!cursorGlow) return;
   const { clientX: x, clientY: y } = e;
   cursorGlow.style.transform = `translate3d(${x - 25}px, ${y - 25}px, 0)`;
 });
@@ -234,8 +239,10 @@ const projectCards = [
     image4: LostinTranslationMockup,
       image4Description: 'Mockup',  
     heading: 'Lost in Translation',
-    subheading: 'Lost in Translation – A Card Matching Game',
-    description: `I developed a memory/card matching game based on a React & TypeScript YouTube tutorial. Using GitHub Copilot, I customized the code to fit my vision, where players match images with terms to create an educational and poetic experience. The game aims to spark curiosity about different cultures, languages, and perspectives on life, thoughts, and emotions. For styling, I used a combination of vanilla CSS and Tailwind CSS, implementing a fully responsive grid layout for an optimal user experience on various screen sizes.`,
+    subheading: 'Lost in Translation – Ein Memory-Spiel über Sprache und Kultur',
+    description: `Lost in Translation ist ein interaktives Memory-Spiel, das Sprache, Bild und Emotion miteinander verbindet. Spieler*innen kombinieren Begriffe und Bilder zu kurzen poetischen Paaren – ein spielerischer Zugang zu unterschiedlichen Kulturen und Perspektiven.
+Ich habe das Spiel mit Figma, React und TypeScript entwickelt, basierend auf einem Tutorial, das ich mithilfe von GitHub Copilot umfassend an meine konzeptionelle Idee angepasst habe. Für die technische Spiellogik habe ich eine Mischung aus TypeScript und Vanilla CSS verwendet und für die visuelle Umsetzung Tailwind CSS. Das Spiel ist außerdem responsive und auf verschiedenen Bildschirmgrößen spielbar.
+`,
     linkNetlify: 'https://lostintranslation.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/words-images-matching-game',
   },
@@ -251,15 +258,11 @@ const projectCards = [
       image4Description: 'Navbar mobile',  
     heading: 'Peters Elektro GmbH Website',
     subheading: 'Peters Elektro GmbH Website',
-    description: `This project showcases my ability to design and develop a modern, responsive website that communicates both the energy and sustainability of renewable technologies. The process began with a detailed design mockup in Figma, where I crafted a clean, vibrant aesthetic. I carefully chose a color palette that reflected the dynamic power of electricity while emphasizing the harmony and balance of renewability.
-
-To complement the design, I sourced high-quality images from Unsplash and utilized illustrations from UnDraw. However, instead of using the illustrations as-is, I heavily edited them to better align with the project’s theme. This customization gave the visuals a distinctive look that retained the essence of the original while making them more cohesive and unique to the site.
-
-For the development phase, I used React Router to create a seamless multi-page experience, along with tools like VS Code, Node.js, Vite, Git, and TypeScript to ensure efficient and maintainable code. The website’s design divided into modular sections, such as a hero section, a text-and-image section, and a text-and-cards section. These sections were built as reusable UI components, making it easy to assemble pages with flexibility and scalability.
-
-To enhance the reusability of the components, I utilized techniques such as passing props and leveraging React’s Context API to manage state. TailwindCSS was my styling framework of choice, which not only ensured the design was consistent but also allowed me to make the website fully responsive across all devices.
-
-This project highlights my ability to combine thoughtful design principles with modern web development techniques to create a visually compelling and highly functional user experience.`,
+    description: `In diesem Projekt habe ich eine moderne, responsive Website gestaltet und entwickelt, die die Dynamik und Nachhaltigkeit erneuerbarer Energien auf visuelle Weise erlebbar macht.
+Ausgehend von einem Figma-Design entwarf ich ein klares und lebendiges Erscheinungsbild mit einer Farbwelt, die sowohl Energie als auch Balance ausdrückt. Für die Visuals kombinierte ich Bilder von Unsplash mit individuell angepassten Illustrationen aus UnDraw, um einen kohärenten Look zu erzielen.
+In der Entwicklung setzte ich auf React, TypeScript, React Router und Tailwind CSS. Das Layout wurde in modulare, wiederverwendbare Komponenten unterteilt, wodurch sich Seiten flexibel und skalierbar aufbauen lassen.
+Das Ergebnis ist eine performante, strukturell saubere Website, die Designqualität, Responsivität und technisches Feintuning vereint.
+`,
     linkNetlify: 'https://peters-elektro.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/TEMPLATE-business-and-services',
   },
@@ -275,7 +278,12 @@ This project highlights my ability to combine thoughtful design principles with 
       image4Description: 'Mockup',  
     heading: 'ElderGymBro',
     subheading: 'ElderGymBro — Join the Cult!',
-    description: 'Working on "ElderGymBro" was the grand finale of my WBS Coding School bootcamp experience. This last time we had the freedom to choose any topic we wanted to tackle as our final coding challenge. We decided to shake things up with a fitness app that was not only functional, but fun, and thus ElderGymBro was born, an Lovecraftian-themed fitness app for humans, blobs, and other abominations! For the first time, we took a mobile-first approach for one of our projects. Coming from a native software development background, this made me understand how web apps work and how to use TailwindCSS\'s flex-box and grid classes in order to craft responsive UIs for web apps. I dove deep into experimenting with a variety of tools and frameworks such as SASS, DaisyUI, WindUI, and Material UI, each with their own unique strengths and challenges. Together, we worked hard to find the perfect balance between design aesthetics and usability, from the first wireframes in Figma to the final deployed MERN app. This project was an incredible learning experience full of valuable lessons, and we had the fantastic opportunity to present our work at the WBS Coding School Community Day on campus in Berlin.',
+    description: `„ElderGymBro“ ist im Rahmen meines Abschlussprojekts an der WBS Coding School entstanden – eine Fitness-App mit Lovecraft-inspirierter Ästhetik, die Funktionalität und Humor kombiniert und für mobile Geräte optimiert ist.
+Unser Ziel war es, eine App zu entwickeln, die Training mit einem spielerischen Twist verbindet – für Menschen, Blobs und andere „Abominations“. 😉
+Zum ersten Mal setzten wir konsequent auf einen Mobile-First-Ansatz, um eine nahtlose Nutzung auf Smartphones zu gewährleisten. Dabei nutzte ich Tailwind CSS mit Flexbox- und Grid-Layouts, um ein vollständig responsives Interface zu gestalten.
+In der Entwicklung kamen verschiedene Tools und Frameworks zum Einsatz, darunter React, SASS, DaisyUI, WindUI und Material UI. Ich übernahm die Verantwortung für die visuelle Gestaltung in Figma, das UX-Konzept und die Integration der UI-Komponenten im MERN-Stack.
+Das Ergebnis ist eine funktionale, humorvolle Web-App, die Design, Teamarbeit und technische Vielfalt vereint. Das Projekt wurde erfolgreich auf dem WBS Community Day in Berlin präsentiert und stieß dort auf begeistertes Feedback.
+`,
     linkNetlify: 'https://eldergymbro.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/ElderGymBroApp',
   },
@@ -291,7 +299,11 @@ This project highlights my ability to combine thoughtful design principles with 
       image4Description: 'Mockup',
     heading: 'PokéFight',
     subheading: 'PokéFight — Got to fetch them all!',
-    description: '"PokéFight" was an exciting web development project that brings the world of Pokémon to life by retrieving the stats of thousands of Pokémon via a REST API. This group project was a great opportunity to combine creative design with technical development, and I contributed by designing a dynamic, responsive Pokémon card layout. Using the Daisy UI card component as a base, I extensively redesigned it to ensure that it could serve as the primary element of our Arena Battles, as well as our Pokédex, an overview of thousands of Pokémon, regardless of screen size or device. We also pushed the envelope by experimenting with AI tools such as Leonardo AI to create unique Pokémon visuals to complement the existing images and animated Pokémon sprites from the JSON data. This experience provided valuable lessons, such as the importance of using global objects to simplify data management and understanding the impact of fetching large data sets on the performance of UI components from a library.',
+    description: `PokéFight ist eine interaktive Web-App, die die Welt der Pokémon mithilfe dynamischer Datensätze zum Leben erweckt. Über eine REST-API werden Statistiken von Tausenden Pokémon abgerufen und in einer individuell gestalteten Benutzeroberfläche visualisiert.
+Mein Schwerpunkt lag auf dem Design und der Umsetzung eines responsiven Kartenlayouts, das sowohl in den Arena-Battles als auch im Pokédex zum Einsatz kommt.
+Ausgehend von der DaisyUI-Komponente habe ich das Layout vollständig überarbeitet und für verschiedene Bildschirmgrößen optimiert. Zusätzlich experimentierten wir mit Leonardo AI, um einzigartige Pokémon-Visuals zu generieren, die die bestehenden JSON-Sprites stimmig ergänzen.
+Während der Entwicklung legte ich besonderen Wert auf Performance und effizientes Datenmanagement, etwa durch den Einsatz globaler Objekte und optimiertes Fetching großer Datensätze.
+Das Ergebnis ist eine kreative, performante Web-App, die Design, API-Integration und technisches Feintuning vereint – ein Beispiel für datengetriebenes, interaktives Webdesign mit Liebe zum Detail.`,
     linkNetlify: 'https://pokebattler.netlify.app',
     linkGitHub: 'https://github.com/Sebastian-Weber/PokemonBattle',
   },
@@ -307,7 +319,7 @@ This project highlights my ability to combine thoughtful design principles with 
       image4Description: 'Mockup',
     heading: 'PICAPI',
     subheading: 'PICAPI — All your favorite APIs at your fingertips!',
-    description: 'This group project was primarily focused on gaining practical experience in fetching data from both a headless CMS and a backend server. To accomplish this, we began by creating our own API collection, which we initially hosted on the Contentful platform, a popular headless CMS. After successfully setting up the API, we transferred the collection into a custom JSON file, which was then hosted on an Express server for greater flexibility and control over the backend processes. In addition, we enhanced the user interface by implementing an off-canvas sidebar, which was managed through the useState hook, a dedicated details page, pagination with npm\'s pagination library, the "slick slider carousel" for dynamic content display, a search bar using Daisy UI with an efficient search function, and clickable category tags to serve as filter options.',
+    description: `Bei diesem Gruppenprojekt lag der Fokus vor allem darauf, praktische Erfahrungen beim Abrufen von Daten aus einem Headless-CMS und einem Backend-Server zu sammeln. Zu diesem Zweck haben wir zunächst eine eigene API-Sammlung erstellt und diese auf der Contentful-Plattform gehostet, einem beliebten Headless-CMS. Nach der erfolgreichen Einrichtung der API haben wir die Sammlung in eine benutzerdefinierte JSON-Datei übertragen und diese auf einem Express-Server gehostet, um mehr Flexibilität und Kontrolle über die Backend-Prozesse zu erreichen. Darüber hinaus haben wir die Benutzeroberfläche durch die Implementierung einer Off-Canvas-Seitenleiste, die über den useState-Hook verwaltet wird, sowie durch eine spezielle Detailseite, Paginierung mit der Paginierungsbibliothek von npm, das „Slick Slider Carousel” für die dynamische Anzeige von Inhalten, eine Suchleiste mit Daisy UI und eine effiziente Suchfunktion verbessert. Außerdem haben wir anklickbare Kategorie-Tags als Filteroptionen hinzugefügt.`,
     linkNetlify: 'https://picapi.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/Contentful_CMS_Rework',
   },
@@ -323,7 +335,10 @@ This project highlights my ability to combine thoughtful design principles with 
       image4Description: 'Mockup',
     heading: 'HackerNews',
     subheading: 'What\'s up in Tech? — The latest news fetched from Agolia API & styled with TailwindCSS',
-    description: 'Coming from a design background, I\'ve always been more involved with front-end technologies than back-end technologies. Fetching data from an API and JSon files were things I had heard about, but had never done myself. While working on this HackerNews group project, I not only got my first taste of backend technologies, but also discovered npm packages for pre-built components like busy spinners and pagination. After using Bootstrap, I experimented with TailwindCSS and spent hours perfecting the layout and styling. The simplicity of TailwindCSS won me over, making it easier to write and maintain CSS, even with its limitations - well worth the tradeoffs from a UX designer\'s perspective.',
+    description: `Bei diesem Gruppenprojekt ging es um den Einstieg in die Arbeit mit API-Daten und Backend-Technologien. Das Ziel bestand darin, einen Nachrichtenfeed auf Basis der HackerNews-API zu gestalten und umzusetzen.
+Ich entwickelte das Frontend und konzentrierte mich dabei auf Struktur, Lesbarkeit und Interaktionsdesign. Nach ersten Versuchen mit Bootstrap habe ich das Layout in Tailwind CSS neu aufgesetzt und für verschiedene Bildschirmgrößen optimiert.
+Dabei kamen erstmals npm-Pakete für Pagination und Ladeindikatoren zum Einsatz, die ich gezielt an das Designsystem anpasste.
+Das Ergebnis ist eine schlanke, performante Web-App mit klarem Fokus auf Nutzerfreundlichkeit und konsistenter Gestaltung. Dieses Projekt hat mein Verständnis für API-Integration und moderne CSS-Frameworks vertieft.`,
     linkNetlify: 'https://hackernewsfromagolia.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/HackerNews',
   },
@@ -339,7 +354,11 @@ This project highlights my ability to combine thoughtful design principles with 
       image4Description: 'Mockup',
     heading: 'Taskify',
     subheading: 'Stay organized and focused with Taskify!',
-    description: '"Taskify" is a to-do list app created during the WBS Coding School bootcamp, marking my first deep dive into JavaScript and React.js. Collaborating on this project, I discovered the power of collaborative wireframing using Excalidraw. It not only clarified our projects UX but also helped us, as beginners, build a shared understanding of how UIs work and translate into code. Despite our team of four being mostly new to web development, we successfully built a functional app using tools like Git, Slack and Trello. With Taskify we did not create a new gold standard for to-do-lists but the learning experience was invaluable and unforgettable!',
+    description: `Taskify was created during the boot camp at WBS Coding School and was my introduction to development with JavaScript and React.js.
+In a team of four, we developed a functional to-do app that allows users to create, edit and manage tasks.
+I supported the UX process through collaborative wireframing in Excalidraw, which helped to create a common understanding of structure, user flows and visual hierarchy – particularly valuable in an interdisciplinary team of beginners.
+For project organisation, we used Git, Slack and Trello to streamline version control, communication and task management.
+The result: a clearly structured, functional to-do app and an intensive introduction to collaborative web development – with a focus on clean UI structure, communication and technical fundamentals.`,
     linkNetlify: 'https://taskifyinreact.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/ToDoListReact',
   },
