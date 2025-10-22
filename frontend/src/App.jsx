@@ -79,7 +79,9 @@ import TaskifyMacBookAir from '/src/assets/images/png/Taskify/Taskify_macbook_ai
 
 const aboutSection = [
   {
-    introduction: 'I am a graduate UX designer with a total of +10 years of experience in Tech. I\'m interested in everything related to UIs, especially frontend technologies and visual design in general. I\'m also interested in the history of information technology, especially its earliest ideas and concepts. After working mainly in native software development for 5 years, I recently started learning how to code frontends for the web.'
+    introduction: `Ich bin UX/UI-Designer mit Fokus auf Frontend-Entwicklung – ich gestalte und entwickle Interfaces, die durchdacht, klar und technisch solide sind.
+Nach mehreren Jahren in der nativen Softwareentwicklung habe ich meinen Schwerpunkt auf das Web verlagert und arbeite heute mit React, TypeScript und TailwindCSS, um Designsysteme effizient in skalierbare Komponenten zu übersetzen.
+Mich interessiert, wie gutes Design und präzise Umsetzung zusammenwirken, um Produkte zu schaffen, die sich natürlich anfühlen und gerne genutzt werden.`,
   },
 ];
 
@@ -239,10 +241,8 @@ const projectCards = [
     image4: LostinTranslationMockup,
       image4Description: 'Mockup',  
     heading: 'Lost in Translation',
-    subheading: 'Lost in Translation – Ein Memory-Spiel über Sprache und Kultur',
-    description: `Lost in Translation ist ein interaktives Memory-Spiel, das Sprache, Bild und Emotion miteinander verbindet. Spieler*innen kombinieren Begriffe und Bilder zu kurzen poetischen Paaren – ein spielerischer Zugang zu unterschiedlichen Kulturen und Perspektiven.
-Ich habe das Spiel mit Figma, React und TypeScript entwickelt, basierend auf einem Tutorial, das ich mithilfe von GitHub Copilot umfassend an meine konzeptionelle Idee angepasst habe. Für die technische Spiellogik habe ich eine Mischung aus TypeScript und Vanilla CSS verwendet und für die visuelle Umsetzung Tailwind CSS. Das Spiel ist außerdem responsive und auf verschiedenen Bildschirmgrößen spielbar.
-`,
+    subheading: `Lost in Translation — A Words & Images Matching Game`,
+    description: `Lost in Translation ist ein interaktives Memory-Spiel, das Sprache, Bild und Emotion miteinander verbindet. Spieler kombinieren Begriffe und Illustrationen zu kleinen poetischen Paaren – ein spielerischer Zugang zu unterschiedlichen Kulturen und Perspektiven. Ich habe das Projekt mit Figma, React und TypeScript entwickelt, basierend auf einem Tutorial, das ich mithilfe von GitHub Copilot konzeptionell erweitert und individuell angepasst habe. Für die visuelle Umsetzung habe ich Tailwind CSS verwendet und besonderen Wert auf ein harmonisches, responsives Layout gelegt. Das Ergebnis ist ein digitales Spiel, das Ästhetik, Emotion und Interaktivität zu einem inspirierenden Erlebnis vereint.`,
     linkNetlify: 'https://lostintranslation.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/words-images-matching-game',
   },
@@ -258,11 +258,7 @@ Ich habe das Spiel mit Figma, React und TypeScript entwickelt, basierend auf ein
       image4Description: 'Navbar mobile',  
     heading: 'Peters Elektro GmbH Website',
     subheading: 'Peters Elektro GmbH Website',
-    description: `In diesem Projekt habe ich eine moderne, responsive Website gestaltet und entwickelt, die die Dynamik und Nachhaltigkeit erneuerbarer Energien auf visuelle Weise erlebbar macht.
-Ausgehend von einem Figma-Design entwarf ich ein klares und lebendiges Erscheinungsbild mit einer Farbwelt, die sowohl Energie als auch Balance ausdrückt. Für die Visuals kombinierte ich Bilder von Unsplash mit individuell angepassten Illustrationen aus UnDraw, um einen kohärenten Look zu erzielen.
-In der Entwicklung setzte ich auf React, TypeScript, React Router und Tailwind CSS. Das Layout wurde in modulare, wiederverwendbare Komponenten unterteilt, wodurch sich Seiten flexibel und skalierbar aufbauen lassen.
-Das Ergebnis ist eine performante, strukturell saubere Website, die Designqualität, Responsivität und technisches Feintuning vereint.
-`,
+    description: `Peter’s Elektro ist eine moderne, responsive Website, die die Dynamik und Nachhaltigkeit erneuerbarer Energien visuell erlebbar macht. Ziel war es, ein digitales Erscheinungsbild zu gestalten, das die Werte eines zukunftsorientierten Elektrobetriebs – Energie, Präzision und Vertrauen – widerspiegelt. Ich habe das Design in Figma entworfen und hochwertige Unsplash-Fotografien mit angepassten UnDraw-Illustrationen kombiniert, um einen klaren, professionellen Look zu schaffen. Für die Entwicklung habe ich React, TypeScript, React Router und Tailwind CSS eingesetzt, um ein modulares, skalierbares Layout zu realisieren. Das Ergebnis ist eine performante Website, die Gestaltung, Struktur und technische Umsetzung zu einem harmonischen Gesamterlebnis verbindet.`,
     linkNetlify: 'https://peters-elektro.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/TEMPLATE-business-and-services',
   },
@@ -299,11 +295,7 @@ Das Ergebnis ist eine funktionale, humorvolle Web-App, die Design, Teamarbeit un
       image4Description: 'Mockup',
     heading: 'PokéFight',
     subheading: 'PokéFight — Got to fetch them all!',
-    description: `PokéFight ist eine interaktive Web-App, die die Welt der Pokémon mithilfe dynamischer Datensätze zum Leben erweckt. Über eine REST-API werden Statistiken von Tausenden Pokémon abgerufen und in einer individuell gestalteten Benutzeroberfläche visualisiert.
-Mein Schwerpunkt lag auf dem Design und der Umsetzung eines responsiven Kartenlayouts, das sowohl in den Arena-Battles als auch im Pokédex zum Einsatz kommt.
-Ausgehend von der DaisyUI-Komponente habe ich das Layout vollständig überarbeitet und für verschiedene Bildschirmgrößen optimiert. Zusätzlich experimentierten wir mit Leonardo AI, um einzigartige Pokémon-Visuals zu generieren, die die bestehenden JSON-Sprites stimmig ergänzen.
-Während der Entwicklung legte ich besonderen Wert auf Performance und effizientes Datenmanagement, etwa durch den Einsatz globaler Objekte und optimiertes Fetching großer Datensätze.
-Das Ergebnis ist eine kreative, performante Web-App, die Design, API-Integration und technisches Feintuning vereint – ein Beispiel für datengetriebenes, interaktives Webdesign mit Liebe zum Detail.`,
+    description: `PokéFight ist eine interaktive Web-App, die die Welt der Pokémon mithilfe dynamischer Datensätze zum Leben erweckt. Über eine REST-API werden Informationen zu Tausenden Pokémon abgerufen und in einer individuell gestalteten Benutzeroberfläche visualisiert. Ich habe den Fokus auf das Design und die Umsetzung eines responsiven Kartenlayouts gelegt, das sowohl im Pokédex als auch in den Arena-Battles zum Einsatz kommt. Auf Basis der DaisyUI-Komponentenbibliothek habe ich ein visuell eigenständiges Interface entwickelt und für verschiedene Bildschirmgrößen optimiert. Ergänzt durch Leonardo AI-Visuals und effizientes Datenmanagement vereint das Projekt Design, API-Integration und Interaktivität – ein Beispiel für datengetriebenes Webdesign mit Liebe zum Detail.`,
     linkNetlify: 'https://pokebattler.netlify.app',
     linkGitHub: 'https://github.com/Sebastian-Weber/PokemonBattle',
   },
@@ -319,7 +311,7 @@ Das Ergebnis ist eine kreative, performante Web-App, die Design, API-Integration
       image4Description: 'Mockup',
     heading: 'PICAPI',
     subheading: 'PICAPI — All your favorite APIs at your fingertips!',
-    description: `Bei diesem Gruppenprojekt lag der Fokus vor allem darauf, praktische Erfahrungen beim Abrufen von Daten aus einem Headless-CMS und einem Backend-Server zu sammeln. Zu diesem Zweck haben wir zunächst eine eigene API-Sammlung erstellt und diese auf der Contentful-Plattform gehostet, einem beliebten Headless-CMS. Nach der erfolgreichen Einrichtung der API haben wir die Sammlung in eine benutzerdefinierte JSON-Datei übertragen und diese auf einem Express-Server gehostet, um mehr Flexibilität und Kontrolle über die Backend-Prozesse zu erreichen. Darüber hinaus haben wir die Benutzeroberfläche durch die Implementierung einer Off-Canvas-Seitenleiste, die über den useState-Hook verwaltet wird, sowie durch eine spezielle Detailseite, Paginierung mit der Paginierungsbibliothek von npm, das „Slick Slider Carousel” für die dynamische Anzeige von Inhalten, eine Suchleiste mit Daisy UI und eine effiziente Suchfunktion verbessert. Außerdem haben wir anklickbare Kategorie-Tags als Filteroptionen hinzugefügt.`,
+    description: `Bei diesem Gruppenprojekt lag der Schwerpunkt auf dem praxisnahen Arbeiten mit einem Headless CMS und einem Backend-Server. Gemeinsam im Team haben wir eine eigene API-Sammlung entwickelt und über Contentful gehostet, bevor wir sie in eine individuelle JSON-Datei überführt und auf einem Express-Server weiterverarbeitet haben. In der Frontend-Entwicklung habe ich die Benutzeroberfläche gestaltet und Funktionen wie eine Off-Canvas-Seitenleiste, eine Detailseite, Paginierung, ein Slick Slider Carousel sowie Such- und Filterfunktionen mit DaisyUI implementiert. Das Projekt hat gezeigt, wie sich API-Architektur, Datenmanagement und UI-Interaktion zu einer stimmigen Gesamterfahrung verbinden lassen.`,
     linkNetlify: 'https://picapi.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/Contentful_CMS_Rework',
   },
@@ -354,11 +346,7 @@ Das Ergebnis ist eine schlanke, performante Web-App mit klarem Fokus auf Nutzerf
       image4Description: 'Mockup',
     heading: 'Taskify',
     subheading: 'Stay organized and focused with Taskify!',
-    description: `Taskify was created during the boot camp at WBS Coding School and was my introduction to development with JavaScript and React.js.
-In a team of four, we developed a functional to-do app that allows users to create, edit and manage tasks.
-I supported the UX process through collaborative wireframing in Excalidraw, which helped to create a common understanding of structure, user flows and visual hierarchy – particularly valuable in an interdisciplinary team of beginners.
-For project organisation, we used Git, Slack and Trello to streamline version control, communication and task management.
-The result: a clearly structured, functional to-do app and an intensive introduction to collaborative web development – with a focus on clean UI structure, communication and technical fundamentals.`,
+    description: `Taskify ist eine minimalistische To-Do-App, die Effizienz und Design in einem klaren Nutzungserlebnis vereint. Das Projekt habe ich während des Bootcamps an der WBS Coding School entwickelt – es war mein Einstieg in die Arbeit mit JavaScript und React.js. In einem Team von vier Personen haben wir eine funktionale App erstellt, mit der sich Aufgaben erstellen, bearbeiten und organisieren lassen. Ich habe den UX-Prozess unterstützt, indem ich in Excalidraw Wireframes entworfen habe, um Struktur, Userflows und visuelle Hierarchie abzustimmen. Für Organisation und Versionskontrolle haben wir Git, Slack und Trello genutzt. Das Ergebnis ist eine klar strukturierte, responsive To-Do-App – ein Beispiel für kollaboratives Web Development mit Fokus auf saubere UI-Strukturen, Kommunikation und technische Grundlagen.`,
     linkNetlify: 'https://taskifyinreact.netlify.app/',
     linkGitHub: 'https://github.com/Sebastian-Weber/ToDoListReact',
   },
