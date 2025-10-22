@@ -79,9 +79,10 @@ import TaskifyMacBookAir from '/src/assets/images/png/Taskify/Taskify_macbook_ai
 
 const aboutSection = [
   {
-    introduction: `Ich bin UX/UI-Designer mit Fokus auf Frontend-Entwicklung – ich gestalte und entwickle Interfaces, die durchdacht, klar und technisch solide sind.
-Nach mehreren Jahren in der nativen Softwareentwicklung habe ich meinen Schwerpunkt auf das Web verlagert und arbeite heute mit React, TypeScript und TailwindCSS, um Designsysteme effizient in skalierbare Komponenten zu übersetzen.
-Mich interessiert, wie gutes Design und präzise Umsetzung zusammenwirken, um Produkte zu schaffen, die sich natürlich anfühlen und gerne genutzt werden.`,
+    introduction: `Gutes Design merkt man erst, wenn es fehlt.
+Ich arbeite gerne da, wo Gestaltung auf Code trifft – und übersetze Designsysteme, Ideen und Prototypen in saubere, skalierbare Interfaces.
+Mit Erfahrung in React, TypeScript und TailwindCSS entwickle ich nutzerzentrierte Oberflächen, die visuell konsistent und technisch präzise sind.
+Mich interessiert, wie Design und Technologie ineinandergreifen, um Produkte zu schaffen, die sich natürlich anfühlen und gerne genutzt werden.`,
   },
 ];
 
@@ -107,11 +108,11 @@ const workCards = [
     contract: 'Fulltime Associate',
     position: 'UX & UI Designer',
     company: 'empower GmbH',
-    bullet1: '• Designed wireframes, mockups & prototypes for the company\'s software products.',
-    bullet2: '• Developed ui guidelines for the implementation of ui elements in the company\'s products.',
-    bullet3: '• Co-authored the company\'s ui style guide and implemented it in XAML.',
-    bullet4: '• (Re)designed ui layouts, icons, marketing materials.',
-    bullet5: '• Wrote a language guide on ux writing and ui copy.',
+    bullet1: '• Wireframes, Mockups und interaktive Prototypen für Softwareprodukte konzipiert und gestaltet – mit Fokus auf Benutzerfreundlichkeit und Designkonsistenz.',
+    bullet2: '• UI-Guidelines entwickelt, um die Implementierung von Bedienelementen in allen Unternehmensprodukten zu vereinheitlichen.',
+    bullet3: '• Das unternehmensweite UI-Styleguide mitverfasst und in XAML implementiert – als Grundlage eines skalierbaren, konsistenten Designsystems.',
+    bullet4: '• UI-Layouts, Icons und Marketingmaterialien überarbeitet und optimiert, um Markenidentität und visuelle Kohärenz zu stärken.',
+    bullet5: '• Einen Language Guide für UX Writing und UI-Texte verfasst, der die sprachliche Klarheit und Nutzerführung verbessert hat.',
     tag1: 'Adobe XD',
     tag2: 'Adobe Illustrator',
     tag3: 'Adobe Photoshop',
@@ -123,12 +124,12 @@ const workCards = [
     // working student at empower
     startDate: '05/2019',
     endDate: '08/2021',
-    contract: 'Working Student',
+    contract: 'Werkstudent',
     position: 'UX & UI Designer',
     company: 'empower GmbH',
-    bullet1: '• Created ux personas for the company\'s ux department.',
-    bullet2: '• Crafted pixel-perfect icons in various sizes, formats and color schemes.',
-    bullet3: '• Crafted and edited marketing materials, such as website and broschures, business cards, product mockups and (html) banners.',
+    bullet1: '• UX-Personas erstellt, um Zielgruppen klar zu definieren und nutzerzentrierte Designentscheidungen zu ermöglichen.',
+    bullet2: '• Pixelgenaue Icons in verschiedenen Größen, Formaten und Farbschemata gestaltet.',
+    bullet3: '• Marketingmaterialien wie Websites, Broschüren, Visitenkarten, Produkt-Mockups und HTML-Banner entworfen und bearbeitet, um die Markenkommunikation zu stärken.',
     bullet4: '',
     tag1: 'Adobe XD',
     tag2: 'Adobe Illustrator',
@@ -149,7 +150,7 @@ const educationCards = [
     altText: 'Future Education logo',
     degree: 'Certifcate of Completion',
     program: 'Advanced JavaScript programming with TypeScript and EcmaScript',
-    bullet1: '• Learned how to apply Typescript in web deelopment projects.',
+    bullet1: '• Kenntnisse in der Anwendung von TypeScript in Webentwicklungsprojekten erworben.',
     tag1: 'VS Code',
     tag2: 'HTML',
     tag3: 'CSS',
@@ -166,7 +167,7 @@ const educationCards = [
     altText: 'WBS Coding School logo',
     degree: 'Certified Fullstack Web and App Developer',
     program: 'Fullstack Web and App Development Bootcamp',
-    bullet1: '• Learned how to apply frontend, backend and middleware technologies for web and app development using MERN stack. ',
+    bullet1: 'Frontend-, Backend- und Middleware-Technologien mit dem MERN-Stack für Web- und App-Entwicklung eingesetzt.',
     tag1: 'VS Code',
     tag2: 'Figma',
     tag3: 'Project management',
@@ -183,10 +184,10 @@ const educationCards = [
     altText: 'Rheinische Hochschule logo',
     degree: 'Master of Arts',
     program: 'User Experience Design',
-    bullet1: '• Researched user needs and scientifically and practically analyzed user experiences.',
-    bullet2: '• Designed iterative concepts and for interactive services and products with focus on psychology, empathy, diversity and social responsibility.',
-    bullet3: '• Created interfaces and interaction designs.',
-    bullet4: '• Practiced pitches, self-presentation & visualization of design processes and results.',
+    bullet1: '• Nutzerbedürfnisse erforscht und User Experiences wissenschaftlich sowie praktisch analysiert.',
+    bullet2: '• Iterative Konzepte für interaktive Services und Produkte entwickelt – mit Fokus auf Psychologie, Empathie, Diversität und soziale Verantwortung.',
+    bullet3: '• Benutzerzentrierte Interfaces und Interaktionsdesigns entworfen.',
+    bullet4: '• Pitches, Selbstpräsentationen und die Visualisierung von Designprozessen und Ergebnissen trainiert.',
     bullet5: '',
     tag1: 'UX Research',
     tag2: 'Market & competitors analyses',
@@ -204,8 +205,8 @@ const educationCards = [
     altText: 'Bergische Universität Wuppertal logo',
     degree: 'Bachelor of Arts',
     program: 'Media Design / Design Technology & English Studies',
-    bullet1: '• Studied the principles of different fields of design, e.g. visual design, layout, typography, film and the history and theory of design.',
-    bullet2: '• Created concepts for various media projects using a broad stack of media and design technologies.',
+    bullet1: '• Prinzipien verschiedener Designbereiche studiert, darunter Visuelles Design, Layout, Typografie, Film sowie Designgeschichte und -theorie.',
+    bullet2: '• Konzepte für medienübergreifende Projekte entwickelt und ein breites Spektrum an Design- und Medientechnologien angewendet.',
     tag1: 'Academic Writing',
     tag2: 'Business English',
     tag3: 'Technical English',
@@ -397,12 +398,15 @@ function App() {
            
            
             <div className="flex flex-col justify-start items-start">
-              <h1 className="font-normal text-2xl md:text-3xl xl:text-5xl text-slate-300">
+              <h2 className="font-normal text-2xl md:text-3xl xl:text-4xl text-slate-300">
                 Sebastian Weber
-              </h1>
-            <h1 className="font-extralight text-2xl md:text-3xl xl:text-5xl text-slate-300">
-              UX Designer & Frontend Developer 
+              </h2>
+            <h1 className="font-extralight text-lg md:text-2xl xl:text-3xl text-slate-300">
+              UX/UI Designer 
             </h1>
+            <h2 className="font-extralight text-xl md:text-2xl xl:text-3xl text-slate-300">
+              mit Entwicklerblick
+            </h2>
           </div>
           </div>
           <div className="flex flex-col justify-start">
@@ -539,7 +543,7 @@ function App() {
          <div className="p-4">
             <div className="flex flex-row justify-start">
               <h3 className="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl">
-                _about
+                _About me
               </h3>
             </div>
 
@@ -577,7 +581,7 @@ function App() {
           <div className="p-4 pt-6">
             <div className="flex flex-row justify-start">
               <h3 className="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl">
-                _projects
+                _Projekte
               </h3>
             </div>
 
@@ -684,7 +688,7 @@ function App() {
         {/* -- 4. Work experience section */}
         <div className="p-4 pt-6">
           <h3 className="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl">
-              _work experience
+              _Arbeitserfahrung
             </h3>
             <br></br>
 
@@ -741,7 +745,7 @@ function App() {
           {/* -- 4. education section */}
           <div className="p-4 pt-6">
             <h4 className="p-4 bg-clip-text pb-1 -ml-4 text-start font-medium leading-tight text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl">
-              _education
+              _Ausbildung
             </h4>
             <br></br>
 
