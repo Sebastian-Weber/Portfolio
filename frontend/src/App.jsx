@@ -13,7 +13,7 @@ import resume from '/src/assets/documents/pdf/Sebastian_Weber_CV_-_UX-UI_Designe
 import RH_Logo_white from '/src/assets/logos/RH_Logo_weiss.png'
 import BUW_Logo_white from '/src/assets/logos/Unilogo_schwarz_T3.png'
 // import WBS_Logo_red from '/src/assets/logos/WBSCS-Red-logo.webp'
-import WBS_Logo_white from '/src/assets/logos/WBSCS-full-logo-white.webp'
+import WBS_Logo_white from '/src/assets/logos/WBSCS-full-logo-white.png'
 import Future_education_Logo_white from '/src/assets/logos/future_education.png'
 
 // --- Web Development Projects ---
@@ -402,7 +402,7 @@ function App() {
                 Sebastian Weber
               </h2>
             <h1 className="font-extralight text-lg md:text-2xl xl:text-3xl text-slate-300">
-              UX/UI Designer 
+              UX/UI Designer
             </h1>
             <h2 className="font-extralight text-xl md:text-2xl xl:text-3xl text-slate-300">
               mit technischem Fokus
@@ -417,20 +417,25 @@ function App() {
 
           <div className="flex flex-row justify-end xl:pr-32">
 
-            <div className="flex flex-col justify-start items-start mt-2">
+            <div className="flex flex-row justify-start items-start mt-2"></div>
+
+              <div className="flex flex-col justify-start items-start mt-2">
               <h2 className="text-right font-extralight  leading-none pb-1 text-2xl md:text-3xl xl:text-4xl">
               Bridging 
               </h2>
               <h2 className="text-right font-extralight leading-none pb-1 text-2xl md:text-3xl xl:text-4xl">
-              Design 
+              Design
               </h2>
               <h2 className="text-right font-extralight leading-none pb-1 text-2xl md:text-3xl xl:text-4xl">
-              & 
+              &
               </h2>
               <h2 className="text-right font-extralight leading-none pb-1 text-2xl md:text-3xl xl:text-4xl">
               Development 
               </h2>
             </div>
+
+
+      
           </div>
 
           <br></br>
