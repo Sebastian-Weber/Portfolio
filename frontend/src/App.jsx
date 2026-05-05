@@ -402,10 +402,10 @@ function App() {
                 Sebastian Weber
               </h2>
             <h1 className="font-extralight text-lg md:text-2xl xl:text-3xl text-slate-300">
-              UX/UI Designer
+              Product Designer für B2B-Webprodukte
             </h1>
             <h2 className="font-extralight text-xl md:text-2xl xl:text-3xl text-slate-300">
-              mit technischem Fokus
+              Design Systems · Design-to-Code
             </h2>
           </div>
           </div>
@@ -827,7 +827,7 @@ function App() {
 
 
                   <div className='px-2 pb-8'>
-                <div className='font-light text-sm'>©2025 Sebastian Weber</div>
+                <div className='font-light text-sm'>©2026 Sebastian Weber</div>
                   </div>
 
                   <div className='px-2'>
