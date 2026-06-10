@@ -1,6 +1,6 @@
-# Portfolio - Sebastian Weber
+# Web Development Portfolio - Sebastian Weber 2024 - 2025
 
-Persönliches Web-Dev-Portfolio mit Projekten aus dem Fullstack-Bootcamp an der WBS Coding School (2024) sowie weiterführenden Projekten aus der Bewerbungsphase 2024/2025.
+Persönliches Web Devevelopment Portfolio mit Projekten aus dem Fullstack-Bootcamp an der WBS Coding School (2024) sowie weiterführenden Projekten aus der Bewerbungsphase 2024/2025.
 
 **Live:** [sebastian-weber.netlify.app](https://sebastian-weber.netlify.app/) &nbsp;|&nbsp; **LinkedIn:** [linkedin.com/in/sebastian-weber1708](https://www.linkedin.com/in/sebastian-weber1708/)
 
