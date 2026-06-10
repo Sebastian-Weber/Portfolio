@@ -1,4 +1,4 @@
-# Sebastian Weber — Portfolio
+# Sebastian Weber - Portfolio
 
 **UI Designer · Design-to-Code**  
 React · TypeScript · Tailwind CSS · Vite · Netlify
